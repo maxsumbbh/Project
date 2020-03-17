@@ -1,0 +1,177 @@
+@extends('layouts.master')
+
+@section('content')
+<div class="body">
+  <br><br><br><br><br>
+  <div class="fakeimg" style="height:100%;"></div>
+  <div id="carouselExampleControls" id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        @foreach ($slideshows as $slideshow)
+      <div class="carousel-item @if($loop->first)active @endif">
+      <img class="d-block mx-auto img-fluid" src="{{asset("images/$slideshow->image")}}" width="1110px"   alt="">
+      </div>
+      @endforeach
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>  
+<div class="content">
+  <div id="services" class="container text-center content ">
+    <div class="row">
+     <div class="col-sm-4 ">
+      <a href="newsupdate"><span class="fa fa-newspaper-o fa-2x"></span>
+      <h5>ประชาสัมพันธ์</h5></a>
+     </div>
+     <div class="col-sm-4">
+      <a href="activities"><span class="fa fa-thumb-tack fa-2x"></span>
+      <h5>กิจกรรม</h5></a>
+    
+     </div>
+     <div class="col-sm-4">
+      <a href="coursegenaral"><span class="fa fa-graduation-cap	 fa-2x"></span>
+      <h5>หลักสูตรทั่วไป</h5></a>
+ 
+     </div>
+    </div>
+    <br><br>
+    <div class="row slideanim">
+     <div class="col-sm-4">
+      <a href="form"><span class="fa fa-file-o fa-2x"></span>
+      <h5>แบบฟอร์ม</h5></a>
+     
+     </div>
+     <div class="col-sm-4">
+      <a href="tact"><span class="fa fa-comments-o fa-2x"></span>
+      <h5>ติดต่อเรา</h5></a>
+      
+     </div>
+     <div class="col-sm-4">
+      <a href="comment"><span class="fa fa-comments-o fa-2x"></span>
+      <h5>แสดงความคิดเห็น</h5></a>
+      
+     </div>
+    </div>
+   </div>
+   <!-- Contact Section -->
+</div>
+<div class="content1">
+  <div class="r1"><h3>| ประชาสัมพันธ์</h3></div>
+  <br>
+  <div class="row">
+    @foreach ($newsupdatess as $newsupdate)
+    <div class="">
+      <div class="card-wrapper">
+        <div class="thumbnail-container">
+          <a href="#">
+            <img src="{{ asset('images/'.$newsupdate->image) }}" width="100%">
+          </a>
+        </div>
+        <div class="card-desc-wrapper">
+          <div class="card-desc-container">
+            <div class="card-desc-cont">
+                <div class="card-desc-header"><a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}">{{ $newsupdate->title }}</a></div>
+                <div class="card-desc-desc app"><p>{{ $newsupdate->content }}</p></div>
+            </div>
+                <div class="card-desc-tag">ประชาสัมพันธ์</div>
+          </div>
+          </div>
+      </div>
+    </div>
+    @endforeach
+</div>
+</div>
+<div class="content2">
+  <div class="r1"><h3>| เกี่ยวกับสาขา</h3></div>
+  <br>
+  <div class="s1">
+    @foreach ($abouts as $about)
+  <div class="indent2">
+      <p>{!! $about->text !!}</p>  
+  </div>
+  @endforeach
+  </div>
+</div>
+<div class="content1">
+  <div class="r1"><h3>| กิจกรรม</h3></div>
+  <br>
+  <div class="row">
+    @foreach ($activities as $activitie)
+    <div class="">
+      <div class="card-wrapper">
+        <div class="thumbnail-container">
+          <a href="#">
+            <img src="{{ asset('images/'.$activitie->image) }}" width="100%">
+          </a>
+        </div>
+        <div class="card-desc-wrapper">
+          <div class="card-desc-container">
+            <div class="card-desc-cont">
+                <div class="card-desc-header"><a href="{{ url('/newsupdate/show/'.$activitie->id)  }}">{{ $activitie->title }}</a></div>
+                <div class="card-desc-desc app"><h6>{!! $activitie->content !!}</h6></div>
+            </div>
+                <div class="card-desc-tag">กิจกรรม</div>
+          </div>
+          </div>
+      </div>
+    </div>
+    @endforeach
+</div>
+</div>
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</div>
+
+
+
+@endsection
