@@ -25,7 +25,7 @@ class SuccessController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $success = Success::paginate(5);
+        $success = Success::paginate(10);
         return view('admin.success.index',[
             'success'=> $success
         ]);

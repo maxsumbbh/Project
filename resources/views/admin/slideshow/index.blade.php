@@ -1,11 +1,14 @@
 @extends('layouts.admin')
+
 @section('content')
-<div class="content">
-   
+<div class="container">
+    <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
             <br><br>
+            <h3>| เพิ่ม ลบ ส่วนสไลด์โชว์</h3>
+            <br>
             <?= link_to('admin/bslideshow/create', $title = 'เพิ่มรูปภาพ', ['class' => 'btn btn-success btn-sm'], $secure = null); ?>
-            <hr>
+            <br><br>
             <div class="card">
                 <div class="card-body">
                     <table class="table table-striped">
@@ -20,12 +23,9 @@
                                 <img src="{{ asset('images/resize/'.$slideshow->image) }}" style="width:100px"></a>
                             </td>
                             <td>
-                                <form action="{{ route('admin.bslideshow.destroy', $slideshow->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <a onclick="return confirm('คุณต้องการที่จะลบใช่หรือไม่?');">
-                                    <button type="submit" class="btn btn-danger">ลบ</button></a>
-                                </form>
+                                <a onclick="return confirm('คุณต้องการที่จะลบใช่หรือไม่?');"><?= Form::open(array('url' => 'admin/bslideshow/' . $slideshow->id, 'method' => 'delete')) ?>
+                                <button type="submit" class="btn btn-danger">ลบ</button>
+                                {!! Form::close() !!}
                             </td>
                         </tr>
                         @endforeach
@@ -36,7 +36,5 @@
             <br><br><br><br>
         </div>
     </div>
-    @endsection
-    @section('scripts')
-    @parent
+</div>
 @endsection

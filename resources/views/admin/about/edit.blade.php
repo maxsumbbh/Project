@@ -4,11 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
+        <br><br>
             <div aligh="right">
                 <a href="{{ route('admin.babout') }}" class="btn btn-default">กลับ</a>
             </div>
-            <div class="card">
+            <br>
 
+            <div class="card">
                 <div class="card-header">แก้ไขข้อมูลเกี่ยวกับเรา</div>
 
                 <div class="card-body">
@@ -17,15 +19,16 @@
                         @csrf
                         @method('PATCH')
                         <div class="form-group">
-                            <label class="col-md-4 text-left">เนื้อหา</label>
-                            <div class="col-md-8">
+                            <label class="col-md-12 text-left">เนื้อหา</label>
+                            <div class="col-md-8 ">
                                 <textarea name="text" rows="10" cols="80" value="" class="form-control input-lg">{{ $about->text }}</textarea>
+                                <br>
                             </div>
                         </div>
                         <br>
                         <div class="form-group text-left">
-                            <div class="col-md-10">
-                                <input type="submit" name="submit" class="btn btn-primary input-lg" value="ยืนยัน" />
+                            <div class="col-md-12">
+                                <input type="submit" name="submit" class="btn btn-success " value="ยืนยัน" />
                             </div>
                         </div>
                     </form>

@@ -25,7 +25,7 @@ class AwardController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $awards = Award::paginate(5);
+        $awards = Award::paginate(10);
         return view('admin.award.index',[
             'awards'=> $awards
         ]);

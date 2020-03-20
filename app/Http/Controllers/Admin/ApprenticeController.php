@@ -25,7 +25,7 @@ class ApprenticeController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $apprentices = Apprentice::paginate(5);
+        $apprentices = Apprentice::paginate(10);
         return view('admin.apprentice.index',[
             'apprentices'=> $apprentices
         ]);

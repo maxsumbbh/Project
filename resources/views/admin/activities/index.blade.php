@@ -2,22 +2,17 @@
 
 @section('content')
 <div class="container">
-    @if ($message = Session::get('success'))
-    <div class="alert alert-success">
-        <p>{{ $message }}</p>
-    </div>
-    @endif
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
             <br><br>
-
+            <h3>| เพิ่ม ลบ แก้ไข ส่วนกิจกรรม</h3>
+            <br>
             <div aligh="right">
                 <a href="{{ route('admin.bactivities.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลกิจกรรม</a>
             </div>
+            <br>
 
-            <hr>
             <div class="card">
-
                 <div class="card-body">
                     <table class="table table-striped">
                         <tr>
@@ -29,7 +24,7 @@
                         </tr>
                         @foreach ($activitiess as $activities)
                         <tr>
-                            <td>{!! $activities->title !!}</td>
+                            <td>{{ $activities->title }}</td>
                             <td>{!! $activities->content !!}</td>
                             <td>
                             <img src="{{ URL::to('/') }}/images/{{ $activities->image }}"

@@ -22,7 +22,7 @@ class AboutController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $abouts = About::paginate(5);
+        $abouts = About::paginate(10);
         return view('admin.about.index',[
             'abouts'=> $abouts
         ]);

@@ -24,7 +24,7 @@ class FormController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $forms = Form::paginate(5);
+        $forms = Form::paginate(10);
         return view('admin.form.index',[
             'forms'=> $forms
         ]);

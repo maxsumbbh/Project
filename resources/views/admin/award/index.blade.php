@@ -2,25 +2,20 @@
 
 @section('content')
 <div class="container">
-    @if ($message = Session::get('success'))
-    <div class="alert alert-success">
-        <p>{{ $message }}</p>
-    </div>
-    @endif
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
             <br><br>
-
+            <h3>| เพิ่ม ลบ แก้ไข ส่วนรางวัล</h3>
+            <br>
             <div aligh="right">
                 <a href="{{ route('admin.baward.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลรางวัล</a>
             </div>
+            <br>
 
-            <hr>
             <div class="card">
-
                 <div class="card-body">
                     <table class="table table-striped">
-                        <tr  >
+                        <tr>
                             <th>หัวข้อ</th>
                             <th>เนื้อหา</th>
                             <th>รูปภาพ</th>

@@ -25,7 +25,7 @@ class CooperativeController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $cooperatives = Cooperative::paginate(5);
+        $cooperatives = Cooperative::paginate(10);
         return view('admin.cooperative.index',[
             'cooperatives'=> $cooperatives
         ]);
