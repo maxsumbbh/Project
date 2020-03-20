@@ -99,7 +99,7 @@
   </div>
 
 </div>
-
+{!! $success->render() !!}
     </div>
     </div>
 <script>

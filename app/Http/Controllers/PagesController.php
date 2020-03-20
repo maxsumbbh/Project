@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Header;
+use App\Newsupdate;
 
 class PagesController extends Controller
 {
@@ -19,11 +21,15 @@ class PagesController extends Controller
         return view('pages.course');
     }
     public function tact(){
-       
-        return view('pages.tact');
+        $header = Header::all();
+        $newsupdatess = Newsupdate::orderBy('updated_at','desc')->limit(3)->get();
+        return view('pages.tact',[
+            'headers' => $header,
+            'newsupdatess' => $newsupdatess,
+            ]);
     }
     public function test(){
-       
+        
         return view('pages.test');
     }
     public function com(){

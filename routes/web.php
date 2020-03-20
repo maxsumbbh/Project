@@ -12,9 +12,9 @@ Route::post('/comment', 'CommentsController@store');
 
 
 
-Route::get('books', 'BookController@index');
-Route::post('books/import', 'BookController@import');
-Route::get('books/export', 'BookController@export');
+// Route::get('books', 'BookController@index');
+// Route::post('books/import', 'BookController@import');
+// Route::get('books/export', 'BookController@export');
 
 
 Route::get('/homee','ShowhomeController@index')->name('homee');
@@ -96,6 +96,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('/blocation','LocationController')->name('index','blocation');
     Route::resource('/bstudent','StudentController')->name('index','bstudent');
     Route::resource('/bcoursegenaral','CoursegenaralController')->name('index','bcoursegenaral');
+    
   
 
 

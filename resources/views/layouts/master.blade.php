@@ -19,6 +19,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
         @yield('styles')     
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -146,7 +147,7 @@
     </head>
     <body>
     <header>
-		<nav id="main-navbar" class="navbar navbar-toggleable-md fixed-top scrolling-navbar navbar-expand-lg navbar-inverse">
+		<nav id="main-navbar" class="navbar navbar-toggleable-md fixed-top scrolling-navbar navbar-expand-lg ">
 			<div class="container navbar-container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -163,7 +164,7 @@
 							<a class="nav-link" href="{{ route('homee') }}">หน้าหลัก</a>
 						</li>
 						  <li class="dropdown ">
-							<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">หลักสูตร <b class="caret fa fa-caret-down"></b></a>
+							<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">หลักสูตร <b class="fa fa-caret-down"></b></a>
 							<ul class="dropdown-content ">
                 <li class="{{ Request::path() == 'category' ? 'active' : '' }}">
 								<a class="nav-link" href="{{ route('category') }}">ข้อมูลหลักสูตร</a></li>
@@ -176,7 +177,7 @@
             <li class="{{ Request::path() == 'about' ? 'active' : '' }}">
               <a class="nav-link" href="{{ route('about') }}">คณาจารย์</a></li>
 						<li class="dropdown">
-							<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">นักศึกษา <b class="caret fa fa-caret-down"></b></a>
+							<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">นักศึกษา <b class="fa fa-caret-down"></b></a>
 							<ul class="dropdown-content ">
 
    

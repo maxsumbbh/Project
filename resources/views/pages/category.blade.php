@@ -18,22 +18,19 @@
       <div class="row">
       <div class="leftcolumn"> 
         @foreach ($categorys as $category)
-               <h5>{{ $category->name }}
-                  {{ $category->credit }}</h5>
-           @foreach ($subgroups as $subgroup)   
-              @if($subgroup->category_id == $category->id)
-                <p>{{ $subgroup->name }}
-                     {{ $subgroup->credit }}</p>
-              @foreach ($subjects as $subject)
-                @if($subject->subgroup_id == $subgroup->id)
-          
-                        <a href="{{ url('/category/show/'.$subject->id)  }}">
-                         {{ $subject->subcode }}
-                          &nbsp; {{ $subject->name }} &nbsp; {{ $subject->credit }}<br></a><br>
-                            @endif
-                            @endforeach
+        <p>{{ $category->name }}
+                  {{ $category->credit }}</p>
+        
+                @foreach ($subgroups as $subgroup)   
+                    @if($subgroup->category_id == $category->id)
+        
+                    <a href="{{ url('/category/show/'.$subgroup->id)  }}">
+                     <p>{{ $subgroup->name }}
+                        {{ $subgroup->credit }}</p></a>
+                    
                     @endif
                 @endforeach
+        
         @endforeach
 
 </div>
@@ -86,15 +83,15 @@
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
-    {{-- @foreach ($awardss as $award)
+    @foreach ($activitiess as $activitie)
     <ul class="w3-ul w3-hoverable w3-white">
       <li class="w3-padding-16">
-        <img src="{{ asset('images/'.$award->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
+        <img src="{{ asset('images/'.$activitie->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
         <br><br><br><br>
-        <a href="{{ url('/award/show/'.$award->id)  }}"><p class="w3-large">{{ $award->title }}</p></a>
+        <a href="{{ url('/activities/show/'.$activitie->id)  }}"><p class="w3-large">{{ $activitie->title }}</p></a>
       </li>
     </ul>
-    @endforeach --}}
+    @endforeach
   </div>
   </div>
 

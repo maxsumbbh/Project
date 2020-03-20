@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Student;
 use Illuminate\Support\Facades\DB;
 use App\Header;
+use App\Activities;
 
 class ShowstudentController extends Controller
 {
@@ -18,9 +19,11 @@ class ShowstudentController extends Controller
     {
         $student = Student::paginate(9);
         $header = Header::all();
+        $activitiess = Activities::orderBy('updated_at','desc')->limit(3)->get();
         return view('pages.student',[
             'students' => $student,
             'headers' => $header,
+            'activitiess' => $activitiess,
         ]);
     }
 

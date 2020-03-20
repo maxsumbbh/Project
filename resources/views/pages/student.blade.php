@@ -31,19 +31,19 @@
   
                                       </th>
                                       <th>
-                                          {{ trans('รหัสนักศึกษา') }}
+                                        
                                       </th>
                                       <th>
-                                          {{ trans('ชื่อ-นามสกุล') }}
+                                        {{ trans('รหัสนักศึกษา') }}
                                       </th>
                                       <th>
-                                          {{ trans('ปีการศึกษา') }}
+                                        {{ trans('ชื่อ-นามสกุล') }}
                                       </th>
                                       <th>
-                                          {{ trans('รูปภาพ') }}
+                                        {{ trans('ปีการศึกษา') }}
                                       </th>
                                       <th>
-                                         
+                                        {{ trans('รูปภาพ') }}
                                       </th>
                                       <th>
                                       
@@ -60,21 +60,21 @@
   
                                           </td>
                                           <td>
-                                              {{ $student->id }}
+                                             
                                           </td>
                                           <td>
-                                              {{ $student->name }}
+                                            {{ $student->id }}
                                           </td>
                                           <td>
-                                              {{ $student->studentyear->name }}
+                                            {{ $student->name }}
                                           </td>
                                           <td>
-                                              <a href="{{ asset('images/'.$student->image)}}">
-                                                  <img src="{{ URL::to('/') }}/images/{{ $student->image }}"
-                                                  class="img-thumbnail" width="75" />  
+                                            {{ $student->studentyear->name }}
                                           </td>
                                           <td>
-                                              
+                                            <a href="{{ asset('images/'.$student->image)}}">
+                                              <img src="{{ URL::to('/') }}/images/{{ $student->image }}"
+                                              class="img-thumbnail" width="75" />
                                           </td>
                                           <td>
                                          
@@ -146,15 +146,15 @@
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
-    {{-- @foreach ($awardss as $award)
+    @foreach ($activitiess as $activitie)
     <ul class="w3-ul w3-hoverable w3-white">
       <li class="w3-padding-16">
-        <img src="{{ asset('images/'.$award->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
+        <img src="{{ asset('images/'.$activitie->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
         <br><br><br><br>
-        <a href="{{ url('/award/show/'.$award->id)  }}"><p class="w3-large">{{ $award->title }}</p></a>
+        <a href="{{ url('/activities/show/'.$activitie->id)  }}"><p class="w3-large">{{ $activitie->title }}</p></a>
       </li>
     </ul>
-    @endforeach --}}
+    @endforeach
   </div>
   </div>
 

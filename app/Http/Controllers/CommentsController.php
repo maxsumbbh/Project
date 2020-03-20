@@ -8,10 +8,12 @@ use App\Http\Requests\CommentRequest;
 use Gate;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Controllers\Controller;
+use App\Header;
 
 
 class CommentsController extends Controller
 {
+
  
    /**
      * Display a listing of the resource.
@@ -21,12 +23,14 @@ class CommentsController extends Controller
 
     public function store(Request $request)
     {
+       
         $comment= new Comment();
         $comment->comment=$request->comment;
         $comment->save();
         $comment = Comment::orderBy('updated_at','desc')->limit(6)->get();
 
         return redirect('/comment')->with('success', 'เพิ่มข้อมูลเกี่ยวกับเราสำเร็จ');
+        
     }
 
     public function approval(Request $request)

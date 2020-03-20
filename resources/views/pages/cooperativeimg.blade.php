@@ -28,6 +28,8 @@
           style="width:100%" onclick="onClick(this)">
     </div>
   </div>   
+
+
         @endforeach
 </div>
 <div class="rightcolumn">
@@ -84,7 +86,7 @@
       <li class="w3-padding-16">
         <img src="{{ asset('images/'.$cooperative->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
         <br><br><br><br>
-        <a href="{{ url('/cooperative/show/'.$cooperative->id)  }}"><p class="w3-large">{{ $cooperative->title }}</p></a>
+        <a href="{{ url('/cooperative/show/'.$cooperative->id)  }}"><p class="w3-large">{!! $cooperative->text !!}</p></a>
       </li>
     </ul>
     @endforeach
