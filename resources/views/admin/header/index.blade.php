@@ -1,12 +1,15 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="content">
+<div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-10 col-md-offset-1">
             <br><br>
+            <h3>| เพิ่ม แก้ไข ส่วนโลโก้</h3>
+            <br>
             <?= link_to('admin/bheader/create', $title = 'เพิ่มรูปภาพ', ['class' => 'btn btn-success btn-sm'], $secure = null); ?>
-            <hr>
+            <br><br>
+            
             <div class="card">
                 <div class="card-body">
                     <table class="table table-striped">
@@ -28,8 +31,7 @@
                     <br>
                 </div>
             </div>
-
-            
+            <b>* สามารถเพิ่มได้แค่ 1 รูปเท่านั้น</b>
             <br><br><br><br>
         </div>
     </div>

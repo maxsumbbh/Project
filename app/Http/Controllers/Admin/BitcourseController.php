@@ -22,7 +22,7 @@ class BitcourseController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $bitcourses = Bitcourse::paginate(5);
+        $bitcourses = Bitcourse::paginate(10);
         return view('admin.bitcourse.index',[
             'bitcourses'=> $bitcourses
         ]);

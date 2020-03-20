@@ -2,22 +2,17 @@
 
 @section('content')
 <div class="container">
-    @if ($message = Session::get('success'))
-    <div class="alert alert-success">
-        <p>{{ $message }}</p>
-    </div>
-    @endif
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
             <br><br>
-
+            <h3>| เพิ่ม ลบ แก้ไข ส่วนกลุ่มวิชา</h3>
+            <br>
             <div aligh="right">
                 <a href="{{ route('admin.bsubgroup.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลกลุ่มวิชา</a>
             </div>
-
-            <hr>
+            <br>
+            
             <div class="card">
-
                 <div class="card-body">
                     <table class="table table-striped">
                         <tr>
@@ -25,7 +20,7 @@
                             <th>จำนวนหน่วยกิต</th>
                             <th>หมวดวิชา</th>
                             <th>แก้ไข</th>
-                            <th>ลบ</th>
+                            <th>ลบ</th> 
                         </tr>
                         @foreach ($subgroups as $subgroup)
                         <tr>

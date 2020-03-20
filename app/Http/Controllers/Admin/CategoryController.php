@@ -22,7 +22,7 @@ class CategoryController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $categorys = Category::paginate(5);
+        $categorys = Category::paginate(10);
         return view('admin.category.index',[
             'categorys'=> $categorys
         ]);

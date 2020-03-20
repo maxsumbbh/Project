@@ -4,23 +4,18 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
+        <br>
+        <div aligh="right">
+                <a href="{{ route('admin.bsubgroup') }}" class="btn btn-default">กลับ</a>
+            </div>
+            <br>
+
             <div class="card">
                 <div class="card-header">แก้ไขข้อมูลรุ่น</div>
-
-                <div class="card-body">
-                    @if (count($errors) > 0)
-                    <div class="alert alert-warning">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
-
+                <div class="card-body"></div>
                     <?= Form::model($studentyears,array('url'=>'admin/bstudentyear/'.$studentyears->id,'method'=>'put')) ?>
 
-                    <div class="col-md-8">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <?= Form::label('name','รุ่น'); ?>
                             <?= Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'ชื่อรุ่น']); ?>
@@ -28,7 +23,7 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-sm-10">
+                        <div class="col-sm-12">
                             <?= Form::submit('บันทึก',['class'=>'btn btn-primary']); ?>
                         </div>
                     </div>

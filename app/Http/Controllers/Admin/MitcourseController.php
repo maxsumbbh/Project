@@ -22,7 +22,7 @@ class MitcourseController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $mitcourses = Mitcourse::paginate(5);
+        $mitcourses = Mitcourse::paginate(10);
         return view('admin.mitcourse.index',[
             'mitcourses'=> $mitcourses
         ]);

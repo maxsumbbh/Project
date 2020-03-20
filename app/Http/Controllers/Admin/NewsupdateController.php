@@ -25,7 +25,7 @@ class NewsupdateController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $newsupdates = Newsupdate::paginate(5);
+        $newsupdates = Newsupdate::paginate(10);
         return view('admin.newsupdate.index',[
             'newsupdates'=> $newsupdates
         ]);

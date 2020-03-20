@@ -2,29 +2,20 @@
 
 @section('content')
 <div class="container">
-    @if ($message = Session::get('success'))
-    <div class="alert alert-success">
-        <p>{{ $message }}</p>
-    </div>
-    @endif
-    <br>
-    <div aligh="right">
-        <a href="{{ route('admin.bmembers.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลบุคลากร</a>
-    </div>
-    <br>
-      <!-- Main content -->
-      <section class="content">
-        <div class="row">
-          <div class="col-12">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-md-offset-1">
+            <br><br>
+            <h3>| เพิ่ม ลบ แก้ไข ส่วนคณาจารย์</h3>
+            <br>
+            <div aligh="right">
+                <a href="{{ route('admin.bmembers.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลหลักสูตร</a>
+            </div>
+            <br>
+
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
+                <div class="card-body">
+                    <table class="table table-striped">
+                    <tr>
                      <th>ชื่อบุคลากร</th>
                             <th>ตำแหน่ง</th>
                             <th>รูปภาพ</th>
@@ -34,9 +25,8 @@
                             <th>ลบ</th>
                
                   </tr>
-                  </thead>
                   @foreach ($members as $member)
-                  <tbody>
+               
                   <tr>
                     <td>{{ $member->name }}</td>
                             <td>{{ $member->position->name }}</td>
@@ -58,19 +48,14 @@
                                 </form>
                             </td>
                   </tr>
-                  </tbody>
-                  @endforeach
-                </table>
-              </div>
-              <!-- /.card-body -->
+                        @endforeach
+                    </table>
+                    <br>
+                    {!! $members->render() !!}
+                </div>
             </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
+            <br><br><br><br>
         </div>
-        <!-- /.row -->
-      </section>
-      <!-- /.content -->
-      {!! $members->render() !!}
+    </div>
 </div>
 @endsection

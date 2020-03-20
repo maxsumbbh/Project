@@ -5,10 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
             <br><br>
+            <h3>| เพิ่ม ลบ แก้ไข ส่วนปีที่ศึกษา</h3>
+            <br>
             <?= link_to('admin/bstudentyear/create', $title = 'เพิ่มข้อมูลปีที่เข้าศึกษา', ['class' => 'btn btn-success btn-sm'], $secure = null); ?>
-            <hr>
+           <br><br>
+            
             <div class="card">
-
                 <div class="card-body">
                     <table class="table table-striped">
                         <tr>

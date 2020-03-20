@@ -26,7 +26,7 @@ class ActivitiesController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $activitiess = Activities::paginate(5);
+        $activitiess = Activities::paginate(10);
         return view('admin.activities.index',[
             'activitiess'=> $activitiess
         ]);

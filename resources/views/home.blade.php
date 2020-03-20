@@ -3,7 +3,7 @@
 <div class="content">
     <div class="row">
         <div class="col-lg-12">
-            ยินดีตอนรับ
+            <center><h1>ยินดีต้อนรับ</h1></center>
         </div>
     </div>
 </div>

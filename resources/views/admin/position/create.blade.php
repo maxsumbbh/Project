@@ -4,22 +4,17 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
-            <br><br>
-            @if (count($errors) > 0)
-            <div class="alert alert-warning">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
+        <div aligh="right">
+            <br>
+                <a href="{{ route('admin.bposition') }}" class="btn btn-default">กลับ</a>
             </div>
-             @endif
+            <br>
+
             <div class="card">
                 <div class="card-header">เพิ่มข้อมูลตำแหน่ง</div>
-
                 <div class="card-body">
                     {!! Form::open(array('url'=>'admin/bposition','files'=>true)) !!}
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <?= Form::label('name','ตำแหน่ง'); ?>
                             <?= Form::text('name', null,['class'=>'form-control','placeholder'=>'ระบุตำแหน่ง']); ?>
@@ -27,8 +22,8 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-md-10">
-                            <?= Form::submit('บันทึก',['class'=>'btn btn-primary']); ?>
+                        <div class="col-md-12">
+                            <?= Form::submit('บันทึก',['class'=>'btn btn-success']); ?>
                         </div>
                     </div>
                     {!! Form::close() !!}

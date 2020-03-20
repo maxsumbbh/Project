@@ -2,22 +2,17 @@
 
 @section('content')
 <div class="container">
-    @if ($message = Session::get('success'))
-    <div class="alert alert-success">
-        <p>{{ $message }}</p>
-    </div>
-    @endif
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
             <br><br>
-
+            <h3>| เพิ่ม ลบ แก้ไข ส่วนประชาสัมพันธ์</h3>
+            <br>
             <div aligh="right">
-                <a href="{{ route('admin.bnewsupdate.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลเกี่ยวกับเรา</a>
+                <a href="{{ route('admin.bnewsupdate.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลประชาสัมพันธ์</a>
             </div>
-
-            <hr>
+            <br>
+            
             <div class="card">
-
                 <div class="card-body">
                     <table class="table table-striped">
                         <tr>

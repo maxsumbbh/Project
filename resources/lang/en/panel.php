@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Approval Demo',
+    'site_title' => 'ระบบจัดการเว็บไซต์',
 ];
