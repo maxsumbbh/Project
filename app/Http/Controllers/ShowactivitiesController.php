@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Activities;
 use App\ActivitieImage;
+use App\Header;
 
 class ShowactivitiesController extends Controller
 {
@@ -18,9 +19,11 @@ class ShowactivitiesController extends Controller
         // $activities = Activities::paginate(9)->orderBy('updated_at','desc')->get();
         $activities = Activities::orderBy('updated_at','desc')->paginate(9);
         $activitiess = Activities::orderBy('updated_at','desc')->limit(3)->get();
+        $header = Header::all();
         return view('pages.activities',[
             'activities' => $activities,
             'activitiess' => $activitiess,
+            'headers' => $header,
 
            
         ]);
@@ -57,7 +60,13 @@ class ShowactivitiesController extends Controller
     {
         $activities = Activities::findOrFail($id);
         $activitieImage = ActivitieImage::select('activitie_id','image_path')->where('activitie_id', '=', $id)->get();
-        return view('pages.readactivitie', compact('activities','activitieImage'));
+        $header = Header::all();
+        return view('pages.readactivitie',[
+            'activities' => $activities,
+            'activitieImage' => $activitieImage,
+            'headers' => $header,
+
+        ]);
     }
 
     /**

@@ -11,7 +11,7 @@ class ShowheaderController extends Controller
     {
         $headers = Header::all();      
         return view('layouts.master',[
-            'headers' => $headers
+            'header' => $headers
            
         ]);
     }

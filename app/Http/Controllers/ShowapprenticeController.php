@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Apprentice;
-
+use App\Header;
 
 class ShowapprenticeController extends Controller
 {
@@ -16,8 +16,10 @@ class ShowapprenticeController extends Controller
     public function index()
     {
         $apprentice = Apprentice::paginate(9);
+        $header = Header::all();
         return view('pages.apprentice',[
-            'apprentices' => $apprentice
+            'apprentices' => $apprentice,
+            'headers' => $header,
         ]);
     }
 

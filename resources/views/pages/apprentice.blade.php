@@ -8,38 +8,36 @@
     <ol class="breadcrumb blue-grey lighten-4">
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
       <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <li class="breadcrumb-item active">ผลงานฝึกงาน</li>
+      <li class="breadcrumb-item active">ผลงานโครงงาน</li>
     </ol>
   </nav>
       </div>
       <div class="content0">  
-        <h3>| ผลงานฝึกงาน</h3>
+        <h3>| ผลงานโครงงาน</h3>
     <hr>
       <div class="row">
       <div class="leftcolumn"> 
-        @foreach($apprentices as $apprentice)
-        <div class="col-md-4">
-          <div class="card-wrapper">
-            <div class="thumbnail-container">
-              <a href="#">
-                <img src="{{ asset('images/'.$apprentice->image) }}" class="card-img-top">
+        <a href="apprenticeimg"><p>รูปภาพผลงานโครงงาน</p></a>
+        <table class="table table-striped">
+          <tr>
+              <th>&nbsp;</th>
+              <th>ชื่อผู้จัดทำ</th>
+              <th>รายละเอียด</th>
+              <th>ดาวน์โหลดไฟล์</th>
+          </tr>
+          @foreach($apprentices as $apprentice)
+          <tr>
+            <td><p class="fa fa-file-pdf-o fa-2x"></p></td>
+              <td>{{ $apprentice->name }}</td>
+              <td>{!! $apprentice->text !!}</td>
+              <td>
+              <a href="files/{{ $apprentice->file }}" download="{{ $apprentice->file }}">
+              <p>{{ $apprentice->file }}</p>
               </a>
-            </div>
-            <div class="card-desc-wrapper">
-              <div class="card-desc-container">
-                <div class="card-desc-cont">
-                    <div class="card-desc-header">{{ $apprentice->name }}</div>
-                    
-                    <c class="fa fa-print"></c>  <a href="files/{{ $apprentice->file }}" download="{{ $apprentice->file }}">
-                      {{ $apprentice->file }} </a>
-                      <div class="card-desc-desc"><p>{!! $apprentice->text !!}</p></div><br>
-                </div>
-                    <div class="card-desc-tag">สหกิจศึกษา</div>
-              </div>
-              </div>
-          </div>
-        </div>
-        @endforeach
+              </td>
+          </tr>
+          @endforeach
+      </table>
 </div>
 <div class="rightcolumn">
   <div class=" w3-margin">

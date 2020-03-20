@@ -25,11 +25,11 @@
   <div id="services" class="container text-center content ">
     <div class="row">
      <div class="col-sm-4 ">
-      <a href="newsupdate"><span class="fa fa-newspaper-o fa-2x"></span>
+      <a href="newsupdate"><span class="fa fa-bullhorn fa-2x"></span>
       <h5>ประชาสัมพันธ์</h5></a>
      </div>
      <div class="col-sm-4">
-      <a href="activities"><span class="fa fa-thumb-tack fa-2x"></span>
+      <a href="activities"><span class="fa fa-newspaper-o fa-2x"></span>
       <h5>กิจกรรม</h5></a>
     
      </div>
@@ -52,7 +52,7 @@
       
      </div>
      <div class="col-sm-4">
-      <a href="comment"><span class="fa fa-comments-o fa-2x"></span>
+      <a href="comment"><span class="fa fa-commenting-o fa-2x"></span>
       <h5>แสดงความคิดเห็น</h5></a>
       
      </div>

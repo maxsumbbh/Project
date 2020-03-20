@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Subgroup;
 use App\Subject;
+use App\Header;
 
 
 class ShowcategoryController extends Controller
@@ -15,17 +16,24 @@ class ShowcategoryController extends Controller
         $category = Category::all();
         $subgroup = Subgroup::all();
         $subject = Subject::all();
+        $header = Header::all();
         return view('pages.category',[
             'categorys' => $category,
             'subgroups'=> $subgroup,
             'subjects'=> $subject,
+            'headers' => $header,
         ]);
     }
 
     public function show($id) {
         $subgroup = Subgroup::findOrFail($id);
         $subjects = Subject::select('subcode','name','credit','text')->where('subgroup_id', '=', $id)->get();
-        return view('pages.subject', compact('subgroup','subjects'));
+        $header = Header::all();
+        return view('pages.subject',[
+            'subgroup' => $subgroup,
+            'subjects' => $subjects,
+            'headers' => $header,
+        ]);
     }
 
     public function showdetail($id) {

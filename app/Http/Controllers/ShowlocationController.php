@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Location;
+use App\Header;
 
 class ShowlocationController extends Controller
 {
@@ -11,9 +12,11 @@ class ShowlocationController extends Controller
     {
         $locations = Location::orderBy('updated_at','desc')->paginate(9);
         $locationss = Location::orderBy('updated_at','desc')->limit(3)->get();
+        $header = Header::all();
         return view('pages.location',[
             'locations' => $locations,
             'locationss' => $locationss,
+            'headers' => $header,
         ]);
     }
 
@@ -28,6 +31,10 @@ class ShowlocationController extends Controller
     {
         
         $location = Location::findOrFail($id);
-        return view('pages.readlocation', compact('location'));
+        $header = Header::all();
+        return view('pages.readlocation',[
+            'location' => $location,
+            'headers' => $header,
+        ]);
     }
 }

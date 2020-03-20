@@ -8,33 +8,40 @@
     <ol class="breadcrumb blue-grey lighten-4">
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
       <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <li class="breadcrumb-item active">แบบฟอร์มงานทะเบียน</li>
+      <li class="breadcrumb-item"><a class="black-text" href="{{ route('apprentice') }}">ผลงานโครงงาน</a>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      <li class="breadcrumb-item active">รูปผลงานโครงงาน</li>
     </ol>
   </nav>
       </div>
       <div class="content0">  
-        <h3>| แบบฟอร์มงานทะเบียน</h3>
-        <hr>
+        <h3>| รูปผลงานโครงงาน</h3>
+    <hr>
       <div class="row">
       <div class="leftcolumn"> 
-        <table class="table table-striped">
-          <tr>
-              <th>&nbsp;</th>
-              <th>ชื่อไฟล์</th>
-              <th>ดาวน์โหลดไฟล์</th>
-          </tr>
-          @foreach ($forms as $form)
-          <tr>
-            <td><p class="fa fa-file-pdf-o fa-2x"></p></td>
-              <td>{{ $form->name }}</td>
-              <td>
-              <a href="files/{{ $form->file }}" download="{{ $form->file }}">
-              <p>ดาวน์โหลดไฟล์</p>
+        @foreach($apprentices as $apprentice)
+        <div class="col-md-4">
+          <div class="card-wrapper">
+            <div class="thumbnail-container">
+              <a href="#">
+                <img src="{{ asset('images/'.$apprentice->image) }}" class="card-img-top">
               </a>
-              </td>
-          </tr>
-          @endforeach
-      </table>
+            </div>
+            <div class="card-desc-wrapper">
+              <div class="card-desc-container">
+                <div class="card-desc-cont">
+                    <div class="card-desc-header">{{ $apprentice->name }}</div>
+                    
+                    <c class="fa fa-print"></c>  <a href="files/{{ $apprentice->file }}" download="{{ $apprentice->file }}">
+                      {{ $apprentice->file }} </a>
+                      <div class="card-desc-desc"><p>{!! $apprentice->text !!}</p></div><br>
+                </div>
+                    <div class="card-desc-tag">ผลงานโครงงาน</div>
+              </div>
+              </div>
+          </div>
+        </div>
+        @endforeach
 </div>
 <div class="rightcolumn">
   <div class=" w3-margin">
@@ -85,20 +92,20 @@
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
-    {{-- @foreach ($awardss as $award)
+    @foreach ($apprentices as $apprentice)
     <ul class="w3-ul w3-hoverable w3-white">
       <li class="w3-padding-16">
-        <img src="{{ asset('images/'.$award->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
+        <img src="{{ asset('images/'.$apprentice->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
         <br><br><br><br>
-        <a href="{{ url('/award/show/'.$award->id)  }}"><p class="w3-large">{{ $award->title }}</p></a>
+        <a href="{{ url('/cooperative/show/'.$apprentice->id)  }}"><p class="w3-large">{{ $apprentice->title }}</p></a>
       </li>
     </ul>
-    @endforeach --}}
+    @endforeach
   </div>
   </div>
 
 </div>
-{!! $forms->render() !!}
+{!! $apprentices->render() !!}
     </div>
     </div>
 <script>

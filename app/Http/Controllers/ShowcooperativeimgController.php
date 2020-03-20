@@ -6,18 +6,17 @@ use Illuminate\Http\Request;
 use App\Cooperative;
 use App\Header;
 
-class ShowcooperativeController extends Controller
+class ShowcooperativeimgController extends Controller
 {
     public function index()
     {
-        $cooperative = Cooperative::paginate(9);
+        $cooperatives = Cooperative::paginate(9);
         $header = Header::all();
-        return view('pages.cooperative',[
-            'cooperatives' => $cooperative,
+        return view('pages.cooperativeimg',[
+            'cooperatives' => $cooperatives,
             'headers' => $header,
         ]);
     }
-
     public function __construct()
     {
         $this->middleware('auth');

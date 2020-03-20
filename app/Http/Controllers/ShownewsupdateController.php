@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Newsupdate;
+use App\Header;
 
 class ShownewsupdateController extends Controller
 {
@@ -11,9 +12,11 @@ class ShownewsupdateController extends Controller
     {
         $newsupdates = Newsupdate::orderBy('updated_at','desc')->paginate(9);
         $newsupdatess = Newsupdate::orderBy('updated_at','desc')->limit(3)->get();
+        $header = Header::all();
         return view('pages.newsupdate',[
             'newsupdates' => $newsupdates,
             'newsupdatess' => $newsupdatess,
+            'headers' => $header,
         ]);
     }
 
@@ -28,6 +31,11 @@ class ShownewsupdateController extends Controller
     {
         
         $newsupdate = Newsupdate::findOrFail($id);
-        return view('pages.readnewsupdate', compact('newsupdate'));
+        $header = Header::all();
+        return view('pages.readnewsupdate',[
+            'newsupdate' => $newsupdate,
+            'headers' => $header,
+
+        ]);
     }
 }

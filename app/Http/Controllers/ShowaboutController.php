@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Member;
 use App\About;
+use App\Header;
 
 class ShowaboutController extends Controller
 {
@@ -12,9 +13,11 @@ class ShowaboutController extends Controller
     {
         $about = About::all();
         $members = Member::all();
+        $header = Header::all();
         return view('pages.about',[
             'abouts' => $about,
-            'members'=> $members
+            'members'=> $members,
+            'headers' => $header,
         ]);
     }
 }

@@ -8,33 +8,27 @@
     <ol class="breadcrumb blue-grey lighten-4">
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
       <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <li class="breadcrumb-item active">แบบฟอร์มงานทะเบียน</li>
+      <li class="breadcrumb-item"><a class="black-text" href="{{ route('cooperative') }}">ผลงานสหกิจศึกษา</a>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      <li class="breadcrumb-item active">รูปผลงานสหกิจ</li>
     </ol>
   </nav>
       </div>
       <div class="content0">  
-        <h3>| แบบฟอร์มงานทะเบียน</h3>
-        <hr>
+        <h3>| รูปผลงานสหกิจ</h3>
+    <hr>
       <div class="row">
       <div class="leftcolumn"> 
-        <table class="table table-striped">
-          <tr>
-              <th>&nbsp;</th>
-              <th>ชื่อไฟล์</th>
-              <th>ดาวน์โหลดไฟล์</th>
-          </tr>
-          @foreach ($forms as $form)
-          <tr>
-            <td><p class="fa fa-file-pdf-o fa-2x"></p></td>
-              <td>{{ $form->name }}</td>
-              <td>
-              <a href="files/{{ $form->file }}" download="{{ $form->file }}">
-              <p>ดาวน์โหลดไฟล์</p>
-              </a>
-              </td>
-          </tr>
-          @endforeach
-      </table>
+        @foreach($cooperatives as $cooperative)
+            <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+        <a href="{{ asset('images/'.$cooperative->image)}}">
+          <img src="{{ URL::to('/') }}/images/{{ $cooperative->image }}"
+          style="width:100%" onclick="onClick(this)">
+    </div>
+  </div>   
+        @endforeach
 </div>
 <div class="rightcolumn">
   <div class=" w3-margin">
@@ -85,20 +79,20 @@
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
-    {{-- @foreach ($awardss as $award)
+    @foreach ($cooperatives as $cooperative)
     <ul class="w3-ul w3-hoverable w3-white">
       <li class="w3-padding-16">
-        <img src="{{ asset('images/'.$award->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
+        <img src="{{ asset('images/'.$cooperative->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
         <br><br><br><br>
-        <a href="{{ url('/award/show/'.$award->id)  }}"><p class="w3-large">{{ $award->title }}</p></a>
+        <a href="{{ url('/cooperative/show/'.$cooperative->id)  }}"><p class="w3-large">{{ $cooperative->title }}</p></a>
       </li>
     </ul>
-    @endforeach --}}
+    @endforeach
   </div>
   </div>
 
 </div>
-{!! $forms->render() !!}
+{!! $cooperatives->render() !!}
     </div>
     </div>
 <script>

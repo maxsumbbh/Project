@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Success;
+use App\Header;
 
 
 class ShowsuccessController extends Controller
@@ -16,10 +17,12 @@ class ShowsuccessController extends Controller
     public function index()
     {
         $success = Success::paginate(9);
+        $header = Header::all();
         $successs = Success::orderBy('updated_at','desc')->limit(3)->get();
         return view('pages.success',[
             'success' => $success,
             'successs' => $successs,
+            'headers' => $header,
         ]);
     }
 
@@ -53,7 +56,11 @@ class ShowsuccessController extends Controller
     public function show($id)
     {
         $success = Success::findOrFail($id);
-        return view('pages.readsuccess', compact('success'));
+        $header = Header::all();
+        return view('pages.readsuccess',[
+            'success' => $success,
+            'headers' => $header,
+        ]);
     }
 
     /**

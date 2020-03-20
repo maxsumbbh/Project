@@ -168,7 +168,7 @@
   
   #top-social-menu li a {
 	text-decoration: none;
-	color: #ffffff;
+	color: #000;
   }
   
   #top-social-menu li a:hover {
@@ -372,7 +372,7 @@
 		margin: auto;
 		background-color: #ffffff;
 		background-size: cover;
-		padding: 40px;
+		padding: 30px;
 		color:#000;
 	   
 	  }

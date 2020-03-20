@@ -14,32 +14,30 @@
       </div>
       <div class="content0">  
         <h3>| ผลงานสหกิจศึกษา</h3>
-    <hr>
+        <hr>
       <div class="row">
       <div class="leftcolumn"> 
-        @foreach($cooperatives as $cooperative)
-        <div class="col-md-4">
-          <div class="card-wrapper">
-            <div class="thumbnail-container">
-              <a href="#">
-                <img src="{{ asset('images/'.$cooperative->image) }}" class="card-img-top">
+        <a href="cooperativeimg"><p>รูปภาพผลงานสหกิจศึกษา</p></a>
+        <table class="table table-striped">
+          <tr>
+              <th>&nbsp;</th>
+              <th>ชื่อผู้จัดทำ</th>
+              <th>รายละเอียด</th>
+              <th>ดาวน์โหลดไฟล์</th>
+          </tr>
+          @foreach($cooperatives as $cooperative)
+          <tr>
+            <td><p class="fa fa-file-pdf-o fa-2x"></p></td>
+              <td>{{ $cooperative->name }}</td>
+              <td>{!! $cooperative->text !!}</td>
+              <td>
+              <a href="files/{{ $cooperative->file }}" download="{{ $cooperative->file }}">
+              <p>{{ $cooperative->file }}</p>
               </a>
-            </div>
-            <div class="card-desc-wrapper">
-              <div class="card-desc-container">
-                <div class="card-desc-cont">
-                    <div class="card-desc-header">{{ $cooperative->name }}</div>
-                    
-                    <c class="fa fa-print"></c>  <a href="files/{{ $cooperative->file }}" download="{{ $cooperative->file }}">
-                      {{ $cooperative->file }} </a>
-                      <div class="card-desc-desc"><p>{!! $cooperative->text !!}</p></div><br>
-                </div>
-                    <div class="card-desc-tag">สหกิจศึกษา</div>
-              </div>
-              </div>
-          </div>
-        </div>
-        @endforeach
+              </td>
+          </tr>
+          @endforeach
+      </table>
 </div>
 <div class="rightcolumn">
   <div class=" w3-margin">

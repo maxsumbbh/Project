@@ -17,22 +17,85 @@
         <hr>
       <div class="row">
       <div class="leftcolumn"> 
-        @foreach ($students as $student)
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-        <a href="{{ asset('images/'.$student->image)}}">
-                  <img src="{{ URL::to('/') }}/images/{{ $student->image }}"
-                  class="img-thumbnail" width="75" />  
-        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                  {{ $student->id }}
-                  {{ $student->name }}
-                  {{ $student->studentyear->name }}
-        </div>
-        </div>
-        </div>
-        </div>
-        @endforeach
+          <div class="col-lg-12">
+              <div class="panel panel-default">
+       
+                  <div class="panel-body">
+  
+                      <div class="table-responsive">
+                          <table class=" table table-bordered table-striped table-hover datatable datatable-User">
+                              <thead>
+                                  <tr>
+                                      <th width="10">
+  
+                                      </th>
+                                      <th>
+                                          {{ trans('รหัสนักศึกษา') }}
+                                      </th>
+                                      <th>
+                                          {{ trans('ชื่อ-นามสกุล') }}
+                                      </th>
+                                      <th>
+                                          {{ trans('ปีการศึกษา') }}
+                                      </th>
+                                      <th>
+                                          {{ trans('รูปภาพ') }}
+                                      </th>
+                                      <th>
+                                         
+                                      </th>
+                                      <th>
+                                      
+                                      </th>
+                                      <th>
+                                          &nbsp;
+                                      </th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  @foreach($students as $key => $student)
+                                      <tr data-entry-id="{{ $student->id }}">
+                                          <td>
+  
+                                          </td>
+                                          <td>
+                                              {{ $student->id }}
+                                          </td>
+                                          <td>
+                                              {{ $student->name }}
+                                          </td>
+                                          <td>
+                                              {{ $student->studentyear->name }}
+                                          </td>
+                                          <td>
+                                              <a href="{{ asset('images/'.$student->image)}}">
+                                                  <img src="{{ URL::to('/') }}/images/{{ $student->image }}"
+                                                  class="img-thumbnail" width="75" />  
+                                          </td>
+                                          <td>
+                                              
+                                          </td>
+                                          <td>
+                                         
+                                          </td>
+                                          <td>
+                                        
+  
+                                          </td>
+  
+                                      </tr>
+                                  @endforeach
+                              </tbody>
+                          </table>
+                      </div>
+  
+  
+                  </div>
+              </div>
+  
+          </div>
+      </div>
 </div>
 <div class="rightcolumn">
   <div class=" w3-margin">
@@ -106,5 +169,24 @@
     });
   });
 })();
+</script>
+@endsection
+@section('scripts')
+@parent
+<script>
+    $(function () {
+  let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
+
+  $.extend(true, $.fn.dataTable.defaults, {
+    order: [[ 1, 'desc' ]],
+    pageLength: 100,
+  });
+  $('.datatable-User:not(.ajaxTable)').DataTable({ buttons: dtButtons })
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e){
+        $($.fn.dataTable.tables(true)).DataTable()
+            .columns.adjust();
+    });
+})
+
 </script>
 @endsection

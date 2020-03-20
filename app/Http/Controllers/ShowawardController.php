@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Award;
+use App\Header;
 
 class ShowawardController extends Controller
 {
@@ -11,9 +12,11 @@ class ShowawardController extends Controller
     {
         $award = Award::paginate(9);
         $awardss = Award::orderBy('updated_at','desc')->limit(3)->get();
+        $header = Header::all();
         return view('pages.award',[
             'awards' => $award,
-            'awardss' => $awardss
+            'awardss' => $awardss,
+            'headers' => $header,
         ]);
     }
 
@@ -27,6 +30,10 @@ class ShowawardController extends Controller
     public function show($id)
     {
         $award = Award::findOrFail($id);
-        return view('pages.readaward', compact('award'));
+        $header = Header::all();
+        return view('pages.readaward',[
+            'award' => $award,
+            'headers' => $header,
+        ]);
     }
 }

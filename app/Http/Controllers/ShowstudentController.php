@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student;
-
+use Illuminate\Support\Facades\DB;
+use App\Header;
 
 class ShowstudentController extends Controller
 {
@@ -16,8 +17,10 @@ class ShowstudentController extends Controller
     public function index()
     {
         $student = Student::paginate(9);
+        $header = Header::all();
         return view('pages.student',[
-            'students' => $student
+            'students' => $student,
+            'headers' => $header,
         ]);
     }
 
@@ -35,6 +38,7 @@ class ShowstudentController extends Controller
     {
         //
     }
+
 
     /**
      * Store a newly created resource in storage.
