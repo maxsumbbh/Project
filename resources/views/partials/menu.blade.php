@@ -107,6 +107,17 @@
                             </a>
                         </li>
                         @endcan
+                        @can('user_access')
+                        <li class="{{ request()->is('bcomment') || request()->is('bcomment/*') ? 'active' : '' }}">
+                            <a href="bcomment">
+                                <i class="glyphicon glyphicon-credit-card">
+
+                                </i>
+                                <span>{{ trans('ความคิดเห็น') }}</span>
+                            </a>
+                        </li>
+                        @endcan
+                 
      
                 
                     </ul>
@@ -305,7 +316,7 @@
                 </li>
             @endcan
             <li>
-                <a href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                <a href="" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <i class="fas fa-fw fa-sign-out-alt">
 
                     </i>

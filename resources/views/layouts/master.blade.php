@@ -218,16 +218,16 @@
                 @can('user_access')        
                 <a class="dropdown-item" href="admin"><span class="fa fa-database "></span>&nbsp;{{ __('สำหรับผู้ดูแลระบบ') }}</a>
                 @endcan
-                  <a class="dropdown-item" href="{{ route('homee') }}"
-                     onclick="event.preventDefault();
-                                   document.getElementById('logout-form').submit();">
-                      <span class="fa fa-sign-out "></span>&nbsp;{{ __('ออกจากระบบ') }}
-                  </a>
+                <a class="dropdown-item" href="" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                  <i class="fas fa-fw fa-sign-out-alt">
 
-
-                  <form id="logout-form" action="{{ route('homee') }}" method="POST" style="display: none;">
-                      @csrf
-                  </form>
+                  </i>
+                  {{ trans('ออกจากระบบ') }}
+              </a>
+              
+        <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+          {{ csrf_field() }}
+      </form>
               </div>
           </li>
            

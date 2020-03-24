@@ -3,12 +3,12 @@ use App\Comment;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
- Route::get('/comment', function () {
-     $comments=Comment::where('approve','1')->get();
-    return view('page.comment')->with('comments',$comments); 
-});
 
-Route::post('/comment', 'ShowcommentController@store');
+
+Route::post('/comment', 'CommentsController@store');
+
+
+
 
 
 
@@ -51,15 +51,13 @@ Auth::routes();
 
 
 
-
-
-
 Route::post('/toggle-approve', 'CommentsController@approval');
 
 Route::get('/bcomment', function () {
     $comments=Comment::orderBy('created_at','desc')->get();
    return view('admin.comment.index')->with('comments',$comments); 
 });
+
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
@@ -97,7 +95,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('/blocation','LocationController')->name('index','blocation');
     Route::resource('/bstudent','StudentController')->name('index','bstudent');
     Route::resource('/bcoursegenaral','CoursegenaralController')->name('index','bcoursegenaral');
-    Route::resource('/bcomment','ShowcommentController')->name('index','bcomment');
+   
     
   
 

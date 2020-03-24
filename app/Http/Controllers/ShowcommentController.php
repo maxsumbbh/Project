@@ -15,10 +15,12 @@ class ShowcommentController extends Controller
     public function index()
     {
         $comment = Comment::paginate(9);
+        $comments=Comment::where('approve','1')->get();
         $header = Header::all();
         return view('pages.comment',[
             'comments' => $comment,
             'headers' => $header,
+            'comments' => $comments,
         ]);
     }
     public function store(Request $request)
@@ -33,7 +35,8 @@ class ShowcommentController extends Controller
     }
     public function approval(Request $request)
     {
-       
+        
+        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         $comment= Comment::find($request->commentId);
         $approveVal=$request->approve;
         if($approveVal=='on'){

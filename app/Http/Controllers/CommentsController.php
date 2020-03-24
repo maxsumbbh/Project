@@ -34,7 +34,7 @@ class CommentsController extends Controller
 
     public function approval(Request $request)
     {
-       
+        abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         $comment= Comment::find($request->commentId);
         $approveVal=$request->approve;
         if($approveVal=='on'){

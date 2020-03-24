@@ -7,33 +7,43 @@
         <p>{{ $message }}</p>
     </div>
     @endif
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Comments</th>
-                <th>Approval</th>
-            </tr>
-        </thead>
-        <tbody>
-            @forelse ($comments as $comment)
-            <tr>
-                <td>{{$comment->comment}}</td>
-                <td>
-                    <form action="{{url('/toggle-approve')}}" method="POST">
-                        {{csrf_field()}}
-                         
-                        <input <?php if($comment->approve == 1){echo "checked";}?> type="checkbox" name='approve'>
+ <div class="row justify-content-center">
+        <div class="col-md-10 col-md-offset-1">
+            <br><br>
+            <h3>| อนุมัติความคิดเห็น</h3>
+            <br>
+            <br>
 
-                    <input type="hidden" name="commentId" value="{{$comment->id}}">
-                        <input class="btn btn-primary" type="submit" value="Done">
-            
-                    </form>
-                </td>
-            </tr>         
-            @empty
-            <h4>No Data</h4>
-            @endforelse
-        </tbody>   
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>ความคิดเห็น</th>
+                            <th>อนุมัติ</th>
+                          
+                        </tr>
+                        @foreach ($comments as $comment)
+                        <tr>
+                            <td>{{ $comment->comment }}</td>
+                            <td>  <form action="{{url('/toggle-approve')}}" method="POST">
+                                {{csrf_field()}}
+                                 
+                                <input <?php if($comment->approve == 1){echo "checked";}?> type="checkbox" name='approve'>
+        
+                            <input type="hidden" name="commentId" value="{{$comment->id}}">
+                                <input class="btn btn-primary" type="submit" value="Done">
+                    
+                            </form></td>
+                        </tr>
+                     
+                        @endforeach
+                    </table>
+                    <br>
+                </div>
+            </div>
+            <br><br><br><br>
+        </div>
+    </div>
 
 </div>
 @endsection
