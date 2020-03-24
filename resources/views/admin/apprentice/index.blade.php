@@ -19,6 +19,7 @@
                             <th>ชื่อ</th>
                             <th>เนื้อหา</th>
                             <th>สถานที่</th>
+                            <th>ปีการศึกษา</th>
                             <th>รูปภาพ</th>
                             <th>ไฟล์</th>
                             <th>แก้ไข</th>
@@ -29,6 +30,7 @@
                             <td>{{ $apprentice->name }}</td>
                             <td>{!! $apprentice->text !!}</td>
                             <td>{!! $apprentice->location !!}</td>
+                            <td>{{ $apprentice->year }}</td>
                             <td>
                             <img src="{{ URL::to('/') }}/images/{{ $apprentice->image }}"
                             class="img-thumbnail" width="75" />

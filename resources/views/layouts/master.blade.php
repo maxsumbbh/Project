@@ -149,13 +149,12 @@
     <header>
 		<nav id="main-navbar" class="navbar navbar-toggleable-md fixed-top scrolling-navbar navbar-expand-lg ">
 			<div class="container navbar-container">
+      <button  type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="fa fa-navicon" style="color:#fff; font-size:28px;"></span>
+            </button>
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            
-          <span class="fa fa-navicon" style="color:#fff; font-size:28px;"></span>
-          </button>
           @foreach($headers as $header)
-          <a class="navbar-brand" href="home"> <img src="{{ asset('images/'.$header->image) }}" width="250px"></a>
+            <a class="navbar-brand" href="{{ route('homee') }}"> <img src="{{ asset('images/'.$header->image) }}" width="230px"></a>
           @endforeach
 				</div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -207,7 +206,7 @@
 				<div class="top-social">
 					<ul id="top-social-menu">
             @guest
-            <li><span class="	fa fa-sign-in fa-2x"></span>&nbsp;<a href="login">เข้าสู่ระบบ</a></li>
+            <li><span class="	fa fa-sign-in fa-2x"></span>&nbsp;<a href="{{ route('login') }}">เข้าสู่ระบบ</a></li>
         
             @else
             <li class="nav-item dropdown">
@@ -219,14 +218,14 @@
                 @can('user_access')        
                 <a class="dropdown-item" href="admin"><span class="fa fa-database "></span>&nbsp;{{ __('สำหรับผู้ดูแลระบบ') }}</a>
                 @endcan
-                  <a class="dropdown-item" href="{{ route('logout') }}"
+                  <a class="dropdown-item" href="{{ route('homee') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
                       <span class="fa fa-sign-out "></span>&nbsp;{{ __('ออกจากระบบ') }}
                   </a>
 
 
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  <form id="logout-form" action="{{ route('homee') }}" method="POST" style="display: none;">
                       @csrf
                   </form>
               </div>
@@ -281,7 +280,7 @@
 </footer>
 
 
-        <script>
+<script>
   $(document).ready(function() {
 
 $('.burger').click(function(){
@@ -289,14 +288,14 @@ $('.burger').click(function(){
 });
 
 $('nav ul li').click(function(){
-  $('nav ul li').removeClass('selected');
-  $('nav ul li').addClass('notselected');
-  $(this).toggleClass('selected');
-  $(this).removeClass('notselected');
+$('nav ul li').removeClass('selected');
+$('nav ul li').addClass('notselected');
+$(this).toggleClass('selected');
+$(this).removeClass('notselected');
 });
 
 });
-$(window).scroll(function () {
+*$(window).scroll(function () {
 	var sc = $(window).scrollTop()
 	if (sc > 150) {
 		$("#main-navbar").addClass("navbar-scroll")
@@ -306,6 +305,10 @@ $(window).scroll(function () {
 	}
 });
 
+window.onscroll = () => {
+  const nav = document.querySelector('#main-navbar');
+  if(this.scrollY <= 10) nav.className = '    '; else nav.className = 'navbar-scroll';
+};
 </script>
     </body>
 </html>

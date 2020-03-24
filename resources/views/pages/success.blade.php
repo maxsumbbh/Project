@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
       <br><br><br><br><br>
@@ -18,8 +18,8 @@
       <div class="row">
       <div class="leftcolumn"> 
       @foreach($success as $success)
-      <div class="wrapper1">
-        <div class="grid">
+      <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
+        <div class="success-responsive">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
               <img src="{{ asset('images/'.$success->image) }}" class="card-img-top">
@@ -99,7 +99,6 @@
   </div>
 
 </div>
-{!! $success->render() !!}
     </div>
     </div>
 <script>

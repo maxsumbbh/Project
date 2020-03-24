@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
       <br><br><br><br><br>
@@ -19,83 +19,39 @@
       <div class="leftcolumn"> 
         <a href="cooperativeimg"><p>รูปภาพผลงานสหกิจศึกษา</p></a>
         <div class="row">
-          <div class="col-lg-12">
               <div class="panel panel-default">
-       
                   <div class="panel-body">
-  
                       <div class="table-responsive">
-                          <table class=" table table-bordered table-striped table-hover datatable datatable-User">
+                          <table class="table table-bordered table-striped table-hover datatable datatable-User">
                               <thead>
                                   <tr>
-                                      <th width="10">
-  
-                                      </th>
-                                      <th>
-                                        
-                                      </th>
-                                      <th>
-                                        {{ trans('ชื่อผู้จัดทำ') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('รายละเอียด') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('สถานที่ประกอบการ') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('ปีการศึกษา') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('ดาวน์โหลดไฟล์') }}
-                                      </th>
-                                      <th>
-                                     
-                                          &nbsp;
-                                      </th>
+                                      <th></th>
+                                      <th>{{ trans('ชื่อผู้จัดทำ') }}</th>
+                                      <th>{{ trans('รายละเอียด') }}</th>
+                                      <th>{{ trans('สถานที่ประกอบการ') }}</th>
+                                      <th>{{ trans('ปีการศึกษา') }}</th>
+                                      <th>{{ trans('ดาวน์โหลดไฟล์') }}</th>
+                                      <th>&nbsp;</th>
                                   </tr>
                               </thead>
                               <tbody>
-                                  @foreach($cooperatives as $key => $cooperative)
-                                      <tr data-entry-id="{{ $cooperative->id }}">
-                                          <td>
-  
-                                          </td>
-                                          <td>
-                                            <p class="fa fa-file-pdf-o fa-2x"></p>
-                                          </td>
-                                          <td>
-                                            {{ $cooperative->name }}
-                                          </td>
-                                          <td>
-                                            {!! $cooperative->text !!}
-                                          </td>
-                                          <td>
-                                            {!! $cooperative->location !!}
-                                          </td>
-                                          <td>
-                                         
-                                          </td>
-                                          <td>
-                                            <a href="files/{{ $cooperative->file }}" download="{{ $cooperative->file }}">
-                                              <p>{{ $cooperative->file }}</p>
-                                          </td>
-                                          <td>
-                                        
-  
-                                          </td>
-  
+                                  @foreach($cooperatives as $key => $cooperative)     
+                                      <tr data-entry-id="{{ $cooperative->id }}">                
+                                          <td><p class="fa fa-file-pdf-o fa-2x"></p></td>
+                                          <td>{{ $cooperative->name }}</td>
+                                          <td>{!! $cooperative->text !!}</td>
+                                          <td>{!! $cooperative->location !!}</td>
+                                          <td>{{ $cooperative->year }}</td>
+                                          <td><a href="files/{{ $cooperative->file }}" download="{{ $cooperative->file }}">
+                                              <p>{{ $cooperative->file }}</p></td>
+                                          <td></td>
                                       </tr>
                                   @endforeach
                               </tbody>
                           </table>
                       </div>
-  
-  
                   </div>
-              </div>
-  
-          </div>
+             </div>
       </div>
 </div>
 <div class="rightcolumn">
@@ -189,6 +145,10 @@
     });
 })
 
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
 </script>
+
 @endsection
 

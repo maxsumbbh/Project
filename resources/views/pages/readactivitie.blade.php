@@ -1,6 +1,5 @@
-
 @extends('layouts.master')
-
+@extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
       <br><br><br><br><br>

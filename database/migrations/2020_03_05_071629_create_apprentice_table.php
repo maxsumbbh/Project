@@ -18,6 +18,7 @@ class CreateApprenticeTable extends Migration
             $table->string('name',50);
             $table->text('text');
             $table->text('location');
+            $table->string('year');
             $table->string('image');
             $table->string('file');
             $table->timestamps();

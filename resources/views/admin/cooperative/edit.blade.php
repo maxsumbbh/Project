@@ -42,6 +42,14 @@
                         </div>
                         <br>
                         <div class="form-group">
+                            <label class="col-md-12 text-left">ปีการศึกษา</label>
+                            <div class="col-md-4">
+                                <input type="year" name="name" value="{{ $cooperatives->year }}" class="form-control input-lg"/>
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
                             <label class="col-md-12 text-left">เลือกรูปภาพ</label>
                             <div class="col-md-8">
                                 <input type="file" name="image" />

@@ -1,9 +1,10 @@
 @extends('layouts.master')
-
+@extends('layouts.inc_navbar')
 @section('content')
 <div class="body">
+  <div class="container" >
   <br><br><br><br><br>
-  <div class="fakeimg" style="height:100%;"></div>
+  <div class="fakeimg" style="height:2.5%;"></div>
   <div id="carouselExampleControls" id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         @foreach ($slideshows as $slideshow)
@@ -21,38 +22,38 @@
       <span class="sr-only">Next</span>
     </a>
   </div>  
-<div class="content">
+  <div class="content">
   <div id="services" class="container text-center content ">
     <div class="row">
-     <div class="col-sm-4 ">
-      <a href="newsupdate"><span class="fa fa-bullhorn fa-2x"></span>
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+      <a href="newsupdate"><span class="fa fa-newspaper-o fa-2x"></span>
       <h5>ประชาสัมพันธ์</h5></a>
      </div>
-     <div class="col-sm-4">
-      <a href="activities"><span class="fa fa-newspaper-o fa-2x"></span>
+     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+      <a href="activities"><span class="fa fa-thumb-tack fa-2x"></span>
       <h5>กิจกรรม</h5></a>
     
      </div>
-     <div class="col-sm-4">
+     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
       <a href="coursegenaral"><span class="fa fa-graduation-cap	 fa-2x"></span>
       <h5>หลักสูตรทั่วไป</h5></a>
  
      </div>
     </div>
-    <br><br>
+    <br>
     <div class="row slideanim">
-     <div class="col-sm-4">
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
       <a href="form"><span class="fa fa-file-o fa-2x"></span>
       <h5>แบบฟอร์ม</h5></a>
      
      </div>
-     <div class="col-sm-4">
+     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
       <a href="tact"><span class="fa fa-comments-o fa-2x"></span>
       <h5>ติดต่อเรา</h5></a>
       
      </div>
-     <div class="col-sm-4">
-      <a href="comment"><span class="fa fa-commenting-o fa-2x"></span>
+     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
+      <a href="comment"><span class="fa fa-comments-o fa-2x"></span>
       <h5>แสดงความคิดเห็น</h5></a>
       
      </div>
@@ -61,14 +62,16 @@
    <!-- Contact Section -->
 </div>
 <div class="content1">
-  <div class="r1"><h3>| ประชาสัมพันธ์</h3></div>
+  <div class=""><h3>| ประชาสัมพันธ์</h3></div>
   <br>
   <div class="row">
     @foreach ($newsupdatess as $newsupdate)
-    <div class="">
+    <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
+    <!-- <div class=""> -->
+      <div class="newsupdate-responsive">
       <div class="card-wrapper">
         <div class="thumbnail-container">
-          <a href="#">
+          <a href="">
             <img src="{{ asset('images/'.$newsupdate->image) }}" width="100%">
           </a>
         </div>
@@ -82,30 +85,36 @@
           </div>
           </div>
       </div>
-    </div>
+      </div>
+      </div>
+    <!-- </div> -->
     @endforeach
 </div>
 </div>
 <div class="content2">
-  <div class="r1"><h3>| เกี่ยวกับสาขา</h3></div>
+  <div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+  <div class=""><h3>| เกี่ยวกับสาขา</h3></div>
   <br>
-  <div class="s1">
+  <div class="">
     @foreach ($abouts as $about)
   <div class="indent2">
       <p>{!! $about->text !!}</p>  
+  </div>
   </div>
   @endforeach
   </div>
 </div>
 <div class="content1">
-  <div class="r1"><h3>| กิจกรรม</h3></div>
+  <div class=""><h3>| กิจกรรม</h3></div>
   <br>
   <div class="row">
     @foreach ($activities as $activitie)
-    <div class="">
+    <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
+    <div class="activities-responsive">
       <div class="card-wrapper">
         <div class="thumbnail-container">
-          <a href="#">
+          <a href="">
             <img src="{{ asset('images/'.$activitie->image) }}" width="100%">
           </a>
         </div>
@@ -120,6 +129,7 @@
           </div>
       </div>
     </div>
+  </div>
     @endforeach
 </div>
 </div>
@@ -169,7 +179,7 @@ document.getElementById("defaultOpen").click();
 </script>
 
 
-
+</div>
 </div>
 
 

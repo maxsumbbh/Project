@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
       <br><br><br><br><br>
@@ -20,7 +20,7 @@
         @foreach ($members as $member)   
     <!-- <div class="projectsChild"> -->
             <!-- <div class="projectsGrandchild"> -->
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
                       <img class="" src="{{ asset('images/'.$member->image) }}">
@@ -28,10 +28,12 @@
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8"><br><p>{{ $member->name }}</p>
                       <p><b>{{ $member->position->name }}</b></p>
                       <p>Tel : {{ $member->tel }}</p>
-                      <p>Email : {{ $member->email }}</p><hr width="100%  size="20" color="#f77f3b">
+                      <p>Email : {{ $member->email }}</p><hr width="100%"  size="20" color="#f77f3b">
                     </div>        
-                  </div>          
+                  </div> 
+                  <br>           
                 </div>
+               
                 <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   
                 </div> -->

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
       <br><br><br><br><br>
@@ -16,11 +16,12 @@
         <h3>| หลักสูตรเทคโนโลยีสารสนเทศ-การพัฒนาซอฟต์แวร์</h3>
         <hr>
       <div class="row">
+      <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
       <div class="leftcolumn"> 
-
         @foreach ($bitcourses as $bitcourse)
-        <p>{!! $bitcourse->text !!}</p>  <hr width="65%  size="20" color="#f77f3b">
+        <p>{!! $bitcourse->text !!}</p><hr width="100%"  size="20" color="#f77f3b">
     @endforeach
+    </div>
 </div>
 <div class="rightcolumn">
   <div class=" w3-margin">

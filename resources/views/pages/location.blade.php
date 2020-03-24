@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
       <br><br><br><br><br>
@@ -8,18 +8,18 @@
     <ol class="breadcrumb blue-grey lighten-4">
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
       <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <li class="breadcrumb-item active">สถานที่ศึกษานอกพื้นที่</li>
+      <li class="breadcrumb-item active">สถานประกอบการ</li>
     </ol>
   </nav>
       </div>
       <div class="content0">  
-        <h3>สถานที่ศึกษานอกพื้นที่</h3>
+        <h3>สถานประกอบการ</h3>
     <hr>
       <div class="row">
       <div class="leftcolumn"> 
       @foreach($locations as $location)
-      <div class="wrapper1">
-        <div class="grid">
+      <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
+       <div class="location-responsive">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
               <img src="{{ asset('images/'.$location->image) }}" class="card-img-top">
@@ -28,7 +28,7 @@
                   <div class="card-desc-cont">
                     <div class="card-desc-desc appp"><a href="{{ url('/location/show/'.$location->id)  }}"><p>{!! $location->title !!}</p></a></div>
                   </div>
-                      <div class="card-desc-tag1">สถานที่ศึกษานอกพื้นที่</div>
+                      <div class="card-desc-tag1">สถานประกอบการ</div>
                 </div>
                 </div>
             </div>

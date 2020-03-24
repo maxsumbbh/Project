@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
       <br><br><br><br><br>
@@ -32,7 +32,6 @@
                 @endforeach
         
         @endforeach
-
 </div>
 <div class="rightcolumn">
   <div class=" w3-margin">

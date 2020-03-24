@@ -33,7 +33,7 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <label class="col-md-12 text-left">รุ่น</label>
+                            <label class="col-md-12 text-left">ปีที่เข้าศึกษา</label>
                             <div class="col-md-4">
                             <select class="form-control" name="studentyear_id">
                                 @foreach ($studentyears as $studentyear)

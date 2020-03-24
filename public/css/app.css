@@ -19,7 +19,7 @@
   
   
   .carousel-inner {
-    height: 100%;
+
     background: #eeeeee;
     
   }
@@ -822,27 +822,27 @@
   
   .card-wrapper {
     background: #fff;
-    height: 450px;
-    width: 350px;
+    height: 350px;
+    width: 250px;
     overflow: hidden;
     border-radius: 2px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     transition: all .2s ease-in;
-    position: relative;
-    left: 180px;
+    position: relative ;
   }
+
   .card-wrapperr {
     background: #fff;
-    height: 320px;
-    width: 240px;
+    height: 300px;
+    width: 220px;
     overflow: hidden;
     border-radius: 2px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     transition: all .2s ease-in;
-    position: relative;
+    position: relative ;
   }
 .r1{
-  margin-left: 195px;
+  margin-left: 50px;
 }
 .s1{
   margin-left: 195px;
@@ -1238,3 +1238,71 @@
 	 margin-bottom: 30px;
 }
  
+
+
+
+@media only screen and (max-width: 988px) {
+#main-navbar{
+  display: none!important;
+} 
+
+/* .navbarMobile{
+  display: block!important;
+} */
+}
+@media only screen and (min-width: 320px) {
+  .award-responsive{
+    margin-left: 60px;
+    padding-bottom: 20px;
+  }
+  .success-responsive{
+    margin-left: 60px;
+    padding-bottom: 20px;
+  }
+  .location-responsive{
+    margin-left: 60px;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+    .newsupdate-responsive {
+      margin-left: -40px ;
+    }
+    .activities-responsive{
+      margin-left: -40px ;
+    }
+    .award-responsive{
+      margin-left: 30px;
+      padding-bottom: 20px;
+    }
+    .success-responsive{
+      margin-left: 30px;
+      padding-bottom: 20px;
+    }
+    .location-responsive{
+      margin-left: 30px;
+      padding-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  .newsupdate-responsive {
+    padding-right: 40px ;
+  }
+  .activities-responsive{
+    padding-right: 40px ;
+  }
+  .award-responsive{
+    margin-left: 50px;
+    padding-bottom: 20px;
+  }
+  .success-responsive{
+    margin-left: 50px;
+    padding-bottom: 20px;
+  }
+  .location-responsive{
+    margin-left: 50px;
+    padding-bottom: 20px;
+  }
+}

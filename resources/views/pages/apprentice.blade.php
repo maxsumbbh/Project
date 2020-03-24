@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
       <br><br><br><br><br>
@@ -19,83 +19,39 @@
       <div class="leftcolumn"> 
         <a href="apprenticeimg"><p>รูปภาพผลงานโครงงาน</p></a>
         <div class="row">
-          <div class="col-lg-12">
               <div class="panel panel-default">
-       
                   <div class="panel-body">
-  
                       <div class="table-responsive">
                           <table class=" table table-bordered table-striped table-hover datatable datatable-User">
                               <thead>
                                   <tr>
-                                      <th width="10">
-  
-                                      </th>
-                                      <th>
-                                        
-                                      </th>
-                                      <th>
-                                        {{ trans('ชื่อผู้จัดทำ') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('รายละเอียด') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('สถานที่ประกอบการ') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('ปีการศึกษา') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('ดาวน์โหลดไฟล์') }}
-                                      </th>
-                                      <th>
-                                     
-                                          &nbsp;
-                                      </th>
+                                      <th></th>
+                                      <th>{{ trans('ชื่อผู้จัดทำ') }}</th>
+                                      <th>{{ trans('รายละเอียด') }}</th>
+                                      <th>{{ trans('สถานที่ประกอบการ') }}</th>
+                                      <th>{{ trans('ปีการศึกษา') }}</th> 
+                                      <th>{{ trans('ดาวน์โหลดไฟล์') }}</th>
+                                      <th>&nbsp;</th>
                                   </tr>
                               </thead>
                               <tbody>
                                   @foreach($apprentices as $key => $apprentice)
                                       <tr data-entry-id="{{ $apprentice->id }}">
-                                          <td>
-  
-                                          </td>
-                                          <td>
-                                            <p class="fa fa-file-pdf-o fa-2x"></p>
-                                          </td>
-                                          <td>
-                                            {{ $apprentice->name }}
-                                          </td>
-                                          <td>
-                                            {!! $apprentice->text !!}
-                                          </td>
-                                          <td>
-                                            {!! $apprentice->location !!}
-                                          </td>
-                                          <td>
-                                         
-                                          </td>
-                                          <td>
-                                            <a href="files/{{ $apprentice->file }}" download="{{ $apprentice->file }}">
-                                              <p>{{ $apprentice->file }}</p>
-                                          </td>
-                                          <td>
-                                        
-  
-                                          </td>
-  
+                                          <td><p class="fa fa-file-pdf-o fa-2x"></p></td>
+                                          <td>{{ $apprentice->name }}</td>
+                                          <td>{!! $apprentice->text !!}</td>
+                                          <td>{!! $apprentice->location !!}</td>
+                                          <td>{{ $apprentice->year }}</td>
+                                          <td><a href="files/{{ $apprentice->file }}" download="{{ $apprentice->file }}">
+                                              <p>{{ $apprentice->file }}</p></td>
+                                          <td></td>
                                       </tr>
                                   @endforeach
                               </tbody>
                           </table>
                       </div>
-  
-  
                   </div>
               </div>
-  
-          </div>
       </div>
 </div>
 <div class="rightcolumn">

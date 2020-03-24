@@ -18,6 +18,7 @@ class CreateCooperativeTable extends Migration
             $table->string('name');
             $table->text('text');
             $table->text('location');
+            $table->string('year');
             $table->string('image');
             $table->string('file');
             $table->timestamps();

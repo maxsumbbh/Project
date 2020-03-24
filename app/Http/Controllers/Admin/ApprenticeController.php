@@ -57,6 +57,7 @@ class ApprenticeController extends Controller
             'name' => 'required',
             'text' => 'required',
             'location' => 'required',
+            'year' => 'required',
             'image' => 'required|image|max:2048',
             'file' => 'required|mimes:doc,docx,pdf,xls'
         ]);
@@ -75,6 +76,7 @@ class ApprenticeController extends Controller
             'name' => $request->name,
             'text' => $request->text,
             'location' => $request->location,
+            'year' => $request->year,
             'image' => $new_name,
             'file' => $fileName
         );
@@ -129,7 +131,8 @@ class ApprenticeController extends Controller
                 'name' => 'required',
                 'text' => 'required',
                 'location' => 'required',
-                'image' => 'required|mimes:jpeg,jpg,png',
+                'year' => 'required',
+                'image' => 'required|mimes:jpeg,jpg,png'
             ]);
 
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
@@ -141,6 +144,7 @@ class ApprenticeController extends Controller
                 'name' => 'required',
                 'text' => 'required',
                 'location' => 'required',
+                'year' => 'required',
                 'file' => 'required|mimes:doc,docx,pdf,xls'
             ]);
 
@@ -153,6 +157,7 @@ class ApprenticeController extends Controller
                 'name' => 'required',
                 'text' => 'required',
                 'location' => 'required',
+                'year' => 'required'
             ]);
         }
 
@@ -160,6 +165,7 @@ class ApprenticeController extends Controller
             'name' => $request->name,
             'text' => $request->text,
             'location' => $request->location,
+            'year' => $request->year,
             'image' => $image_name,
             'file' => $fileName
         );

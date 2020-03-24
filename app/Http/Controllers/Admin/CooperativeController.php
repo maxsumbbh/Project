@@ -56,6 +56,7 @@ class CooperativeController extends Controller
             'name' => 'required',
             'text' => 'required',
             'location' => 'required',
+            'year' => 'required',
             'image' => 'required|mimes:jpeg,jpg,png',
             'file' => 'required|mimes:doc,docx,pdf,xls'
         ]);
@@ -74,6 +75,7 @@ class CooperativeController extends Controller
             'name' => $request->name,
             'text' => $request->text,
             'location' => $request->location,
+            'year' => $request->year,
             'image' => $new_name,
             'file' => $fileName
         );
@@ -128,7 +130,8 @@ class CooperativeController extends Controller
                 'name' => 'required',
                 'text' => 'required',
                 'location' => 'required',
-                'image' => 'required|mimes:jpeg,jpg,png',
+                'year' => 'required',
+                'image' => 'required|mimes:jpeg,jpg,png'
             ]);
 
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
@@ -140,6 +143,7 @@ class CooperativeController extends Controller
                 'name' => 'required',
                 'text' => 'required',
                 'location' => 'required',
+                'year' => 'required',
                 'file' => 'required|mimes:doc,docx,pdf,xls'
             ]);
 
@@ -151,7 +155,8 @@ class CooperativeController extends Controller
             $request->validate([
                 'name' => 'required',
                 'text' => 'required',
-                'location' => 'required'
+                'location' => 'required',
+                'year' => 'required'
             ]);
         }
 
@@ -160,6 +165,7 @@ class CooperativeController extends Controller
             'text' => $request->text,
             'image' => $image_name,
             'location' => $request->location,
+            'year' => $request->year,
             'file' => $fileName
         );
 
