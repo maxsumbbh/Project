@@ -71,7 +71,7 @@
       <div class="newsupdate-responsive">
       <div class="card-wrapper">
         <div class="thumbnail-container">
-          <a href="">
+          <a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}">
             <img src="{{ asset('images/'.$newsupdate->image) }}" width="100%">
           </a>
         </div>
@@ -79,7 +79,7 @@
           <div class="card-desc-container">
             <div class="card-desc-cont">
                 <div class="card-desc-header"><a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}">{{ $newsupdate->title }}</a></div>
-                <div class="card-desc-desc app"><p>{{ $newsupdate->content }}</p></div>
+                <div class="card-desc-desc app"><h6>{!! $newsupdate->content !!}</h6></div>
             </div>
                 <div class="card-desc-tag">ประชาสัมพันธ์</div>
           </div>
@@ -114,7 +114,7 @@
     <div class="activities-responsive">
       <div class="card-wrapper">
         <div class="thumbnail-container">
-          <a href="">
+          <a href="{{ url('/newsupdate/show/'.$activitie->id)  }}">
             <img src="{{ asset('images/'.$activitie->image) }}" width="100%">
           </a>
         </div>

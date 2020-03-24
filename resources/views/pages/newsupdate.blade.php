@@ -22,7 +22,7 @@
         <div class="grid">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
-              <img src="{{ asset('images/'.$newsupdate->image) }}" class="card-img-top">
+              <a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}"><img src="{{ asset('images/'.$newsupdate->image) }}" class="card-img-top"></a>
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">
@@ -60,7 +60,7 @@
   </ul>
 </div>
 <br>
-  <div class=" w3-margin">
+<div class=" w3-margin">
   <div class="w3-container w3-padding w3">
     <h5>ข่าวสาร</h5>
   </div>

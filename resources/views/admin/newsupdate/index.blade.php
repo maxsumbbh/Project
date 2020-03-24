@@ -26,7 +26,7 @@
                         @foreach ($newsupdates as $newsupdate)
                         <tr>
                             <td>{{ $newsupdate->title }}</td>
-                            <td>{{ $newsupdate->content }}</td>
+                            <td>{!! $newsupdate->content !!}</td>
                             <td>{{ $newsupdate->date }}</td>
                             <td>
                             <img src="{{ URL::to('/') }}/images/{{ $newsupdate->image }}"

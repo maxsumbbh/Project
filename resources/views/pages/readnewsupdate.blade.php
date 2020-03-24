@@ -22,7 +22,7 @@
           <img src="{{ URL::to('/') }}/images/{{ $newsupdate->image }}" class="img-thumbnail" />
           <br><br>
           <p>{{ $newsupdate->title }}</p><br>
-          <h6>{{ $newsupdate->content }}</h6>
+          <h6>{!! $newsupdate->content !!}</h6>
           </div>
     </div>
     <div class="rightcolumn">

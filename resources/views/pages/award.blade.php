@@ -22,7 +22,7 @@
         <div class="award-responsive">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
-              <img src="{{ asset('images/'.$award->image) }}" class="card-img-top">
+              <a href="{{ url('/award/show/'.$award->id)  }}"><img src="{{ asset('images/'.$award->image) }}" class="card-img-top"></a>
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">

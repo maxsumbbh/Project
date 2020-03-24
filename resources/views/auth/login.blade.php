@@ -8,7 +8,7 @@
     </div>
     <div class="login-box-body">
         <p class="login-box-msg">
-            {{ trans('global.login') }}
+            {{ trans('กรุณาเข้าสู่ระบบ') }}
         </p>
         @if(session()->has('message'))
             <p class="alert alert-info">
@@ -41,15 +41,15 @@
                 </div>
                 <div class="col-xs-4">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">
-                        {{ trans('global.login') }}
+                        {{ trans('เข้าสู่ระบบ') }}
                     </button>
                 </div>
             </div>
         </form>
         <a href="{{ route('password.request') }}">
-            {{ trans('global.forgot_password') }}
+            {{ trans('ลืมรหัสผ่าน') }}
         </a>
-        <br><a href="{{ route('register') }}">{{ trans('global.register') }}</a>
+        <br><a href="{{ route('register') }}">{{ trans('สมัครสมาชิกคณาจารย์/นักศึกษา') }}</a>
 
     </div>
 </div>

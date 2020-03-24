@@ -5,10 +5,10 @@ use Illuminate\Support\Facades\Auth;
 
  Route::get('/comment', function () {
      $comments=Comment::where('approve','1')->get();
-    return view('front')->with('comments',$comments); 
+    return view('page.comment')->with('comments',$comments); 
 });
 
-Route::post('/comment', 'CommentsController@store');
+Route::post('/comment', 'ShowcommentController@store');
 
 
 
@@ -43,6 +43,7 @@ Route::get('/bitcourse','ShowbitcourseController@index')->name('bitcourse');
 Route::get('/mitcourse','ShowmitcourseController@index')->name('mitcourse');
 Route::get('/award/show/{id}','ShowawardController@show');
 Route::get('/coursegenaral','ShowcoursegenaralController@index')->name('coursegenaral');
+Route::get('/comment','ShowcommentController@index')->name('comment');
 
 Route::redirect('/home', '/homee');
 Route::redirect('/', '/login');
@@ -57,7 +58,7 @@ Route::post('/toggle-approve', 'CommentsController@approval');
 
 Route::get('/bcomment', function () {
     $comments=Comment::orderBy('created_at','desc')->get();
-   return view('dashboard')->with('comments',$comments); 
+   return view('admin.comment.index')->with('comments',$comments); 
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
@@ -96,6 +97,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('/blocation','LocationController')->name('index','blocation');
     Route::resource('/bstudent','StudentController')->name('index','bstudent');
     Route::resource('/bcoursegenaral','CoursegenaralController')->name('index','bcoursegenaral');
+    Route::resource('/bcomment','ShowcommentController')->name('index','bcomment');
     
   
 

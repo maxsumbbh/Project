@@ -3,24 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Comment;
 use App\Http\Requests\CommentRequest;
 use Gate;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Controllers\Controller;
 use App\Header;
+use App\Comment;
 
-
-class CommentsController extends Controller
+class ShowcommentController extends Controller
 {
-
- 
-   /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
+    public function index()
+    {
+        $comment = Comment::paginate(9);
+        $header = Header::all();
+        return view('pages.comment',[
+            'comments' => $comment,
+            'headers' => $header,
+        ]);
+    }
     public function store(Request $request)
     {
         $header = Header::all();
@@ -31,7 +31,6 @@ class CommentsController extends Controller
 
         return redirect('/comment')->with('success', 'เพิ่มข้อมูลเกี่ยวกับเราสำเร็จ');    
     }
-
     public function approval(Request $request)
     {
        
@@ -46,9 +45,6 @@ class CommentsController extends Controller
         $comment->approve=$approveVal;
         $comment->save();
 
-        return back();
+        return view('admin.comment.index');
     }
-
-
-
 }

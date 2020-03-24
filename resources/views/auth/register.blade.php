@@ -3,18 +3,18 @@
 <div class="login-box">
     <div class="login-logo">
         <a href="#">
-            {{ trans('panel.site_title') }}
+            {{ trans('สมัครสมาชิก') }}
         </a>
     </div>
     <div class="login-box-body">
         <p class="login-box-msg">
-            {{ trans('global.register') }}
+            {{ trans('สมัครสมาชิก') }}
         </p>
         <form method="POST" action="{{ route('register') }}">
             {{ csrf_field() }}
             <div>
                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                    <input type="text" name="name" class="form-control" required autofocus placeholder="{{ trans('global.user_name') }}" value="{{ old('name', null) }}">
+                    <input type="text" name="name" class="form-control" required autofocus placeholder="{{ trans('รหัสประจำตัว') }}" value="{{ old('name', null) }}">
                     @if($errors->has('name'))
                         <p class="help-block">
                             {{ $errors->first('name') }}
@@ -44,9 +44,9 @@
                     <div class="col-xs-8">
 
                     </div>
-                    <div class="col-xs-4">
+                    <div class="col-xs-5">
                         <button type="submit" class="btn btn-primary btn-block btn-flat">
-                            {{ trans('global.register') }}
+                            {{ trans('สมัครสมาชิก') }}
                         </button>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@extends('layouts.inc_navbar')
+
     @section('content')
     <div class="body">
       <br><br><br><br><br>
@@ -8,34 +8,41 @@
     <ol class="breadcrumb blue-grey lighten-4">
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
       <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <li class="breadcrumb-item active">กิจกรรม</li>
+      <li class="breadcrumb-item active">หลักสูตรเทคโนโลยีสารสนเทศ-การพัฒนาซอฟต์แวร์</li>
     </ol>
   </nav>
       </div>
       <div class="content0">  
-        <h3>กิจกรรม</h3>
-    <hr>
+        <h3>| หลักสูตรเทคโนโลยีสารสนเทศ-การพัฒนาซอฟต์แวร์</h3>
+        <hr>
       <div class="row">
       <div class="leftcolumn"> 
-      @foreach($activities as $activitie)
-      <div class="wrapper1">
-        <div class="grid">
-          <div class="card-wrapperr">
-            <div class="thumbnail-container">
-              <a href="{{ url('/activities/show/'.$activitie->id)  }}"><img src="{{ asset('images/'.$activitie->image) }}" class="card-img-top"></a>
-              <div class="card-desc-wrapper">
-                <div class="card-desc-container">
-                  <div class="card-desc-cont">
-                    <div class="card-desc-desc appp"><a href="{{ url('/activities/show/'.$activitie->id)  }}"><p>{!! $activitie->title !!}</p></a></div>
-                  </div>
-                      <div class="card-desc-tag1">กิจกรรม</div>
-                </div>
+
+        <h5>List of Comments</h5>
+        <hr>
+        <ol>
+        @forelse ($comments as $comment)
+            <li class="lead"><p>{{$comment->comment}}</p></li>
+        @empty
+            <h4>No Comments</h4>
+        @endforelse
+        </ol>
+       <br>
+        <section>
+            <div class="container">
+                <div class="container-content">
+                    <div class="container-header">
+                        <h5 class="container-header-text">กล่องแสดงความคิดเห็น</h5>
+                    </div>
+                    <form action="{{url('/comment')}}" method="POST">
+                        {{csrf_field()}}
+                        <br><br><br>
+                        <textarea placeholder="Message" name="comment" class="form-textarea"></textarea><br>
+                        <button type="submit" class="form-submit">Submit</button>
+                    </form>
                 </div>
             </div>
-          </div>
-        </div>
-      </div>
-      @endforeach
+        </section>
 </div>
 <div class="rightcolumn">
   <div class=" w3-margin">
@@ -86,20 +93,19 @@
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
-    @foreach ($activitiess as $activitie)
+    {{-- @foreach ($newsupdatess as $newsupdate)
     <ul class="w3-ul w3-hoverable w3-white">
       <li class="w3-padding-16">
-        <a href="{{ url('/activities/show/'.$activitie->id)  }}"><img src="{{ asset('images/'.$activitie->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px"></a>
+        <img src="{{ asset('images/'.$newsupdate->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
         <br><br><br><br>
-        <a href="{{ url('/activities/show/'.$activitie->id)  }}"><p class="w3-large">{{ $activitie->title }}</p></a>
+        <a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}"><p class="w3-large">{{ $newsupdate->title }}</p></a>
       </li>
     </ul>
-    @endforeach
+    @endforeach --}}
   </div>
   </div>
 
 </div>
-{!! $activities->render() !!}
     </div>
     </div>
 <script>

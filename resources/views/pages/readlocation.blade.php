@@ -22,7 +22,7 @@
           <img src="{{ URL::to('/') }}/images/{{ $location->image }}" class="img-thumbnail" />
           <br><br>
           <p>{{ $location->title }}</p><br>
-          <h6>{{ $location->text }}</h6>
+          <h6>{!! $location->text !!}</h6>
           </div>
     </div>
     <div class="rightcolumn">

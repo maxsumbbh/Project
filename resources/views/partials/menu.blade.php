@@ -19,7 +19,7 @@
                         <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
-                        @can('permission_access')
+                        {{-- @can('permission_access')
                             <li class="{{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
                                 <a href="{{ route("admin.permissions.index") }}">
                                     <i class="fa-fw fas fa-unlock-alt">
@@ -28,8 +28,8 @@
                                     <span>{{ trans('การอนุมัติ') }}</span>
                                 </a>
                             </li>
-                        @endcan
-                        @can('role_access')
+                        @endcan --}}
+                        {{-- @can('role_access')
                             <li class="{{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active' : '' }}">
                                 <a href="{{ route("admin.roles.index") }}">
                                     <i class="fa-fw fas fa-briefcase">
@@ -38,7 +38,7 @@
                                     <span>{{ trans('สถานะ') }}</span>
                                 </a>
                             </li>
-                        @endcan
+                        @endcan --}}
                         @can('user_access')
                             <li class="{{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
                                 <a href="{{ route("admin.users.index") }}">

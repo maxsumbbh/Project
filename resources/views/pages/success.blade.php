@@ -22,7 +22,7 @@
         <div class="success-responsive">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
-              <img src="{{ asset('images/'.$success->image) }}" class="card-img-top">
+              <a href="{{ url('/success/show/'.$success->id)  }}"><img src="{{ asset('images/'.$success->image) }}" class="card-img-top"></a>
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">

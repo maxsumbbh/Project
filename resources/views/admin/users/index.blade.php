@@ -5,7 +5,7 @@
         <div style="margin-bottom: 10px;" class="row">
             <div class="col-lg-12">
                 <a class="btn btn-success" href="{{ route("admin.users.create") }}">
-                    {{ trans('global.add') }} {{ trans('cruds.user.title_singular') }}
+                    {{ trans('เพิ่มสมาชิก') }} 
                 </a>
             </div>
         </div>
@@ -30,19 +30,19 @@
                                         {{ trans('cruds.user.fields.id') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.user.fields.name') }}
+                                        {{ trans('รหัสประจำตัว') }}
                                     </th>
                                     <th>
                                         {{ trans('cruds.user.fields.email') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.user.fields.email_verified_at') }}
+                                        {{-- {{ trans('cruds.user.fields.email_verified_at') }} --}}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.user.fields.approved') }}
+                                        {{ trans('อนุมัติ') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.user.fields.roles') }}
+                                        {{ trans('สถานะ') }}
                                     </th>
                                     <th>
                                         &nbsp;
@@ -78,13 +78,13 @@
                                         <td>
                                             @can('user_show')
                                                 <a class="btn btn-xs btn-primary" href="{{ route('admin.users.show', $user->id) }}">
-                                                    {{ trans('global.view') }}
+                                                    {{ trans('แสดง') }}
                                                 </a>
                                             @endcan
 
                                             @can('user_edit')
                                                 <a class="btn btn-xs btn-info" href="{{ route('admin.users.edit', $user->id) }}">
-                                                    {{ trans('global.edit') }}
+                                                    {{ trans('แก้ไข') }}
                                                 </a>
                                             @endcan
 
@@ -92,7 +92,7 @@
                                                 <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                    <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                                    <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('ลบ') }}">
                                                 </form>
                                             @endcan
 
