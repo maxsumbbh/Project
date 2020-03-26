@@ -17,6 +17,7 @@
         <hr>
       <div class="row">
       <div class="leftcolumn"> 
+        <b>* สามารถค้นหาปีการศึกษาใน Search</b>
         <div class="row">
           <div class="col-lg-12">
               <div class="panel panel-default">

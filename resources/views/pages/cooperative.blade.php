@@ -18,6 +18,7 @@
       <div class="row">
       <div class="leftcolumn"> 
         <a href="cooperativeimg"><p>รูปภาพผลงานสหกิจศึกษา</p></a>
+        <b>* สามารถค้นหาปีการศึกษาใน Search</b>
         <div class="row">
               <div class="panel panel-default">
                   <div class="panel-body">

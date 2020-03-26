@@ -8,18 +8,17 @@
     <ol class="breadcrumb blue-grey lighten-4">
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
       <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <li class="breadcrumb-item active">หลักสูตรเทคโนโลยีสารสนเทศ-การพัฒนาซอฟต์แวร์</li>
+      <li class="breadcrumb-item active">แสดงความคิดเห็น</li>
     </ol>
   </nav>
       </div>
       <div class="content0">  
-        <h3>| หลักสูตรเทคโนโลยีสารสนเทศ-การพัฒนาซอฟต์แวร์</h3>
+        <h3>| แสดงความคิดเห็น</h3>
         <hr>
       <div class="row">
       <div class="leftcolumn"> 
 
-        <h5>List of Comments</h5>
-        <hr>
+       
         <ol>
         @forelse ($comments as $comment)
             <li class="lead"><p>{{$comment->comment}}</p></li>
