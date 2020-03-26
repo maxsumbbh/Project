@@ -14,11 +14,10 @@ class ShowcommentController extends Controller
 {
     public function index()
     {
-        $comment = Comment::paginate(9);
         $comments=Comment::where('approve','1')->get();
+        $comments = Comment::orderBy('updated_at','desc')->paginate(4);
         $header = Header::all();
         return view('pages.comment',[
-            'comments' => $comment,
             'headers' => $header,
             'comments' => $comments,
         ]);
@@ -29,8 +28,7 @@ class ShowcommentController extends Controller
         $comment= new Comment();
         $comment->comment=$request->comment;
         $comment->save();
-        $comment = Comment::orderBy('updated_at','desc')->limit(6)->get();
-
+        $comment = Comment::orderBy('updated_at','desc')->limit(4)->get();
         return redirect('/comment')->with('success', 'เพิ่มข้อมูลเกี่ยวกับเราสำเร็จ');    
     }
     public function approval(Request $request)

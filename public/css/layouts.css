@@ -383,7 +383,13 @@
 		padding: 10px;
 	   
 	  }
-  
+  	.content4 {
+		max-width: 100%;
+		
+		background: #eeeeee;
+		padding: 20px;
+	   
+	  }
   
   @media screen and (max-width:320px){
 	  header .head .tile.socialmedia{

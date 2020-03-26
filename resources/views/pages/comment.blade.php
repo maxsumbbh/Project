@@ -17,31 +17,37 @@
         <hr>
       <div class="row">
       <div class="leftcolumn"> 
-
-       
-        <ol>
-        @forelse ($comments as $comment)
-            <li class="lead"><p>{{$comment->comment}}</p></li>
-        @empty
-            <h4>No Comments</h4>
-        @endforelse
-        </ol>
-       <br>
-        <section>
-            <div class="container">
-                <div class="container-content">
-                    <div class="container-header">
-                        <h5 class="container-header-text">กล่องแสดงความคิดเห็น</h5>
-                    </div>
+      <div class="content4"> 
                     <form action="{{url('/comment')}}" method="POST">
                         {{csrf_field()}}
-                        <br><br><br>
-                        <textarea placeholder="Message" name="comment" class="form-textarea"></textarea><br>
-                        <button type="submit" class="form-submit">Submit</button>
-                    </form>
-                </div>
+                        <div class="ccfield-prepend">
+                          <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
+                          <textarea class="ccformfield" name="comment" rows="8" placeholder="แสดงความคิดเห็น" required></textarea>
+                      </div>
+                      <div class="ccfield-prepend">
+                          <input class="ccbtn" type="submit" value="ตกลง">
+                      </div>
+                    </form> 
+      </div>
+
+      <div class="content4">
+        @forelse ($comments as $comment)
+        <div class="">
+          <div class="w3-card-4 w3-margin w3-white">
+            <div class="w3-container">
+            <br>
+              <h5>ความคิดเห็น</h5>
             </div>
-        </section>
+            <div class="w3-container">
+              <p>{{$comment->comment}}</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+        @empty
+        <h4>No Comments</h4>
+        @endforelse
+      </div>
 </div>
 <div class="rightcolumn">
   <div class=" w3-margin">
