@@ -127,8 +127,7 @@ class ActivitiesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        $image = $request->file('image');
+    { $image = $request->file('image');
         $images = $request->file('images');
 
         $activitiess = Activities::find($id);

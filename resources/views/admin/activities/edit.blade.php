@@ -51,7 +51,7 @@
                                 <br>
                                 @foreach ($activitieImage as $image)
                                 <img src="{{ URL::to('/') }}/images/activitie/{{ $image->activitie_id }}/{{ $image->image_path }}" width="150px" height="100px" />
-                                <a href="{{ url('/bactivities/destroyimage/'.$image->id)  }}"><i class="fa fa-close"></i></a>
+                                <a href="{{ url('admin/bactivities/destroyimage/'.$image->id)  }}"><i class="fa fa-close"></i></a>
                                 @endforeach
                             </div>
                         </div>

@@ -53,7 +53,7 @@ Auth::routes();
 
 Route::post('/toggle-approve', 'CommentsController@approval');
 
-Route::get('/bcomment', function () {
+Route::get('admin/bcomment', function () {
     $comments=Comment::orderBy('created_at','desc')->get();
    return view('admin.comment.index')->with('comments',$comments); 
 });
