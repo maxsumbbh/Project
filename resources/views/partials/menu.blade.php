@@ -108,7 +108,7 @@
                         </li>
                         @endcan
                         @can('user_access')
-                        <li class="{{ request()->is('bcomment') || request()->is('bcomment/*') ? 'active' : '' }}">
+                        <li class="{{ request()->is('admin/bcomment') || request()->is('admin/bcomment/*') ? 'active' : '' }}">
                             <a href="bcomment">
                                 <i class="glyphicon glyphicon-credit-card">
 
