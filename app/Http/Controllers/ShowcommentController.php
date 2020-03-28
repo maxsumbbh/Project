@@ -9,17 +9,20 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Http\Controllers\Controller;
 use App\Header;
 use App\Comment;
+use App\Newsupdate;
 
 class ShowcommentController extends Controller
 {
     public function index()
     {
         $comments=Comment::where('approve','1')->get();
-        $comments = Comment::orderBy('updated_at','desc')->paginate(4);
+  
+        $newsupdatess = Newsupdate::orderBy('updated_at','desc')->limit(3)->get();
         $header = Header::all();
         return view('pages.comment',[
             'headers' => $header,
             'comments' => $comments,
+            'newsupdatess' => $newsupdatess,
         ]);
     }
     public function store(Request $request)

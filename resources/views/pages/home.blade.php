@@ -3,7 +3,7 @@
 @section('content')
 <div class="body">
   <div class="container" >
-  <br><br><br><br><br>
+  <br><br><br><br>
   <div class="fakeimg" style="height:2.5%;"></div>
   <div id="carouselExampleControls" id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -21,9 +21,11 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>  
+  </div> 
+
   <div class="content">
   <div id="services" class="container text-center content ">
+    <br>
     <div class="row">
     <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
       <a href="newsupdate"><span class="fa fa-newspaper-o fa-2x"></span>
@@ -48,7 +50,7 @@
      
      </div>
      <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
-      <a href="tact"><span class="fa fa-comments-o fa-2x"></span>
+      <a href="tact"><span class="fa fa-volume-control-phone fa-2x"></span>
       <h5>ติดต่อเรา</h5></a>
       
      </div>
@@ -59,6 +61,7 @@
       </div>
      </div>
    <!-- Contact Section -->
+   <br>
 </div>
 <div class="content1">
   <div class=""><h3>| ประชาสัมพันธ์</h3></div>

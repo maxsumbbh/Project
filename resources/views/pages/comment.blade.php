@@ -18,6 +18,7 @@
       <div class="row">
       <div class="leftcolumn"> 
       <div class="content4"> 
+        <section>
                     <form action="{{url('/comment')}}" method="POST">
                         {{csrf_field()}}
                         <div class="ccfield-prepend">
@@ -25,9 +26,10 @@
                           <textarea class="ccformfield" name="comment" rows="8" placeholder="แสดงความคิดเห็น" required></textarea>
                       </div>
                       <div class="ccfield-prepend">
-                          <input class="ccbtn" type="submit" value="ตกลง">
+                          <button type="submit" class="form-submit">ตกลง</button>
                       </div>
                     </form> 
+        </section>
       </div>
 
       <div class="content4">
@@ -98,7 +100,7 @@
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
-    {{-- @foreach ($newsupdatess as $newsupdate)
+    @foreach ($newsupdatess as $newsupdate)
     <ul class="w3-ul w3-hoverable w3-white">
       <li class="w3-padding-16">
         <img src="{{ asset('images/'.$newsupdate->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
@@ -106,7 +108,7 @@
         <a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}"><p class="w3-large">{{ $newsupdate->title }}</p></a>
       </li>
     </ul>
-    @endforeach --}}
+    @endforeach
   </div>
   </div>
 
