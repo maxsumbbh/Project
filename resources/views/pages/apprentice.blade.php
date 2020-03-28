@@ -62,18 +62,18 @@
   </div>
   <ul class="w3-ul w3-hoverable">
     <li class="w3-padding-5">
-      <a href="https://bua.rmutr.ac.th/">คณะบริหารธุรกิจ</a>
+      <a href="https://bua.rmutr.ac.th/"target="_blank">คณะบริหารธุรกิจ</a>
     </li>
     <li class="w3-padding-5">
-      <a href="https://reg.rmutr.ac.th/registrar/home.asp">งานทะเบียน</a>
-    </li>
-    </li>
-    <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/pages/category/College---University/งานกองทุนฯ-บพิตรพิมุข-จักรวรรดิ-858180540866398/">ระบบงานกองทุน</a>
+      <a href="https://reg.rmutr.ac.th/registrar/home.asp"target="_blank">งานทะเบียน</a>
     </li>
     </li>
     <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ระบบฐานข้อมูล</a>
+      <a href="https://th-th.facebook.com/pages/category/College---University/งานกองทุนฯ-บพิตรพิมุข-จักรวรรดิ-858180540866398/"target="_blank">ระบบงานกองทุน</a>
+    </li>
+    </li>
+    <li class="w3-padding-5">
+      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/"target="_blank">ระบบฐานข้อมูล</a>
     </li>
   </ul>
 </div>

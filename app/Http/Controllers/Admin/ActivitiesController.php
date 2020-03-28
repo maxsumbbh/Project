@@ -149,7 +149,7 @@ class ActivitiesController extends Controller
         {
             $request->validate([
                 'title' => 'required',
-                'content' => 'required',
+                'content' => 'required'
             ]);
         }
 

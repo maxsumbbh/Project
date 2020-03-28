@@ -55,10 +55,9 @@
      <div class="col-sm-4 col-md-4 col-lg-4 col-xs-4">
       <a href="comment"><span class="fa fa-comments-o fa-2x"></span>
       <h5>แสดงความคิดเห็น</h5></a>
-      
+      </div>
+      </div>
      </div>
-    </div>
-   </div>
    <!-- Contact Section -->
 </div>
 <div class="content1">
@@ -114,14 +113,14 @@
     <div class="activities-responsive">
       <div class="card-wrapper">
         <div class="thumbnail-container">
-          <a href="{{ url('/newsupdate/show/'.$activitie->id)  }}">
+          <a href="{{ url('/activities/show/'.$activitie->id)  }}">
             <img src="{{ asset('images/'.$activitie->image) }}" width="100%">
           </a>
         </div>
         <div class="card-desc-wrapper">
           <div class="card-desc-container">
             <div class="card-desc-cont">
-                <div class="card-desc-header"><a href="{{ url('/newsupdate/show/'.$activitie->id)  }}">{{ $activitie->title }}</a></div>
+                <div class="card-desc-header"><a href="{{ url('/activities/show/'.$activitie->id)  }}">{{ $activitie->title }}</a></div>
                 <div class="card-desc-desc app"><h6>{!! $activitie->content !!}</h6></div>
             </div>
                 <div class="card-desc-tag">กิจกรรม</div>
@@ -179,6 +178,7 @@ document.getElementById("defaultOpen").click();
 </script>
 
 
+</div>
 </div>
 </div>
 

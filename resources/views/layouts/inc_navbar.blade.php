@@ -160,7 +160,7 @@
 			border-color: #000000 transparent transparent transparent!important;
 		}
 		
-		.warper {
+		/* .warper {
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -171,7 +171,7 @@
 			opacity: 0;
 			transition: all 0.5s;
 		}
-		
+		 */
 		.warper-after {
 			position: fixed;
 			top: 0;
@@ -318,9 +318,8 @@
 	</div>
 
 	<div id="MB" class="menu-box" style="z-index: 1500;">
-
-		<div class="nav-menu pd">หน้าหลัก</div>
 		<div class="nav-menu">
+		<a href="{{ route('homee') }}" class="w3-bar-item w3-button">หน้าหลัก</a><br>
 			<div class="w3-dropdown-hover">
 				<button class="w3-button">หลักสูตร<div class="traing"></div></button>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -330,9 +329,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="nav-menu pd">คณาจารย์</div>
-
 		<div class="nav-menu">
+		<a href="{{ route('about') }}" class="w3-bar-item w3-button">คณาจารย์</a><br>
 			<div class="w3-dropdown-hover">
 				<button class="w3-button">นักศึกษา<div class="traing"></div></button>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">
