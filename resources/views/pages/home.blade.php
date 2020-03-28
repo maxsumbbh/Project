@@ -107,6 +107,8 @@
   @endforeach
   </div>
 </div>
+</div>
+</div>
 <div class="content1">
   <div class=""><h3>| กิจกรรม</h3></div>
   <br>
