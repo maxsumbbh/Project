@@ -2,7 +2,7 @@
 @extends('layouts.inc_navbar')
 @section('content')
 <div class="body">
-  <br><br><br><br><br>
+  <br><br><br>
   <div class="container">
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb blue-grey lighten-4">
@@ -17,13 +17,19 @@
   <div class="content0"> 
 <div class="row">
   <div class="leftcolumn"> 
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom">
+            <img id="img01" style="width:100%; height:auto;">
+            </div>
+          </div>
     <h3>{{ $award->title }}</h3><br>
     <div class="jumpbotron">
-      <img src="{{ URL::to('/') }}/images/{{ $award->image }}" class="img-thumbnail" />
+      <img src="{{ URL::to('/') }}/images/{{ $award->image }}" style="max-width:100%; height:auto; display: block; cursor:pointer;" 
+    onclick="onClick(this)" class="w3-hover-opacity"/>
       <br><br>
-      <p>{{ $award->title }}</p><br>
-      <h6>{!! $award->content !!}</h6><br>
- 
+      <!-- <p>{{ $award->title }}</p><br> -->
+      <p>{!! $award->content !!}</p><br>
       </div>
 </div>
 <div class="rightcolumn">
@@ -66,7 +72,7 @@
 </li>
 </li>
 <li class="w3-padding-5">
-  <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จของศิษย์เก่า</a>
+  <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
 </li>
 </ul>
 </div>
@@ -75,6 +81,6 @@
 
 </div>
 </div>
-
+<br><br><br><br><br><br>
 
 @endsection

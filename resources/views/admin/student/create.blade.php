@@ -18,15 +18,15 @@
 
                         <div class="form-group">
                             <label class="col-md-12 text-left">รหัสนักศึกษา</label>
-                            <div class="col-md-6">
-                                <input type="number" name="id" class="form-control input-lg" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==13) return false;" placeholder="กรุณากรอกรหัสนักศึกษา"/>
+                            <div class="col-md-4">
+                                <input type="number" name="studentcode" class="form-control input-lg"  onKeyPress="if(this.value.length==13) return false;" placeholder="กรุณากรอกรหัสนักศึกษา"/>
                             <br>
                             </div>
                         </div>
                         <br>
                         <div class="form-group">
                             <label class="col-md-12 text-left">ชื่อ</label>
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                 <input type="text" name="name" class="form-control input-lg" placeholder="กรุณากรอกชื่อนักศึกษา"/>
                                 <br>
                             </div>

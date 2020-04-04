@@ -11,7 +11,7 @@
             <br>
 
             <div class="card">
-                <div class="card-header">เพิ่มข้อมูลศิษย์เก่า</div>
+                <div class="card-header">เพิ่มข้อมูลความสำเร็จ</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.bsuccess.store') }}" enctype="multipart/form-data">
                         @csrf
@@ -19,7 +19,7 @@
                         <div class="form-group">
                             <label class="col-md-12 text-left">ชื่อ</label>
                             <div class="col-md-8">
-                                <input type="text" name="name" class="form-control input-lg" placeholder="กรุณากรอกชื่อกิจกรรม"/>
+                                <input type="text" name="name" class="form-control input-lg" placeholder="กรุณากรอกข้อมูล"/>
                                 <br>
                             </div>
                         </div>

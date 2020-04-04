@@ -44,7 +44,7 @@
                         <div class="form-group">
                             <label class="col-md-12 text-left">ปีการศึกษา</label>
                             <div class="col-md-4">
-                                <input type="year" name="name" value="{{ $cooperatives->year }}" class="form-control input-lg"/>
+                                <input type="year" name="name" value="{{ $cooperatives->year }}" onKeyPress="if(this.value.length==4) return false;"/>
                                 <br>
                             </div>
                         </div>

@@ -11,7 +11,7 @@
             <br>
 
             <div class="card">
-                <div class="card-header">แก้ไขข้อมูลศิษย์เก่า</div>
+                <div class="card-header">แก้ไขข้อมูลความสำเร็จ</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.bsuccess.update' , $success->id) }}" enctype="multipart/form-data">
 

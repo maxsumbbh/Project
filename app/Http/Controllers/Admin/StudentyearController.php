@@ -51,7 +51,7 @@ class StudentyearController extends Controller
         $studentyear->name = $request->name;
         $studentyear->save();
 
-        return redirect('admin/bstudentyear')->with('success', 'เพิ่มข้อมูลปีการศึกษาสำเร็จ');
+        return redirect('admin/bstudentyear')->with('success', 'เพิ่มข้อมูลปีที่เข้าศึกษาสำเร็จ');
     }
 
     /**
@@ -92,7 +92,7 @@ class StudentyearController extends Controller
         $studentyears = Studentyear::find($id);
         $studentyears->update($request->all());
 
-        return redirect('admin/bstudentyear')->with('success', 'แก้ไขข้อมูลปีการศึกษาสำเร็จ');
+        return redirect('admin/bstudentyear')->with('success', 'แก้ไขข้อมูลปีที่เข้าศึกษาสำเร็จ');
     }
 
     /**
@@ -105,6 +105,6 @@ class StudentyearController extends Controller
     {
         $studentyears = Studentyear::find($id);
         $studentyears->delete();
-        return redirect('admin/bstudentyear')->with('success', 'ลบข้อมูลปีการศึกษาสำเร็จ');
+        return redirect('admin/bstudentyear')->with('success', 'ลบข้อมูลปีที่เข้าศึกษาสำเร็จ');
     }
 }

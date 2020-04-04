@@ -2,7 +2,7 @@
 @extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
-      <br><br><br><br><br>
+      <br><br><br>
       <div class="container">
  <nav aria-label="breadcrumb">
     <ol class="breadcrumb blue-grey lighten-4">
@@ -23,12 +23,12 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
-                      <img class="" src="{{ asset('images/'.$member->image) }}">
+                      <img class="" src="{{ asset('images/'.$member->image) }}" style="max-width: 100%; height: auto;"/>
                     </div>
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8"><br><p>{{ $member->name }}</p>
                       <p><b>{{ $member->position->name }}</b></p>
                       <p>Tel : {{ $member->tel }}</p>
-                      <p>Email : {{ $member->email }}</p><hr width="100%"  size="20" color="#f77f3b">
+                      <p>Email : {{ $member->email }}</p><hr width="100%" color="#000000">
                     </div>        
                   </div> 
                   <br>           
@@ -82,12 +82,13 @@
     </li>
     </li>
     <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จของศิษย์เก่า</a>
+      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
     </li>
   </ul>
   </div>
+  <br><br><br><br><br><br>
   <!-- Posts -->
-  <div class="w3-white w3-margin">
+  <!-- <div class="w3-white w3-margin">
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
@@ -101,7 +102,7 @@
     </ul>
     @endforeach
   </div>
-  </div>
+  </div> -->
 
 </div>
     </div>

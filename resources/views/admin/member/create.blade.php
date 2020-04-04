@@ -11,13 +11,13 @@
             <br>
 
             <div class="card">
-                <div class="card-header">เพิ่มข้อมูลบุคลากร</div>
+                <div class="card-header">เพิ่มข้อมูลคณาจารย์</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.bmembers.store') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group">
-                            <label class="col-md-12 text-left">ชื่อบุคลากร</label>
+                            <label class="col-md-12 text-left">ชื่อคณาจารย์</label>
                             <div class="col-md-8">
                                 <input type="text" name="name" class="form-control input-lg" placeholder="กรุณากรอกชื่อบุคลากร"/>
                                 <br>
@@ -26,7 +26,7 @@
                         <br>
                         <div class="form-group">
                             <label class="col-md-12 text-left">ตำแหน่ง</label>
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                             <select class="form-control" name="position_id">
                                 @foreach ($positions as $position)
                                     <option value="{{ $position->id }}">{{ $position->name }}</option>

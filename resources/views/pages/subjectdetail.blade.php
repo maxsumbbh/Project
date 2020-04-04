@@ -2,7 +2,7 @@
 @extends('layouts.inc_navbar')
 @section('content')
 <div class="body">
-<br><br><br><br><br>
+<br><br><br>
 <div class="container">
  <nav aria-label="breadcrumb">
     <ol class="breadcrumb blue-grey lighten-4">

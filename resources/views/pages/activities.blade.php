@@ -2,7 +2,7 @@
 @extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
-      <br><br><br><br><br>
+      <br><br><br>
       <div class="container">
  <nav aria-label="breadcrumb">
     <ol class="breadcrumb blue-grey lighten-4">
@@ -18,22 +18,24 @@
       <div class="row">
       <div class="leftcolumn"> 
       @foreach($activities as $activitie)
+      <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
       <div class="wrapper1">
         <div class="grid">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
-              <a href="{{ url('/activities/show/'.$activitie->id)  }}"><img src="{{ asset('images/'.$activitie->image) }}" class="card-img-top"></a>
+              <a href="{{ url('/activities/show/'.$activitie->id)  }}"><img src="{{ asset('images/'.$activitie->image) }}" class="card-img-top" style="width:230px; height:230px;"></a>
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">
-                    <div class="card-desc-desc appp"><a href="{{ url('/activities/show/'.$activitie->id)  }}"><p>{!! $activitie->title !!}</p></a></div>
+                    <div class="card-desc-desc appp"><a href="{{ url('/activities/show/'.$activitie->id)  }}"><p>{!! $activitie->content !!}</p></a></div>
                   </div>
-                      <div class="card-desc-tag1">กิจกรรม</div>
+                      <div class="card-desc-tag1">{{$activitie->title}}</div>
                 </div>
                 </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
       @endforeach
 </div>
@@ -77,12 +79,13 @@
     </li>
     </li>
     <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จของศิษย์เก่า</a>
+      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
     </li>
   </ul>
   </div>
-  <!-- Posts -->
-  <div class="w3-white w3-margin">
+  <br><br><br><br><br><br>
+    <!-- Posts -->
+  <!-- <div class="w3-white w3-margin">
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
@@ -96,7 +99,7 @@
     </ul>
     @endforeach
   </div>
-  </div>
+  </div> -->
 
 </div>
 {!! $activities->render() !!}

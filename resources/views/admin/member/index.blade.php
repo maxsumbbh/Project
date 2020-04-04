@@ -8,7 +8,7 @@
             <h3>| เพิ่ม ลบ แก้ไข ส่วนคณาจารย์</h3>
             <br>
             <div aligh="right">
-                <a href="{{ route('admin.bmembers.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลหลักสูตร</a>
+                <a href="{{ route('admin.bmembers.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลคณาจารย์</a>
             </div>
             <br>
 
@@ -16,7 +16,7 @@
                 <div class="card-body">
                     <table class="table table-striped">
                     <tr>
-                     <th>ชื่อบุคลากร</th>
+                     <th>ชื่อคณาจารย์</th>
                             <th>ตำแหน่ง</th>
                             <th>รูปภาพ</th>
                             <th>เบอร์โทรศัพท์</th>

@@ -2,13 +2,13 @@
 @extends('layouts.inc_navbar')
 @section('content')
 <div class="body">
-  <br><br><br><br><br>
+  <br><br><br>
   <div class="container">
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb blue-grey lighten-4">
   <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
   <i class="fa fa-angle-right" aria-hidden="true"></i>
-  <li class="breadcrumb-item"><a class="black-text" href="{{ route('success') }}">ความสำเร็จของศิษย์เก่า</a>
+  <li class="breadcrumb-item"><a class="black-text" href="{{ route('success') }}">ความสำเร็จ</a>
     <i class="fa fa-angle-right" aria-hidden="true"></i>
     <li class="breadcrumb-item">{{ $success->name }}</li>
 </ol>
@@ -18,11 +18,18 @@
 <div class="row">
   <div class="leftcolumn"> 
     <h3>{{ $success->name }}</h3><br>
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom">
+            <img id="img01" style="width:100%; height:auto;">
+            </div>
+          </div>
     <div class="jumpbotron">
-      <img src="{{ URL::to('/') }}/images/{{ $success->image }}" class="img-thumbnail" />
+      <img src="{{ URL::to('/') }}/images/{{ $success->image }}" style="max-width:100%; height:auto; display: block; cursor:pointer;" 
+    onclick="onClick(this)" class="w3-hover-opacity"/>
       <br><br>
-      <p>{{ $success->name }}</p><br>
-      <h6>{!! $success->text !!}</h6><br>
+      <!-- <p>{{ $success->name }}</p><br> -->
+      <p>{!! $success->text !!}</p><br>
       </div>
 </div>
 <div class="rightcolumn">
@@ -65,7 +72,7 @@
 </li>
 </li>
 <li class="w3-padding-5">
-  <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จของศิษย์เก่า</a>
+  <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
 </li>
 </ul>
 </div>
@@ -74,6 +81,6 @@
 
 </div>
 </div>
-
+<br><br><br><br><br><br>
 
 @endsection

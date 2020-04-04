@@ -10,14 +10,14 @@
             </div>
 
             <div class="card">
-                <div class="card-header">แก้ไขข้อมูลบุคลากร</div>
+                <div class="card-header">แก้ไขข้อมูลคณาจารย์</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.bmembers.update' , $members->id) }}" enctype="multipart/form-data">
 
                         @csrf
                         @method('PATCH')
                         <div class="form-group">
-                            <label class="col-md-12 text-left">ชื่อบุคลากร</label>
+                            <label class="col-md-12 text-left">ชื่อคณาจารย์</label>
                             <div class="col-md-8">
                                 <input type="text" name="name" value="{{ $members->name }}" class="form-control input-lg"/>
                                 <br>

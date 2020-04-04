@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>สาขาวิชาเทคโนโลยีสารสนเทศทางธุรกิจ</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="{{asset('css/layouts.css')}}">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet" />
@@ -184,18 +185,17 @@
                 <a class="nav-link" href="{{ route('award') }}">รางวัล</a></li>
             
                 <li class="{{ Request::path() == 'success' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('success') }}">ความสำเร็จของศิษย์เก่า</a></li>
+                <a class="nav-link" href="{{ route('success') }}">ความสำเร็จ</a></li>
                 @guest
                 @if (Route::has('cooperative'))
                 @endif
                 @else
                 <li class="{{ Request::path() == 'cooperative' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('cooperative') }}">ผลงานสหกิจศึกษา</a></li>
-               
+                <a class="nav-link" href="{{ route('cooperative') }}">ผลงานสหกิจศึกษา</a></li>           
                 <li class="{{ Request::path() == 'apprentice' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('apprentice') }}">ผลงานโครงงาน</a></li>
                 <li class="{{ Request::path() == 'location' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('location') }}">สถานประกอบการสหกิจ/ฝึกงาน</a></li>
+                <a class="nav-link" href="{{ route('location') }}">สถานที่ฝึกประสบการณ์</a></li>
                 <li class="{{ Request::path() == 'student' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('student') }}">รายชื่อนักศึกษา</a></li>
                 @endguest
@@ -310,5 +310,34 @@ window.onscroll = () => {
   if(this.scrollY <= 10) nav.className = '    '; else nav.className = 'navbar-scroll';
 };
 </script>
+
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
     </body>
 </html>

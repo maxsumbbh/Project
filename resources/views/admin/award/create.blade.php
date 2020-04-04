@@ -11,7 +11,7 @@
             <br>
 
             <div class="card">
-                <div class="card-header">เพิ่มข้อมูลกิจกรรม</div>
+                <div class="card-header">เพิ่มข้อมูลรางวัล</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.baward.store') }}" enctype="multipart/form-data">
                         @csrf

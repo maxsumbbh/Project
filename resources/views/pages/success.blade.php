@@ -2,18 +2,18 @@
 @extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
-      <br><br><br><br><br>
+      <br><br><br>
       <div class="container">
  <nav aria-label="breadcrumb">
     <ol class="breadcrumb blue-grey lighten-4">
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
       <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <li class="breadcrumb-item active">ความสำเร็จของศิษย์เก่า</li>
+      <li class="breadcrumb-item active">ความสำเร็จ</li>
     </ol>
   </nav>
       </div>
       <div class="content0">  
-        <h3>ความสำเร็จของศิษย์เก่า</h3>
+        <h3>ความสำเร็จ</h3>
     <hr>
       <div class="row">
       <div class="leftcolumn"> 
@@ -22,13 +22,14 @@
         <div class="success-responsive">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
-              <a href="{{ url('/success/show/'.$success->id)  }}"><img src="{{ asset('images/'.$success->image) }}" class="card-img-top"></a>
+              <a href="{{ url('/success/show/'.$success->id)  }}"><img src="{{ asset('images/'.$success->image) }}"
+               class="card-img-top" style="width:220px; height:220px;"></a>
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">
                     <div class="card-desc-desc appp"><a href="{{ url('/success/show/'.$success->id)  }}"><p>{!! $success->text !!}</p></a></div>
                   </div>
-                      <div class="card-desc-tag1">ความสำเร็จของศิษย์เก่า</div>
+                      <div class="card-desc-tag1">{{$success->name}}</div>
                 </div>
                 </div>
             </div>
@@ -77,12 +78,13 @@
     </li>
     </li>
     <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จของศิษย์เก่า</a>
+      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
     </li>
   </ul>
   </div>
+  <br><br><br><br><br><br>
   <!-- Posts -->
-  <div class="w3-white w3-margin">
+  <!-- <div class="w3-white w3-margin">
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
@@ -96,7 +98,7 @@
     </ul>
     @endforeach
   </div>
-  </div>
+  </div> -->
 
 </div>
     </div>

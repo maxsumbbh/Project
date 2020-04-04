@@ -2,7 +2,7 @@
 @extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
-      <br><br><br><br><br>
+      <br><br><br>
       <div class="container">
  <nav aria-label="breadcrumb">
     <ol class="breadcrumb blue-grey lighten-4">
@@ -61,12 +61,13 @@
     </li>
     </li>
     <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จของศิษย์เก่า</a>
+      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
     </li>
   </ul>
   </div>
+  <br><br><br><br><br><br>
   <!-- Posts -->
-  <div class="w3-white w3-margin">
+  <!-- <div class="w3-white w3-margin">
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
@@ -80,7 +81,7 @@
     </ul>
     @endforeach
   </div>
-  </div>
+  </div> -->
 
 </div>
     </div>

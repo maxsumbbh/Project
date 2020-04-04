@@ -5,31 +5,35 @@
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
         <br>
-        <div aligh="right">
-                <a href="{{ route('admin.bsubgroup') }}" class="btn btn-default">กลับ</a>
+            <div aligh="right">
+                <a href="{{ route('admin.bstudentyear') }}" class="btn btn-default">กลับ</a>
             </div>
             <br>
 
             <div class="card">
-                <div class="card-header">แก้ไขข้อมูลรุ่น</div>
-                <div class="card-body"></div>
-                    <?= Form::model($studentyears,array('url'=>'admin/bstudentyear/'.$studentyears->id,'method'=>'put')) ?>
+                <div class="card-header">แก้ไขข้อมูลปีที่เข้าศึกษา</div>
+                <div class="card-body">
+                    <form method="POST" action="{{ route('admin.bstudentyear.update' , $studentyears->id) }}" enctype="multipart/form-data">
 
-                    <div class="col-md-4">
+                        @csrf
+                        @method('PATCH')
                         <div class="form-group">
-                            <?= Form::label('name','รุ่น'); ?>
-                            <?= Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'ชื่อรุ่น']); ?>
+                            <label class="col-md-12 text-left">พ.ศ.</label>
+                            <div class="col-md-6">
+                                <input type="text" name="name" value="{{ $studentyears->name }}" class="form-control input-lg"  onKeyPress="if(this.value.length==4) return false;">
+                                <br>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <?= Form::submit('บันทึก',['class'=>'btn btn-primary']); ?>
+                        <br>
+                        <div class="form-group text-left">
+                            <div class="col-md-12">
+                                <input type="submit" name="submit" class="btn btn-success" value="ยืนยัน" />
+                            </div>
                         </div>
-                    </div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
+            <br><br><br>
         </div>
     </div>
 </div>

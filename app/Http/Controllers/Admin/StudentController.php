@@ -55,10 +55,10 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id' => 'required',
+            'studentcode' => 'required',
             'name' => 'required',
             'studentyear_id' => 'required',
-            'image' => 'required|image|max:2048',
+            'image' => 'required|image|max:2048'
         ]);
 
         $image = $request->file('image');
@@ -66,10 +66,10 @@ class StudentController extends Controller
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('images'), $new_name);
         $form_data = array(
-            'id' => $request->id,
+            'studentcode' => $request->studentcode,
             'name' => $request->name,
             'studentyear_id' => $request->studentyear_id,
-            'image' => $new_name,
+            'image' => $new_name
         );
 
         Student::create($form_data);
@@ -117,7 +117,7 @@ class StudentController extends Controller
         if($image != '')
         {
             $request->validate([
-                'id' => 'required',
+                'studentcode' => 'required',
                 'name' => 'required',
                 'studentyear_id' => 'required',
                 'image' => 'required|mimes:jpeg,jpg,png'
@@ -129,14 +129,14 @@ class StudentController extends Controller
         else
         {
             $request->validate([
-                'id' => 'required',
+                'studentcode' => 'required',
                 'name' => 'required',
                 'studentyear_id' => 'required'
             ]);
         }
 
         $form_data = array(
-            'id' => $request->id,
+            'studentcode' => $request->studentcode,
             'name' => $request->name,
             'studentyear_id' => $request->studentyear_id,
             'image' => $image_name

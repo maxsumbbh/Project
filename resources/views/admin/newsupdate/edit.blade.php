@@ -18,7 +18,7 @@
                         @csrf
                         @method('PATCH')
                         <div class="form-group">
-                            <label class="col-md-12 text-left">ชื่อ</label>
+                            <label class="col-md-12 text-left">หัวข้อ</label>
                             <div class="col-md-8">
                                 <input type="text" name="title" value="{{ $newsupdate->title }}" class="form-control input-lg"/>
                                 <br>
@@ -62,6 +62,7 @@
         </div>
     </div>
 </div>
+<br><br>
 <script src="{{asset('//cdn.ckeditor.com/4.13.1/full/ckeditor.js')}}"></script>
 <script>
     CKEDITOR.replace( 'content' );

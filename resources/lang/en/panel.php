@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'ระบบจัดการเว็บไซต์',
+    'site_title' => 'BIT RMUTR',
 ];

@@ -2,18 +2,18 @@
 @extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
-      <br><br><br><br><br>
+      <br><br><br>
       <div class="container">
  <nav aria-label="breadcrumb">
     <ol class="breadcrumb blue-grey lighten-4">
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
       <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <li class="breadcrumb-item active">สถานประกอบการ</li>
+      <li class="breadcrumb-item active">สถานที่ฝึกประสบการณ์</li>
     </ol>
   </nav>
       </div>
       <div class="content0">  
-        <h3>สถานประกอบการ</h3>
+        <h3>สถานที่ฝึกประสบการณ์</h3>
     <hr>
       <div class="row">
       <div class="leftcolumn"> 
@@ -77,12 +77,13 @@
     </li>
     </li>
     <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จของศิษย์เก่า</a>
+      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
     </li>
   </ul>
   </div>
+  <br><br><br><br><br><br>
   <!-- Posts -->
-  <div class="w3-white w3-margin">
+  <!-- <div class="w3-white w3-margin">
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
@@ -96,7 +97,7 @@
     </ul>
     @endforeach
   </div>
-  </div>
+  </div> -->
 
 </div>
 {!! $locations->render() !!}

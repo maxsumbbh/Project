@@ -258,7 +258,7 @@
                             <i class="glyphicon glyphicon-briefcase">
 
                             </i>
-                            <span>{{ trans('ความสำเร็จของศิษย์เก่า') }}</span>
+                            <span>{{ trans('ความสำเร็จ') }}</span>
                         </a>
                     </li>
                 @endcan
@@ -278,7 +278,7 @@
                     <i class="glyphicon glyphicon-bell">
 
                     </i>
-                    <span>{{ trans('ผลงานฝึกงาน') }}</span>
+                    <span>{{ trans('ผลงานโครงงาน') }}</span>
                 </a>
             </li>
         @endcan

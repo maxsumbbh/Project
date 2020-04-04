@@ -19,15 +19,15 @@
                         @method('PATCH')
                         <div class="form-group">
                             <label class="col-md-12 text-left">รหัสนักศึกษา</label>
-                            <div class="col-md-6">
-                                <input type="text" name="id" value="{{ $student->studentcode }}" class="form-control input-lg"/>
+                            <div class="col-md-4">
+                                <input type="text" name="studentcode" value="{{ $student->studentcode }}"  class="form-control input-lg"  onKeyPress="if(this.value.length==13) return false;">
                                 <br>
                             </div>
                         </div>
                         <br>
                         <div class="form-group">
                             <label class="col-md-12 text-left">ชื่อ</label>
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                 <input type="text" name="name" value="{{ $student->name }}" class="form-control input-lg"/>
                                 <br>
                             </div>

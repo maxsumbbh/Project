@@ -31,7 +31,7 @@
                                 <input <?php if($comment->approve == 1){echo "checked";}?> type="checkbox" name='approve'>
         
                             <input type="hidden" name="commentId" value="{{$comment->id}}">
-                                <input class="btn btn-primary" type="submit" value="Done">
+                                <input class="btn btn-success" type="submit" value="ตกลง">
                     
                             </form></td>
                         </tr>

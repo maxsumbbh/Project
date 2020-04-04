@@ -2,7 +2,7 @@
 @extends('layouts.inc_navbar')
     @section('content')
     <div class="body">
-      <br><br><br><br><br>
+      <br><br><br>
       <div class="container">
  <nav aria-label="breadcrumb">
     <ol class="breadcrumb blue-grey lighten-4">
@@ -19,30 +19,22 @@
     <hr>
       <div class="row">
       <div class="leftcolumn"> 
-        @foreach($apprentices as $apprentice)
-        <div class="col-md-4">
-          <div class="card-wrapper">
-            <div class="thumbnail-container">
-              <a href="#">
-                <img src="{{ asset('images/'.$apprentice->image) }}" class="card-img-top">
-              </a>
-            </div>
-            <div class="card-desc-wrapper">
-              <div class="card-desc-container">
-                <div class="card-desc-cont">
-                    <div class="card-desc-header">{{ $apprentice->name }}</div>
-                    
-                    <c class="fa fa-print"></c>  <a href="files/{{ $apprentice->file }}" download="{{ $apprentice->file }}">
-                      {{ $apprentice->file }} </a>
-                      <div class="card-desc-desc"><p>{!! $apprentice->text !!}</p></div><br>
-                </div>
-                    <div class="card-desc-tag">ผลงานโครงงาน</div>
-              </div>
-              </div>
-          </div>
-        </div>
+
+          @foreach($apprentices as $apprentice)
+  <div class="w3-row">
+    <div class="w3-third">
+          <img src="{{ URL::to('/') }}/images/{{ $apprentice->image }}" style="width:220px; height:180px; 
+          cursor:pointer; margin-left: 30px; margin-bottom: 20px;" onclick="onClick(this)" class="w3-hover-opacity">  
+    </div>
+  </div>   
         @endforeach
 </div>
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                <div class="w3-modal-content w3-animate-zoom" style="margin-top:70px">
+                <img id="img01" style="width:100%; height:auto;">
+            </div>
+          </div>
 <div class="rightcolumn">
   <div class=" w3-margin">
   <div class="w3-container w3-padding w3">
@@ -83,12 +75,13 @@
     </li>
     </li>
     <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จของศิษย์เก่า</a>
+      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
     </li>
   </ul>
   </div>
+  <br><br><br><br><br><br>
   <!-- Posts -->
-  <div class="w3-white w3-margin">
+  <!-- <div class="w3-white w3-margin">
     <div class="w3-container w3-padding w3">
       <h5>NEWS POSTS</h5>
     </div>
@@ -102,7 +95,7 @@
     </ul>
     @endforeach
   </div>
-  </div>
+  </div> -->
 
 </div>
 {!! $apprentices->render() !!}

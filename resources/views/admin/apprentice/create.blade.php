@@ -11,7 +11,7 @@
             <br>
 
             <div class="card">
-                <div class="card-header">เพิ่มข้อมูลฝึกงาน</div>
+                <div class="card-header">เพิ่มข้อมูลโครงงาน</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.bapprentice.store') }}" enctype="multipart/form-data">
                         @csrf
@@ -41,7 +41,7 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <label class="col-md-12 text-left">ชื่อ</label>
+                            <label class="col-md-12 text-left">ปีการศึกษา</label>
                             <div class="col-md-4">
                                 <input type="text" name="year" class="form-control input-lg" placeholder="กรุณากรอกข้อมูล"/>
                                 <br>
