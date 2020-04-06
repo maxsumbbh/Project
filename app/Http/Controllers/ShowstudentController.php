@@ -17,7 +17,7 @@ class ShowstudentController extends Controller
      */
     public function index()
     {
-        $student = Student::paginate(9);
+        $student = Student::orderBy('updated_at','desc')->paginate(9);
         $header = Header::all();
         $activitiess = Activities::orderBy('updated_at','desc')->limit(3)->get();
         return view('pages.student',[

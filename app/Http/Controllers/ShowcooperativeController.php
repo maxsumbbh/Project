@@ -10,7 +10,7 @@ class ShowcooperativeController extends Controller
 {
     public function index()
     {
-        $cooperative = Cooperative::paginate(9);
+        $cooperative = Cooperative::orderBy('updated_at','desc')->paginate(9);
         $header = Header::all();
         return view('pages.cooperative',[
             'cooperatives' => $cooperative,

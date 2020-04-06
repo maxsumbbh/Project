@@ -15,7 +15,7 @@ class ShowapprenticeimgController extends Controller
      */
     public function index()
     {
-        $apprentices = Apprentice::paginate(9);
+        $apprentices = Apprentice::orderBy('updated_at','desc')->paginate(9);
         $header = Header::all();
         return view('pages.apprenticeimg',[
             'apprentices' => $apprentices,

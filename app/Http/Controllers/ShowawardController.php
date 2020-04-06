@@ -10,7 +10,7 @@ class ShowawardController extends Controller
 {
     public function index()
     {
-        $award = Award::paginate(9);
+        $award = Award::orderBy('updated_at','desc')->paginate(9);
         $awardss = Award::orderBy('updated_at','desc')->limit(3)->get();
         $header = Header::all();
         return view('pages.award',[

@@ -17,7 +17,7 @@ class ShowformController extends Controller
      */
     public function index()
     {
-        $form = Form::paginate(9);
+        $form = Form::orderBy('updated_at','desc')->paginate(9);
         $header = Header::all();
         $activitiess = Activities::orderBy('updated_at','desc')->limit(3)->get();
         return view('pages.form',[

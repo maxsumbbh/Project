@@ -16,7 +16,7 @@ class ShowsuccessController extends Controller
      */
     public function index()
     {
-        $success = Success::paginate(9);
+        $success = Success::orderBy('updated_at','desc')->paginate(9);
         $header = Header::all();
         $successs = Success::orderBy('updated_at','desc')->limit(3)->get();
         return view('pages.success',[

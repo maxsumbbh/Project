@@ -13,7 +13,7 @@
   </nav>
       </div>
       <div class="content0">  
-        <h3>รางวัล</h3>
+        <h3>| รางวัล</h3>
     <hr>
       <div class="row">
       <div class="leftcolumn"> 

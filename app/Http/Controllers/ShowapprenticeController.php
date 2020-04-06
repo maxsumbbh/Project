@@ -15,7 +15,7 @@ class ShowapprenticeController extends Controller
      */
     public function index()
     {
-        $apprentice = Apprentice::paginate(9);
+        $apprentice = Apprentice::orderBy('updated_at','desc')->paginate(9);
         $header = Header::all();
         return view('pages.apprentice',[
             'apprentices' => $apprentice,
