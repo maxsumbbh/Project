@@ -22,13 +22,13 @@
        <div class="location-responsive">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
-              <a href="{{ url('/location/show/'.$location->id)  }}"><img src="{{ asset('images/'.$location->image) }}" class="card-img-top"></a>
+              <a href="{{ url('/location/show/'.$location->id)  }}"><img src="{{ asset('images/'.$location->image) }}" class="card-img-top" style="width:220px; height:220px;"></a>
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">
-                    <div class="card-desc-desc appp"><a href="{{ url('/location/show/'.$location->id)  }}"><p>{!! $location->title !!}</p></a></div>
+                    <div class="card-desc-desc appp"><a href="{{ url('/location/show/'.$location->id)  }}"><p>{!! $location->text !!}</p></a></div>
                   </div>
-                      <div class="card-desc-tag1">สถานประกอบการ</div>
+                      <div class="card-desc-tag1">{{$location->title}}</div>
                 </div>
                 </div>
             </div>
