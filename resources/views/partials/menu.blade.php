@@ -113,7 +113,7 @@
                                 <i class="glyphicon glyphicon-credit-card">
 
                                 </i>
-                                <span>{{ trans('ความคิดเห็น') }}</span>
+                                <span>{{ trans('ข้อเสนอแนะ') }}</span>
                             </a>
                         </li>
                         @endcan

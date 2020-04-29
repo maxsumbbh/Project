@@ -19,6 +19,10 @@ class ShowlocationController extends Controller
             'headers' => $header,
         ]);
     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
       /**
      * Display the specified resource.

@@ -203,9 +203,12 @@
               
 							</ul>
             </li>
+            <li class="{{ Request::path() == 'form' ? 'active' : '' }}">
+							<a class="nav-link" href="{{ route('form') }}">แบบฟอร์ม</a>
+            </li>
             <li class="{{ Request::path() == 'tact' ? 'active' : '' }}">
 							<a class="nav-link" href="{{ route('tact') }}">ติดต่อเรา</a>
-						</li>
+            </li>
 					</ul>
 				</div>
 				<div class="top-social">
