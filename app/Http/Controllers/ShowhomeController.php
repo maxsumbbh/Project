@@ -14,11 +14,11 @@ class ShowhomeController extends Controller
 {
     public function index(){
         $slideshow = Slideshow::orderBy('updated_at','desc')->get();
-        $activities = Activities::orderBy('updated_at','desc')->limit(3)->get();
+        $activities = Activities::orderBy('updated_at','desc')->limit(6)->get();
         $about = About::all();
         $header = Header::all();
         $newsupdates = Newsupdate::orderBy('updated_at','desc')->limit(6)->get();
-        $newsupdate = Newsupdate::orderBy('updated_at','desc')->limit(3)->get();
+        $newsupdate = Newsupdate::orderBy('updated_at','desc')->limit(6)->get();
 
         return view('pages.home',[
             'slideshows' => $slideshow,
