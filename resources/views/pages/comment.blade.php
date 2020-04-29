@@ -31,13 +31,32 @@
                     </form> 
         </section>
       </div>
-
-
+      @guest
+      @if (Route::has('cooperative'))
+      @endif
+      @else
+      <div class="content4">
+        @forelse ($comments as $comment)
+        <div class="">
+          <div class="w3-card-4 w3-margin w3-white">
+            <div class="w3-container">
+            <br>
+              <h5>ความคิดเห็น</h5>
+            </div>
+            <div class="w3-container">
+              <p>{{$comment->comment}}</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+        @empty
+        <h4>No Comments</h4>
+        @endforelse
+      </div>
+      @endguest
 </div>
-
     </div>
     </div>
-    <br>
 <script>
   (function() {
   var $grid = $('.grid').imagesLoaded(function() {

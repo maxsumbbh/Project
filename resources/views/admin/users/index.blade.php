@@ -20,12 +20,10 @@
                 <div class="panel-body">
 
                     <div class="table-responsive">
-                        <table class=" table table-bordered table-striped table-hover datatable datatable-User">
+                        <table class=" table table-bordered table-striped table-hover datatable">
                             <thead>
                                 <tr>
-                                    <th width="10">
-
-                                    </th>
+                                    
                                     <th>
                                         {{ trans('cruds.user.fields.id') }}
                                     </th>
@@ -35,9 +33,7 @@
                                     <th>
                                         {{ trans('cruds.user.fields.email') }}
                                     </th>
-                                    <th>
-                                        {{-- {{ trans('cruds.user.fields.email_verified_at') }} --}}
-                                    </th>
+                                  
                                     <th>
                                         {{ trans('อนุมัติ') }}
                                     </th>
@@ -52,9 +48,7 @@
                             <tbody>
                                 @foreach($users as $key => $user)
                                     <tr data-entry-id="{{ $user->id }}">
-                                        <td>
-
-                                        </td>
+                                    
                                         <td>
                                             {{ $user->id ?? '' }}
                                         </td>
@@ -64,9 +58,7 @@
                                         <td>
                                             {{ $user->email ?? '' }}
                                         </td>
-                                        <td>
-                                            {{ $user->email_verified_at ?? '' }}
-                                        </td>
+                                
                                         <td>
                                             {{ $user->approved ? trans('global.yes') : trans('global.no') }}
                                         </td>

@@ -6,6 +6,7 @@
                     <i class="fas fa-fw fa-tachometer-alt">
 
                     </i>
+                    
                     {{ trans('แผงควบคุม') }}
                 </a>
             </li>

@@ -167,13 +167,13 @@
 							<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">หลักสูตร <b class="fa fa-caret-down"></b></a>
 							<ul class="dropdown-content ">
                 <li class="{{ Request::path() == 'coursegenaral' ? 'active' : '' }}">
-                  <a class="nav-link" href="{{ route('coursegenaral') }}">หลักสูตรทั่วไป</a></li>
+                  <a class="nav-link" href="{{ route('coursegenaral') }}"><i class="fa fa-minus"></i>&nbsp;หลักสูตรทั่วไป</a></li>
                 <li class="{{ Request::path() == 'category' ? 'active' : '' }}">
-								<a class="nav-link" href="{{ route('category') }}">ข้อมูลหลักสูตร</a></li>
+								<a class="nav-link" href="{{ route('category') }}"><i class="fa fa-minus"></i>&nbsp;ข้อมูลหลักสูตร</a></li>
 							  <li class="{{ Request::path() == 'bitcourse' ? 'active' : '' }}">
-								<a class="nav-link" href="{{ route('bitcourse') }}">กลุ่มวิชาการพัฒนาซอฟต์แวร์</a></li>
+								<a class="nav-link" href="{{ route('bitcourse') }}"><i class="fa fa-minus"></i>&nbsp;พัฒนาซอฟต์แวร์</a></li>
 							  <li class="{{ Request::path() == 'mitcourse' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('mitcourse') }}">กลุ่มวิชาการจัดการเทคโนโลยีสารสนเทศ</a></li>
+                <a class="nav-link" href="{{ route('mitcourse') }}"><i class="fa fa-minus"></i>&nbsp;การจัดการสารสนเทศ</a></li>
 							</ul>
             </li>
             <li class="{{ Request::path() == 'about' ? 'active' : '' }}">
@@ -184,28 +184,26 @@
 
    
 							  <li class="{{ Request::path() == 'award' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('award') }}">รางวัล</a></li>
+                <a class="nav-link" href="{{ route('award') }}"><i class="fa fa-minus"></i>&nbsp;รางวัล</a></li>
             
                 <li class="{{ Request::path() == 'success' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('success') }}">ความสำเร็จ</a></li>
+                <a class="nav-link" href="{{ route('success') }}"><i class="fa fa-minus"></i>&nbsp;ความสำเร็จ</a></li>
                
                 @if (Route::has('cooperative'))
                 @endif
             
                 <li class="{{ Request::path() == 'cooperative' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('cooperative') }}">ผลงานสหกิจศึกษา</a></li>           
+                <a class="nav-link" href="{{ route('cooperative') }}"><i class="fa fa-minus"></i>&nbsp;ผลงานสหกิจศึกษา</a></li>           
                 <li class="{{ Request::path() == 'apprentice' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('apprentice') }}">ผลงานโครงงาน</a></li>
+                <a class="nav-link" href="{{ route('apprentice') }}"><i class="fa fa-minus"></i>&nbsp;ผลงานโครงงาน</a></li>
                 <li class="{{ Request::path() == 'location' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('location') }}">สถานที่ฝึกประสบการณ์</a></li>
+                <a class="nav-link" href="{{ route('location') }}"><i class="fa fa-minus"></i>&nbsp;สถานที่ฝึกประสบการณ์</a></li>
                 <li class="{{ Request::path() == 'student' ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('student') }}">รายชื่อนักศึกษา</a></li>
+                <a class="nav-link" href="{{ route('student') }}"><i class="fa fa-minus"></i>&nbsp;รายชื่อนักศึกษา</a></li>
               
 							</ul>
             </li>
-            <li class="{{ Request::path() == 'form' ? 'active' : '' }}">
-							<a class="nav-link" href="{{ route('form') }}">แบบฟอร์ม</a>
-            </li>
+   
             <li class="{{ Request::path() == 'tact' ? 'active' : '' }}">
 							<a class="nav-link" href="{{ route('tact') }}">ติดต่อเรา</a>
             </li>
@@ -215,6 +213,7 @@
 					<ul id="top-social-menu">
             @guest
             <li><span class="	fa fa-sign-in fa-2x"></span>&nbsp;<a href="{{ route('login') }}">จัดการข้อมูล</a></li>
+            <li><span class="	fa fa-user-circle fa-2x"></span>&nbsp;<a href="{{ route('login') }}">ระบบสารสนเทศ</a></li>
             @else
     
             <li class="nav-item dropdown">
