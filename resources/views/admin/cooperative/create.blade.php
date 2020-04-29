@@ -44,7 +44,7 @@
                             <label class="col-md-12 text-left">ปีการศึกษา</label>
                             <div class="col-md-4">
                                 <input type="text" name="year" onKeyPress="if(this.value.length==4) return false;" placeholder="กรุณากรอกข้อมูล"/>
-                                <br>
+                                <br><br>
                             </div>
                         </div>
                         <br>

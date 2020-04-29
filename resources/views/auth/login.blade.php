@@ -2,7 +2,7 @@
 @section('content')
 <div class="login-box">
     <div class="login-logo">
-        <a href="#">
+        <a href="route('login')">
             {{ trans('เข้าสู่ระบบ') }}
         </a>
     </div>

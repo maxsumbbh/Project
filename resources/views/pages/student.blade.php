@@ -64,7 +64,7 @@
                                              
                                           </td>
                                           <td>
-                                            {{ $student->id }}
+                                            {{ $student->studentcode }}
                                           </td>
                                           <td>
                                             {{ $student->name }}

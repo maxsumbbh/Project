@@ -20,12 +20,12 @@
         @foreach ($categorys as $category)
         <p>{{ $category->name }}
                   {{ $category->credit }}</p>
-        
+              
                 @foreach ($subgroups as $subgroup)   
                     @if($subgroup->category_id == $category->id)
         
                     <a href="{{ url('/category/show/'.$subgroup->id)  }}">
-                     <p>{{ $subgroup->name }}
+                     <p style="margin-left:30px;">{{ $subgroup->name }}
                         {{ $subgroup->credit }}</p></a>
                     
                     @endif

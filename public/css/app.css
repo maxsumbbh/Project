@@ -698,10 +698,9 @@
     padding-bottom:20px;
   }
   
-  span { 
+  p { 
     display: block;
-    font-size: 22px;
-    color: #FF3333;
+    font-size: 16px;
     padding-bottom: 15px;
     }
     
@@ -807,16 +806,20 @@
    }
     
    
-  
-  
+   span { 
+    display: block;
+    font-size: 16px;
+    color: #FF6F61;
+    padding-bottom: 15px;
+    }
+    .span2 {
+      width: 165px;
+      padding: 0px 15px;
+      display: inline-block;
+    }
   .span3 {
     width: 270px;
     padding: 2px 2px;
-    display: inline-block;
-  }
-  .span2 {
-    width: 165px;
-    padding: 0px 15px;
     display: inline-block;
   }
   
@@ -1004,12 +1007,12 @@
   
   .accrodion{margin-bottom: 10px;}
   .header{ 
-      background: #3498DB;
+      background: #FFCC99	;
       transition: .4s;
       position: relative;
   }
-  .header:hover{background: #2980B9;}
-  .header.active{background: #4c6e90;}
+  .header:hover{background: #FFCC99	;}
+  .header.active{background: #FFCC99	;}
   .header:after{
       content: "\f067";
       font: normal normal normal 14px/1 FontAwesome;

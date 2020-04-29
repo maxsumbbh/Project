@@ -19,7 +19,7 @@
                         @method('PATCH')
                         <div class="form-group">
                             <label class="col-md-12 text-left">พ.ศ.</label>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <input type="text" name="name" value="{{ $studentyears->name }}" class="form-control input-lg"  onKeyPress="if(this.value.length==4) return false;">
                                 <br>
                             </div>

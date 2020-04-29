@@ -23,11 +23,11 @@
             <img id="img01" style="width:100%">
             </div>
           </div>
-        <h3>{{ $newsupdate->title }}</h3><br>
+        <h3>{{ $newsupdate->title }}</h3>
         <div class="jumpbotron">
           <img src="{{ URL::to('/') }}/images/{{ $newsupdate->image }}" style="max-width:100%; height:auto; display: block; cursor:pointer;" 
     onclick="onClick(this)" class="w3-hover-opacity"/>
-          <br><br>
+    <br>
           <!-- <p>{{ $newsupdate->title }}</p><br> -->
           <h6>{!! $newsupdate->content !!}</h6>
           </div>

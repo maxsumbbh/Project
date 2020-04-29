@@ -45,7 +45,7 @@
                         <br>
                         <div class="form-group text-left">
                             <div class="col-md-12">
-                                <input type="submit" name="submit" class="btn btn-success" value="แก้ไข" />
+                                <input type="submit" name="submit" class="btn btn-success" value="ยืนยัน" />
                             </div>
                         </div>
                     </form>
@@ -55,4 +55,5 @@
         </div>
     </div>
 </div>
+<br>
 @endsection

@@ -81,7 +81,7 @@
                             </p>
                         </div>
                         <div>
-                            <input class="btn btn-danger" type="submit" value="{{ trans('ยืนยัน') }}">
+                            <input class="btn btn-success" type="submit" value="{{ trans('ยืนยัน') }}">
                         </div>
                     </form>
 

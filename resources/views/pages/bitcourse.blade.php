@@ -18,7 +18,7 @@
       <div class="row">
       <div class="leftcolumn"> 
         @foreach ($bitcourses as $bitcourse)
-        <p>{!! $bitcourse->text !!}</p><hr width="100%"  size="20" color="#f77f3b">
+        <p>{!! $bitcourse->text !!}</p>
     @endforeach
 </div>
 <div class="rightcolumn">

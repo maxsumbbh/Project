@@ -23,13 +23,13 @@
         <div class="grid">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
-              <a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}"><img src="{{ asset('images/'.$newsupdate->image) }}" class="card-img-top"style="width:230px; height:230px;"></a>
+              <a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}"><img src="{{ asset('images/'.$newsupdate->image) }}" class="card-img-top"style="width:220px; height:220px;"></a>
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">
-                    <div class="card-desc-desc appp"><a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}"><p>{!! $newsupdate->content !!}</p></a></div>
+                    <div class="card-desc-desc appp"><a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}"><p>{{ $newsupdate->title }}</p></a></div>
                   </div>
-                      <div class="card-desc-tag1">{{ $newsupdate->title }}</div>
+                      <div class="card-desc-tag1">ประชาสัมพันธ์</div>
                 </div>
                 </div>
             </div>

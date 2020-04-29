@@ -356,16 +356,7 @@
 		padding: 20px;
 	   
 	  }
-	.content1 {
-		max-width: 1520px;
-		margin: auto;
-		background-image: url("../images/bg.jpg");
-		background-size: cover;
-		padding: 30px;
-		color:#fff;
-	   
-	  }
-  	.content2 {
+	  .content1 {
 		max-width: 1520px;
 		margin: auto;
 		background-color: #FF9364;
@@ -373,6 +364,24 @@
 		padding: 50px;
 		color:#ffffff;
 
+	  }
+	.content2 {
+		max-width: 1520px;
+		margin: auto;
+		background-color: #e9e9e9;
+		background-size: cover;
+		padding: 30px;
+		color:#000;
+	   
+	  }
+  	.content22 {
+		max-width: 1520px;
+		margin: auto;
+		background-color: #f8f8f8;
+		background-size: cover;
+		padding: 30px;
+		color:#000;
+	   
 	  }
 	  .content3 {
 		max-width: 1520px;

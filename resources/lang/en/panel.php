@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'BIT RMUTR',
+    'site_title' => 'BIT BPC',
 ];

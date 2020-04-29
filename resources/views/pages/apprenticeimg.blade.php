@@ -21,12 +21,10 @@
       <div class="leftcolumn"> 
 
           @foreach($apprentices as $apprentice)
-  <div class="w3-row">
-    <div class="w3-third">
+
           <img src="{{ URL::to('/') }}/images/{{ $apprentice->image }}" style="width:220px; height:180px; 
           cursor:pointer; margin-left: 30px; margin-bottom: 20px;" onclick="onClick(this)" class="w3-hover-opacity">  
-    </div>
-  </div>   
+
         @endforeach
 </div>
   <div id="modal01" class="w3-modal" onclick="this.style.display='none'">

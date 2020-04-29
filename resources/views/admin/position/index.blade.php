@@ -8,7 +8,7 @@
             <h3>| เพิ่ม ลบ แก้ไข ส่วนตำแหน่งคณาจารย์</h3>
             <br>
             <div aligh="right">
-                <a href="{{ route('admin.bposition.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลตำแหหน่งคณาจารย์</a>
+                <a href="{{ route('admin.bposition.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลตำแหน่งคณาจารย์</a>
             </div>
             <br>
             

@@ -10,7 +10,7 @@
             </div>
             <br>
 
-            <div class="card"></div>
+            <div class="card">
                 <div class="card-header">แก้ไขข้อมูลโครงงาน</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.bapprentice.update' , $apprentices->id) }}" enctype="multipart/form-data">

@@ -26,9 +26,9 @@
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">
-                    <div class="card-desc-desc appp"><a href="{{ url('/location/show/'.$location->id)  }}"><p>{!! $location->text !!}</p></a></div>
+                    <div class="card-desc-desc appp"><a href="{{ url('/location/show/'.$location->id)  }}"><p>{{$location->title}}</p></a></div>
                   </div>
-                      <div class="card-desc-tag1">{{$location->title}}</div>
+                      <div class="card-desc-tag1">สถานที่ฝึกประสบการณ์</div>
                 </div>
                 </div>
             </div>

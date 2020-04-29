@@ -176,7 +176,7 @@
                                 <i class="glyphicon glyphicon-book ">
 
                                 </i>
-                                <span>{{ trans('หลักสูตรสารสนเทศ') }}</span>
+                                <span>{{ trans('หลักสูตรเทคโนโลยีสารสนเทศ') }}</span>
                             </a>
                         </li>
                         @endcan
@@ -196,7 +196,7 @@
                     <a href="#">
                         <i class="fa-fw fas fa-users">
                         </i>
-                        <span>{{ trans('คณาจารย์') }}</span>
+                        <span>{{ trans('บุคลากร') }}</span>
                         <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
@@ -206,7 +206,7 @@
                                 <i class="fa-fw fas fa-user">
 
                                 </i>
-                                <span>{{ trans('ตำแหน่งอาจารย์') }}</span>
+                                <span>{{ trans('ตำแหน่งคณาจารย์') }}</span>
                             </a>
                         </li>
                         @endcan
@@ -216,7 +216,7 @@
                                 <i class="fa-fw fas fa-user">
 
                                 </i>
-                                <span>{{ trans('อาจารย์') }}</span>
+                                <span>{{ trans('คณาจารย์') }}</span>
                             </a>
                         </li>
                         @endcan
@@ -288,7 +288,7 @@
                 <i class="glyphicon glyphicon-pushpin">
 
                 </i>
-                <span>{{ trans('สถานประกอบการ') }}</span>
+                <span>{{ trans('สถานที่ฝึกประสบการณ์') }}</span>
             </a>
         </li>
     @endcan

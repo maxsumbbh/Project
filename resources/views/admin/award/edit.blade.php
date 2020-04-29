@@ -39,7 +39,7 @@
                                 <input type="file" name="image" />
                                 <img src="{{ URL::to('/') }}/images/{{ $award->image }}" class="img-thumbnail" width="100" />
                                 <input type="hidden" name="hidden_image" value="{{ $award->image }}" />
-                                <br>
+                                <br><br>
                             </div>
                         </div>
                         <br>
@@ -55,4 +55,5 @@
         </div>
     </div>
 </div>
+<br>
 @endsection

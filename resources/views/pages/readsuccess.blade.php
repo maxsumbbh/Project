@@ -27,9 +27,9 @@
     <div class="jumpbotron">
       <img src="{{ URL::to('/') }}/images/{{ $success->image }}" style="max-width:100%; height:auto; display: block; cursor:pointer;" 
     onclick="onClick(this)" class="w3-hover-opacity"/>
-      <br><br>
+    <br>
       <!-- <p>{{ $success->name }}</p><br> -->
-      <p>{!! $success->text !!}</p><br>
+      <p>{!! $success->text !!}</p>
       </div>
 </div>
 <div class="rightcolumn">

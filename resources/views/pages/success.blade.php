@@ -27,9 +27,9 @@
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">
-                    <div class="card-desc-desc appp"><a href="{{ url('/success/show/'.$success->id)  }}"><p>{!! $success->text !!}</p></a></div>
+                    <div class="card-desc-desc appp"><a href="{{ url('/success/show/'.$success->id)  }}"><p>{{$success->name}}</p></a></div>
                   </div>
-                      <div class="card-desc-tag1">{{$success->name}}</div>
+                      <div class="card-desc-tag1">ความสำเร็จ</div>
                 </div>
                 </div>
             </div>

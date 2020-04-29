@@ -27,9 +27,9 @@
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">
-                    <div class="card-desc-desc appp"><a href="{{ url('/award/show/'.$award->id)  }}"><p>{!! $award->content !!}</p></a></div>
+                    <div class="card-desc-desc appp"><a href="{{ url('/award/show/'.$award->id)  }}"><p>{{$award->title}}</p></a></div>
                   </div>
-                      <div class="card-desc-tag1">{{ $award->title}}</div>
+                      <div class="card-desc-tag1">รางวัล</div>
                 </div>
               </div>
           </div>

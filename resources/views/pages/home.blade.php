@@ -2,7 +2,7 @@
 @extends('layouts.inc_navbar')
 @section('content')
 <div class="body">
-  <div class="container" >
+  <div class="container">
   <br><br>
   <div class="fakeimg" style="height:2.5%;"></div>
   <div id="carouselExampleControls" id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -65,6 +65,22 @@
    <br>
 </div>
 <div class="content1">
+  <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+         <div class=""><h3>| เกี่ยวกับสาขา</h3></div>
+      <br>
+         <div class="">
+        @foreach ($abouts as $about)
+        <div class="indent2">
+          <p>{!! $about->text !!}</p>  
+         </div>
+      @endforeach
+      </div>
+      </div>
+      </div>
+    </div>
+
+<div class="content2">
   <div class=""><h3>| ประชาสัมพันธ์</h3></div>
   <br>
   <div class="row">
@@ -82,9 +98,9 @@
           <div class="card-desc-container">
             <div class="card-desc-cont">
                 <!-- <div class="card-desc-header"><a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}">{{ $newsupdate->title }}</a></div> -->
-                  <div class="card-desc-desc app"><h6>{!! $newsupdate->content !!}</h6></div>
+                  <div class="card-desc-desc app"><p>{{ $newsupdate->title }}</p></div>
             </div>
-                <div class="card-desc-tag">{{ $newsupdate->title }}</div>
+                <div class="card-desc-tag">ประชาสัมพันธ์</div>
           </div>
           </div>
       </div>
@@ -94,22 +110,8 @@
     @endforeach
 </div>
 </div>
-<div class="content2">
-  <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-         <div class=""><h3>| เกี่ยวกับสาขา</h3></div>
-      <br>
-         <div class="">
-        @foreach ($abouts as $about)
-        <div class="indent2">
-          <p>{!! $about->text !!}</p>  
-         </div>
-      @endforeach
-      </div>
-      </div>
-      </div>
-    </div>
-<div class="content1">
+
+<div class="content22">
   <div class=""><h3>| กิจกรรม</h3></div>
   <br>
   <div class="row">
@@ -126,9 +128,9 @@
           <div class="card-desc-container">
             <div class="card-desc-cont">
                 <!-- <div class="card-desc-header"><a href="{{ url('/activities/show/'.$activitie->id)  }}">{{ $activitie->title }}</a></div> -->
-                   <div class="card-desc-desc app"><h6>{!! $activitie->content !!}</h6></div>
+                   <div class="card-desc-desc app"><p>{{ $activitie->title }}</p></div>
             </div>
-                <div class="card-desc-tag">{{ $activitie->title }}</div>
+                <div class="card-desc-tag">กิจกรรม</div>
           </div>
           </div>
       </div>
@@ -136,6 +138,69 @@
   </div>
     @endforeach
 </div>
+</div>
+<div class="rightcolumn">
+  <div class=" w3-margin">
+  <div class="w3-container w3-padding w3">
+    <h5>หน่วยงานภายใน</h5>
+  </div>
+  <ul class="w3-ul w3-hoverable">
+    <li class="w3-padding-5">
+      <a href="https://bua.rmutr.ac.th/"target="_blank">คณะบริหารธุรกิจ</a>
+    </li>
+    <li class="w3-padding-5">
+      <a href="https://reg.rmutr.ac.th/registrar/home.asp"target="_blank">งานทะเบียน</a>
+    </li>
+    </li>
+    <li class="w3-padding-5">
+      <a href="https://th-th.facebook.com/pages/category/College---University/งานกองทุนฯ-บพิตรพิมุข-จักรวรรดิ-858180540866398/"target="_blank">ระบบงานกองทุน</a>
+    </li>
+    </li>
+    <li class="w3-padding-5">
+      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/"target="_blank">ระบบฐานข้อมูล</a>
+    </li>
+  </ul>
+</div>
+<br>
+<div class=" w3-margin">
+  <div class="w3-container w3-padding w3">
+    <h5>ข่าวสาร</h5>
+  </div>
+  <ul class="w3-ul w3-hoverable">
+    <li class="w3-padding-5">
+      <a href="newsupdate">ประชาสัมพันธ์</a>
+    </li>
+    <li class="w3-padding-5">
+      <a href="https://reg.rmutr.ac.th/registrar/home.asp">กิจกรรม</a>
+    </li>
+    </li>
+    <li class="w3-padding-5">
+      <a href="https://th-th.facebook.com/pages/category/College---University/งานกองทุนฯ-บพิตรพิมุข-จักรวรรดิ-858180540866398/">รางวัล</a>
+    </li>
+    </li>
+    <li class="w3-padding-5">
+      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
+    </li>
+  </ul>
+  </div>
+  <br><br><br><br><br><br>
+  <!-- Posts -->
+  <!-- <div class="w3-white w3-margin">
+    <div class="w3-container w3-padding w3">
+      <h5>NEWS POSTS</h5>
+    </div>
+    @foreach ($newsupdatess as $newsupdate)
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="{{ asset('images/'.$newsupdate->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
+        <br><br><br><br>
+        <a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}"><p class="w3-large">{{ $newsupdate->title }}</p></a>
+      </li>
+    </ul>
+    @endforeach
+  </div>
+  </div> -->
+
 </div>
 <script>
   var slideIndex = 1;
@@ -186,7 +251,4 @@ document.getElementById("defaultOpen").click();
 </div>
 </div>
 </div>
-
-
-
 @endsection

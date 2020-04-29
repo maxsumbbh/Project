@@ -44,8 +44,8 @@
                         <div class="form-group">
                             <label class="col-md-12 text-left">ปีการศึกษา</label>
                             <div class="col-md-4">
-                                <input type="year" name="name" value="{{ $cooperatives->year }}" onKeyPress="if(this.value.length==4) return false;"/>
-                                <br>
+                                <input type="text" name="year" value="{{ $cooperatives->year }}" onKeyPress="if(this.value.length==4) return false;"/>
+                                <br><br>
                             </div>
                         </div>
                         <br>
@@ -79,7 +79,7 @@
         </div>
     </div>
 </div>
-<br><br>
+<br>
 <script src="{{asset('//cdn.ckeditor.com/4.13.1/full/ckeditor.js')}}"></script>
 <script>
  CKEDITOR.replace( 'text' );

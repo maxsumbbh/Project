@@ -17,7 +17,6 @@
         <hr>
       <div class="row">
       <div class="leftcolumn"> 
-
         @foreach ($coursegenarals as $coursegenaral)
         <p>{!! $coursegenaral->text !!}</p>  
         @endforeach

@@ -83,7 +83,7 @@
                                             @endcan
 
                                             @can('user_edit')
-                                                <a class="btn btn-xs btn-info" href="{{ route('admin.users.edit', $user->id) }}">
+                                                <a class="btn btn-xs btn-success" href="{{ route('admin.users.edit', $user->id) }}">
                                                     {{ trans('แก้ไข') }}
                                                 </a>
                                             @endcan
