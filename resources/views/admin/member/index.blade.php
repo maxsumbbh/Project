@@ -51,7 +51,6 @@
                         @endforeach
                     </table>
                     <br>
-                    {!! $members->render() !!}
                 </div>
             </div>
             <br><br><br><br>

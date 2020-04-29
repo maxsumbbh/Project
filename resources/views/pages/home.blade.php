@@ -3,7 +3,7 @@
 @section('content')
 <div class="body">
   <div class="container">
-  <br><br>
+  <br>
   <div class="fakeimg" style="height:2.5%;"></div>
   <div id="carouselExampleControls" id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -91,15 +91,15 @@
       <a href="newsupdate">ประชาสัมพันธ์</a>
     </li>
     <li class="w3-padding-5">
-      <a href="https://reg.rmutr.ac.th/registrar/home.asp">กิจกรรม</a>
+      <a href="activities">กิจกรรม</a>
     </li>
     </li>
     <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/pages/category/College---University/งานกองทุนฯ-บพิตรพิมุข-จักรวรรดิ-858180540866398/">รางวัล</a>
+      <a href="award">รางวัล</a>
     </li>
     </li>
     <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
+      <a href="success">ความสำเร็จ</a>
     </li>
   </ul>
   </div>

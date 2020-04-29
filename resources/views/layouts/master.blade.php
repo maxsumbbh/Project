@@ -166,6 +166,8 @@
 						  <li class="dropdown ">
 							<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">หลักสูตร <b class="fa fa-caret-down"></b></a>
 							<ul class="dropdown-content ">
+                <li class="{{ Request::path() == 'coursegenaral' ? 'active' : '' }}">
+                  <a class="nav-link" href="{{ route('coursegenaral') }}">หลักสูตรทั่วไป</a></li>
                 <li class="{{ Request::path() == 'category' ? 'active' : '' }}">
 								<a class="nav-link" href="{{ route('category') }}">ข้อมูลหลักสูตร</a></li>
 							  <li class="{{ Request::path() == 'bitcourse' ? 'active' : '' }}">
@@ -177,7 +179,7 @@
             <li class="{{ Request::path() == 'about' ? 'active' : '' }}">
               <a class="nav-link" href="{{ route('about') }}">คณาจารย์</a></li>
 						<li class="dropdown">
-							<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">นักศึกษา <b class="fa fa-caret-down"></b></a>
+							<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">ผลงานนักศึกษา <b class="fa fa-caret-down"></b></a>
 							<ul class="dropdown-content ">
 
    
@@ -186,10 +188,10 @@
             
                 <li class="{{ Request::path() == 'success' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('success') }}">ความสำเร็จ</a></li>
-                @guest
+               
                 @if (Route::has('cooperative'))
                 @endif
-                @else
+            
                 <li class="{{ Request::path() == 'cooperative' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('cooperative') }}">ผลงานสหกิจศึกษา</a></li>           
                 <li class="{{ Request::path() == 'apprentice' ? 'active' : '' }}">
@@ -198,30 +200,31 @@
                 <a class="nav-link" href="{{ route('location') }}">สถานที่ฝึกประสบการณ์</a></li>
                 <li class="{{ Request::path() == 'student' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('student') }}">รายชื่อนักศึกษา</a></li>
-                @endguest
+              
 							</ul>
             </li>
+            <li class="{{ Request::path() == 'tact' ? 'active' : '' }}">
+							<a class="nav-link" href="{{ route('tact') }}">ติดต่อเรา</a>
+						</li>
 					</ul>
 				</div>
 				<div class="top-social">
 					<ul id="top-social-menu">
             @guest
-            <li><span class="	fa fa-sign-in fa-2x"></span>&nbsp;<a href="{{ route('login') }}">เข้าสู่ระบบ</a></li>
-        
+            <li><span class="	fa fa-sign-in fa-2x"></span>&nbsp;<a href="{{ route('login') }}">จัดการข้อมูล</a></li>
             @else
+    
             <li class="nav-item dropdown">
+              @can('user_access')        
+              <span class="fa fa-database"></span>&nbsp;<a href="admin"></span>&nbsp;{{ __('สำหรับผู้ดูแลระบบ') }}</a>
+               @endcan
+    
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                   {{ Auth::user()->name }} <span class="fa fa-user-circle "></span>
               </a>
-             
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">    
-                @can('user_access')        
-                <a class="dropdown-item" href="admin"><span class="fa fa-database "></span>&nbsp;{{ __('สำหรับผู้ดูแลระบบ') }}</a>
-                @endcan
                 <a class="dropdown-item" href="" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
-                  <i class="fas fa-fw fa-sign-out-alt">
-
-                  </i>
+                  <i class="fas fa-fw fa-sign-out-alt"></i>
                   {{ trans('ออกจากระบบ') }}
               </a>
               

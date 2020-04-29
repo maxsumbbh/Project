@@ -176,7 +176,7 @@
                                 <i class="glyphicon glyphicon-book ">
 
                                 </i>
-                                <span>{{ trans('หลักสูตรเทคโนโลยีสารสนเทศ') }}</span>
+                                <span>{{ trans('พัฒนาซอฟต์แวร์') }}</span>
                             </a>
                         </li>
                         @endcan
@@ -186,7 +186,7 @@
                                 <i class="glyphicon glyphicon-book ">
 
                                 </i>
-                                <span>{{ trans('หลักสูตรการจัดการสารสนเทศ') }}</span>
+                                <span>{{ trans('การจัดการสารสนเทศ') }}</span>
                             </a>
                         </li>
                         @endcan

@@ -8,12 +8,12 @@
     <ol class="breadcrumb blue-grey lighten-4">
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('homee') }}">หน้าหลัก</a>
       <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <li class="breadcrumb-item active">แสดงความคิดเห็น</li>
+      <li class="breadcrumb-item active">ข้อเสนอแนะ</li>
     </ol>
   </nav>
       </div>
       <div class="content0">  
-        <h3>| แสดงความคิดเห็น</h3>
+        <h3>| ข้อเสนอแนะ</h3>
         <hr>
       <div class="row">
       <div class="leftcolumn"> 
@@ -32,90 +32,12 @@
         </section>
       </div>
 
-      <div class="content4">
-        @forelse ($comments as $comment)
-        <div class="">
-          <div class="w3-card-4 w3-margin w3-white">
-            <div class="w3-container">
-            <br>
-              <h5>ความคิดเห็น</h5>
-            </div>
-            <div class="w3-container">
-              <p>{{$comment->comment}}</p>
-            </div>
-          </div>
-          <hr>
-        </div>
-        @empty
-        <h4>No Comments</h4>
-        @endforelse
-      </div>
-</div>
-<div class="rightcolumn">
-  <div class=" w3-margin">
-  <div class="w3-container w3-padding w3">
-    <h5>หน่วยงานภายใน</h5>
-  </div>
-  <ul class="w3-ul w3-hoverable">
-    <li class="w3-padding-5">
-      <a href="https://bua.rmutr.ac.th/"target="_blank">คณะบริหารธุรกิจ</a>
-    </li>
-    <li class="w3-padding-5">
-      <a href="https://reg.rmutr.ac.th/registrar/home.asp"target="_blank">งานทะเบียน</a>
-    </li>
-    </li>
-    <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/pages/category/College---University/งานกองทุนฯ-บพิตรพิมุข-จักรวรรดิ-858180540866398/"target="_blank">ระบบงานกองทุน</a>
-    </li>
-    </li>
-    <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/"target="_blank">ระบบฐานข้อมูล</a>
-    </li>
-  </ul>
-</div>
-<br>
-  <div class=" w3-margin">
-  <div class="w3-container w3-padding w3">
-    <h5>ข่าวสาร</h5>
-  </div>
-  <ul class="w3-ul w3-hoverable">
-    <li class="w3-padding-5">
-      <a href="newsupdate">ประชาสัมพันธ์</a>
-    </li>
-    <li class="w3-padding-5">
-      <a href="https://reg.rmutr.ac.th/registrar/home.asp">กิจกรรม</a>
-    </li>
-    </li>
-    <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/pages/category/College---University/งานกองทุนฯ-บพิตรพิมุข-จักรวรรดิ-858180540866398/">รางวัล</a>
-    </li>
-    </li>
-    <li class="w3-padding-5">
-      <a href="https://th-th.facebook.com/งานทะเบียนและฐานข้อมูล-บพิตรพิมุข-จักรวรรดิ-576140065834581/">ความสำเร็จ</a>
-    </li>
-  </ul>
-  </div>
-  <br><br><br><br><br><br>
-  <!-- Posts -->
-  <!-- <div class="w3-white w3-margin">
-    <div class="w3-container w3-padding w3">
-      <h5>NEWS POSTS</h5>
-    </div>
-    @foreach ($newsupdatess as $newsupdate)
-    <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <img src="{{ asset('images/'.$newsupdate->image) }}" alt="Image" class="w3-left w3-margin-right" style="width:110px">
-        <br><br><br><br>
-        <a href="{{ url('/newsupdate/show/'.$newsupdate->id)  }}"><p class="w3-large">{{ $newsupdate->title }}</p></a>
-      </li>
-    </ul>
-    @endforeach
-  </div>
-  </div> -->
 
 </div>
+
     </div>
     </div>
+    <br>
 <script>
   (function() {
   var $grid = $('.grid').imagesLoaded(function() {
