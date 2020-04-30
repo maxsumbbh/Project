@@ -218,7 +218,7 @@
     
             <li class="nav-item dropdown">
               @can('user_access')        
-              <span class="fa fa-database"></span>&nbsp;<a href="admin"></span>&nbsp;{{ __('สำหรับผู้ดูแลระบบ') }}</a>
+              <span class="fa fa-database"></span>&nbsp;<a href="admin"></span>&nbsp;{{ __('การจัดการข้อมูล') }}</a>
                @endcan
     
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

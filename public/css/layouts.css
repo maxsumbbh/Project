@@ -38,7 +38,7 @@
 	
 	margin-bottom: 0;
 	background-color: #ffffff;
-	background:#FF6F61;
+	background:#f15b2a;
 	transition: all 0.2s ease-out;
   }
 
@@ -274,8 +274,9 @@
   .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #FF6F61;
+	background-color: #f15b2a;
 	min-width: 160px;
+	margin-left: 14px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
   }
