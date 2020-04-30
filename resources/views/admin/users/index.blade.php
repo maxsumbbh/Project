@@ -72,7 +72,7 @@
                                         </td>
                                         <td>
                                             @foreach($user->roles as $key => $item)
-                                                <span class="label label-info label-many">{{ $item->title }}</span>
+                                                <div style="margin-top:8px;"><span class="label label-info label-many">{{ $item->title }}</span></div>
                                             @endforeach
                                         </td>
                                         <td>

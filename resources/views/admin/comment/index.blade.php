@@ -36,8 +36,7 @@
                                             <input <?php if($comment->approve == 1){echo "checked";}?> type="checkbox" name='approve'>
                     
                                         <input type="hidden" name="commentId" value="{{$comment->id}}">
-                                            <button class="btn btn-success" type="submit" value="ตกลง"></button>
-                                            onclick="return confirm('คุณต้องการที่จะลบใช่หรือไม่?');"
+                                            <input class="btn btn-success" type="submit" value="ตกลง">
                                         </form></td>
 
                                     </tr>

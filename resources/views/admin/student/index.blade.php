@@ -80,16 +80,15 @@
                                         <td>
                                             <form action="{{ route('admin.bstudent.destroy', $student->id) }}" method="POST">
                                                 @csrf
-                                                @method('DELETE')
-                                                <a onclick="return confirm('คุณต้องการที่จะลบใช่หรือไม่?');">
-                                                <button type="submit" class="btn btn-danger">ลบ</button></a>
+                                                @method('DELETE') 
+                                                <div style="margin-top:15px;"><a onclick="return confirm('คุณต้องการที่จะลบใช่หรือไม่?');">
+                                                <button type="submit" class="btn btn-danger">ลบ</button></a></div>
                                             </form>
                                         </td>
                                         <td>
                                       
 
                                         </td>
-
                                     </tr>
                                 @endforeach
                             </tbody>
