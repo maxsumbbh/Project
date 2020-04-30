@@ -1,3 +1,11 @@
+<head> 
+<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    h3{
+        font-family: 'Kanit', sans-serif !important;
+    }
+</style>
 @extends('layouts.master')
 @extends('layouts.inc_navbar')
     @section('content')
@@ -10,7 +18,7 @@
       <i class="fa fa-angle-right" aria-hidden="true"></i>
       <li class="breadcrumb-item"><a class="black-text" href="{{ route('activities') }}">กิจกรรม</a>
         <i class="fa fa-angle-right" aria-hidden="true"></i>
-        <li class="breadcrumb-item">{{ $activities->title }}</li>
+       <li class="breadcrumb-item">{{ $activities->title }}</li>
     </ol>
   </nav>
 </div>
@@ -23,7 +31,7 @@
             <img id="img01" style="width:100%; height:auto;">
             </div>
           </div>
-        <h3>{{ $activities->title }}</h3><br>
+          <div style="color:#000000;"><h3>{{ $activities->title }}</h3></div><br>
         <div class="jumpbotron">
           <img src="{{ URL::to('/') }}/images/{{ $activities->image }}" style="max-width:100%; height:auto; display: block; cursor:pointer;" 
     onclick="onClick(this)" class="w3-hover-opacity"/>

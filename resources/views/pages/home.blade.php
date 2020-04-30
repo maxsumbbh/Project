@@ -1,3 +1,11 @@
+<head> 
+<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    h2{
+        font-family: 'Kanit', sans-serif !important;
+    }
+</style>
 @extends('layouts.master')
 @extends('layouts.inc_navbar')
 @section('content')
@@ -25,7 +33,7 @@
     <div class="content0">  
     <div class="row">
     <div class="leftcolumn">
-      <h3>เกี่ยวกับสาขา</h3>
+      <div style="color:#000000;"><h2>เกี่ยวกับสาขา</h2></div>
       <hr> 
       @foreach ($abouts as $about)
       <div class="indent2">
@@ -57,7 +65,7 @@
 </div>
 </div>
 <div class="leftcolumn"> 
-  <h3>ประชาสัมพันธ์</h3>
+<div style="color:#000000;"><h2>ประชาสัมพันธ์</h2></div>
   <hr>
   <u><p style="margin-left:690px;"><a href="newsupdate">ดูทั้งหมด</a></p></u>
   @foreach($newsupdatess as $newsupdate)
@@ -109,7 +117,7 @@
   </div>
     <div class="row">
       <div class="leftcolumn">
-        <h3>กิจกรรม</h3> 
+      <div style="color:#000000;"><h2>กิจกรรม</h2></div>
         <hr> 
         <u><p style="margin-left:690px;"><a href="activities">ดูทั้งหมด</a></p></u>
       @foreach($activities as $activitie)

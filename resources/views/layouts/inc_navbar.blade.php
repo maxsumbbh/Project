@@ -10,7 +10,7 @@
 		.nav-container {
 			width: 100%;
 			height: 80px;
-			background-color: #ff6f61;
+			background-color: #f15b2a;
 			border-radius: 0px;
 			z-index: 18;
 			position: fixed;
@@ -94,7 +94,7 @@
 		}
 		
 		.menu-box {
-			background-color: #ff6f61;
+			background-color: #f15b2a;
 			position: fixed;
 			width: 100%;
 			top: -100%;
@@ -128,13 +128,13 @@
 		
 		.w3-dropdown-hover:first-child,
 		.w3-dropdown-click:hover {
-			background-color: #ccc0!important;
-			color: #fff!important;
+			 color: #fff!important; 
+			 background-color: #f15b2a!important; 
 		}
 		
 		.w3-dropdown-content {
 			color: #fff!important;
-			background-color: #ff6f61!important;
+			background-color: #f15b2a!important;
 		}
 		/*
 		.w3-dropdown-hover:first-child, .w3-dropdown-click:hover {
@@ -207,7 +207,7 @@
 .scroll-height{
 	width: 100%;
 			height: 80px;
-			background-color: #ff6f61;
+			background-color: #f15b2a;
 			border-radius: 0px;
 			z-index: 18;
 			position: fixed;

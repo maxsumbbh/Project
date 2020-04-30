@@ -7,8 +7,7 @@
   .h5{
     color: #000;
   }
-  
-  
+
   /* Style the body */
   
   
@@ -732,7 +731,7 @@
       position: relative;
       display: inline-block;
       text-decoration: none;
-      color: #000;
+      color: #374B5E;
       margin-bottom: -20px;
     }
     .appp p {
@@ -743,7 +742,7 @@
       margin-bottom: -20px;
       text-align: left;
       text-overflow: ellipsis;
-      color: #000;
+      color: #374B5E;
     }
   
     .apppp p {
@@ -758,7 +757,7 @@
       text-decoration: none;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: #000;
+      color: #374B5E;
     }
     .card-wrapper {
       background: #dcb394;
@@ -818,7 +817,7 @@
       white-space: nowrap;
    }
     
-   
+  
    span { 
     display: block;
     font-size: 16px;

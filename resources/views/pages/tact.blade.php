@@ -1,3 +1,11 @@
+<head> 
+<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    h2{
+        font-family: 'Kanit', sans-serif !important;
+    }
+</style>
 @extends('layouts.master')
 @extends('layouts.inc_navbar')
     @section('content')
@@ -13,7 +21,7 @@
   </nav>
       </div>
       <div class="content0">  
-        <h3>ติดต่อเรา</h3>
+      <div style="color:#000000;"><h2>ติดต่อเรา</h2></div>
     <hr>
       <div class="row">
       <div class="leftcolumn"> 
@@ -23,12 +31,12 @@
         <h4>สาขาวิชาเทคโนโลยีสารสนเทศทางธุรกิจ</h4>
         <h4>คณะบริหารธุรกิจ มหาวิทยาลัยเทคโนโลยีราชมงคล บพิตรพิมุข จักรวรรดิ</h4>
         <br>
-        <h5>ที่อยู่</h5>
+        <div style="color:#000000;"><h5>ที่อยู่</h5></div>
         <p>264 ถนนจักรวรรดิ แขวงจักรวรรดิ เขตสัมพันธวงศ์ กรุงเทพฯ 10100<br>
           โทร : 0-2222-2814 ต่อ 5319,5330,5350<br>
           โทรสาร : 0-2222-2814 ต่อ 5331
         </p>
-        <h5>การเดินทาง</h5>
+        <div style="color:#000000;"><h5>การเดินทาง</h5></div>
         <p>
           MRT : สถานีสามยอด<br>
           รถเมล์ : สาย4 สาย7 สาย9 สาย40 สาย43 สาย49 สาย56 สาย73 สาย85

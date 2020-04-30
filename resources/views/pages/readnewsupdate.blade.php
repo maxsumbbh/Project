@@ -1,3 +1,11 @@
+<head> 
+<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    h3{
+        font-family: 'Kanit', sans-serif !important;
+    }
+</style>
 @extends('layouts.master')
 @extends('layouts.inc_navbar')
     @section('content')
@@ -23,7 +31,7 @@
             <img id="img01" style="width:100%">
             </div>
           </div>
-        <h3>{{ $newsupdate->title }}</h3>
+          <div style="color:#000000;"><h3>{{ $newsupdate->title }}</h3></div>
         <div class="jumpbotron">
           <img src="{{ URL::to('/') }}/images/{{ $newsupdate->image }}" style="max-width:100%; height:auto; display: block; cursor:pointer;" 
     onclick="onClick(this)" class="w3-hover-opacity"/>

@@ -1,3 +1,11 @@
+<head> 
+<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    h2{
+        font-family: 'Kanit', sans-serif !important;
+    }
+</style>
 @extends('layouts.master')
 @extends('layouts.inc_navbar')
     @section('content')
@@ -15,7 +23,7 @@
   </nav>
       </div>
       <div class="content0">  
-        <h3>| รูปผลงานสหกิจ</h3>
+      <div style="color:#000000;"><h2>| รูปผลงานสหกิจ</h2></div>
     <hr>
       <div class="row">
       <div class="leftcolumn"> 
