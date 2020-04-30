@@ -122,7 +122,7 @@
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">
-                    <div class="card-desc-desc appp"><a href="{{ url('/activitie/show/'.$activitie->id)  }}"><p>{{ $activitie->title }}</p></a></div>
+                    <div class="card-desc-desc appp"><a href="{{ url('/activities/show/'.$activitie->id)  }}"><p>{{$activitie->title}}</p></a></div>
                   </div>
                       <div class="card-desc-tag1">กิจกรรม</div>
                 </div>

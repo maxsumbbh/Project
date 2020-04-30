@@ -18,7 +18,7 @@
         <form method="POST" action="{{ route('login') }}">
             {{ csrf_field() }}
             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" name="email" class="form-control" required autofocus placeholder="{{ trans('global.login_email') }}" value="{{ old('email', null) }}">
+                <input type="email" name="email" class="form-control" required autofocus placeholder="{{ trans('อีเมล') }}" value="{{ old('email', null) }}">
                 @if($errors->has('email'))
                     <p class="help-block">
                         {{ $errors->first('email') }}
@@ -26,7 +26,7 @@
                 @endif
             </div>
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" name="password" class="form-control" required placeholder="{{ trans('global.login_password') }}">
+                <input type="password" name="password" class="form-control" required placeholder="{{ trans('รหัสผ่าน') }}">
                 @if($errors->has('password'))
                     <p class="help-block">
                         {{ $errors->first('password') }}
