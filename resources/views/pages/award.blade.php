@@ -16,7 +16,7 @@
         <h3>| รางวัล</h3>
     <hr>
       <div class="row">
-      <div class="leftcolumn"> 
+      <div class="leftcolumn0"> 
       @foreach($awards as $award)
       <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
         <div class="award-responsive">

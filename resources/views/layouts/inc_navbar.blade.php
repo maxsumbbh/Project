@@ -272,9 +272,7 @@
 	<div id="NVBR" class="nav-container clearfix" style="z-index: 2000;">
 		<div id="hamclk" class="hamburg-con hampad" onclick="navright()">
 			<div id="SPN" class="hamburger hamburger--spin">
-				<div class="hamburger-box">
-					<div class="hamburger-inner"></div>
-				</div>
+			<div class="new-hamberg"> <img src="../images/hamberger-icon/humburg-vector.svg"> </div>
 			</div>
 		</div>
 

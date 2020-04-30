@@ -19,7 +19,7 @@
                         <div class="form-group">
                             <label class="col-md-12 text-left">ชื่อคณาจารย์</label>
                             <div class="col-md-8">
-                                <input type="text" name="name" class="form-control input-lg" placeholder="กรุณากรอกชื่อบุคลากร"/>
+                                <input type="text" name="name" class="form-control input-lg" placeholder="กรุณากรอกข้อมูล"/>
                                 <br>
                             </div>
                         </div>

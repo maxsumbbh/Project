@@ -69,6 +69,19 @@
     width: 75%;
     padding-right: 40px;
   }
+
+  .leftcolumn0 {
+    float: left;
+    width: 100%;
+    padding-right: 20px;
+  }
+  .leftcolumn00 {
+    float: left;
+    width: 100%;
+    padding-right: 20px;
+    margin-left: 30px;
+  }
+  
   .leftcolumn1 {
     float: left;
     width: 100%;
@@ -839,7 +852,7 @@
     width: 220px;
     overflow: hidden;
     border-radius: 2px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
     transition: all .2s ease-in;
     position: relative ;
   }
@@ -1234,11 +1247,11 @@
   }
   .award-responsive{
     margin-left: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
   }
   .success-responsive{
     margin-left: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
   }
   .location-responsive{
     margin-left: 50px;

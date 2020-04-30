@@ -20,7 +20,7 @@
                         <div class="form-group">
                             <label class="col-md-12 text-left">หัวข้อ</label>
                             <div class="col-md-8">
-                                <input type="text" name="title" class="form-control input-lg" placeholder="กรุณากรอกชื่อกิจกรรม"/>
+                                <input type="text" name="title" class="form-control input-lg" placeholder="กรุณากรอกข้อมูล"/>
                                 <br>
                             </div>
                         </div>

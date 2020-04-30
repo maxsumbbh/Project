@@ -27,7 +27,7 @@
                         <div class="form-group">
                             <label class="col-md-12 text-left">ชื่อ</label>
                             <div class="col-md-6">
-                                <input type="text" name="name" class="form-control input-lg" placeholder="กรุณากรอกชื่อนักศึกษา"/>
+                                <input type="text" name="name" class="form-control input-lg" placeholder="กรุณากรอกข้อมูล"/>
                                 <br>
                             </div>
                         </div>

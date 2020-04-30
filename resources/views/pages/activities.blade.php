@@ -16,7 +16,7 @@
         <h3>กิจกรรม</h3>
     <hr>
       <div class="row">
-      <div class="leftcolumn"> 
+      <div class="leftcolumn00"> 
       @foreach($activities as $activitie)
       <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
       <div class="wrapper1">

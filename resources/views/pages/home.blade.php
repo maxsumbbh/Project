@@ -59,6 +59,7 @@
 <div class="leftcolumn"> 
   <h3>ประชาสัมพันธ์</h3>
   <hr>
+  <u><p style="margin-left:690px;"><a href="newsupdate">ดูทั้งหมด</a></p></u>
   @foreach($newsupdatess as $newsupdate)
   <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
   <div class="wrapper1">
@@ -108,8 +109,9 @@
   </div>
     <div class="row">
       <div class="leftcolumn">
-        <h3>กิจกรรม</h3>
+        <h3>กิจกรรม</h3> 
         <hr> 
+        <u><p style="margin-left:690px;"><a href="activities">ดูทั้งหมด</a></p></u>
       @foreach($activities as $activitie)
       <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
       <div class="wrapper1">

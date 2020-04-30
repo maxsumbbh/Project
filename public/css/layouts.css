@@ -264,13 +264,13 @@
   
   .dropdown-menu {
 	background-color: #FF6F61;
-	
-	
   }
+
   .dropdown {
 	position: relative;
 	display: inline-block;
   }
+
   .dropdown-content {
 	display: none;
 	position: absolute;
@@ -291,9 +291,8 @@
   }
   
   .dropdown-content a:hover {
-	background-color: #dc8c61;
-	color:#0c4da2;
-	
+	background-color: #fff !important;	
+	color: #000 !important;
   }
   
   .dropdown:hover .dropdown-content {
@@ -307,45 +306,7 @@
   
 
   
-  .dropdown-menu>li>a:hover,
-  .dropdown-menu>li>a:focus {
-	background-image: none;
-	
-  }
   
-
- 
-  
-  .dropdown-menu>li>a {
-	color: #000000
-  
-  
-	
-  }
-  
-  .dropdown-menu>li>a:hover,
-  .dropdown-menu>li>a:focus {
-	color: #000000
-	
-  }
-  
-  .navbar-inverse .navbar-nav>.dropdown>a .caret {
-	border-top-color: #003300
-	
-  }
-  
-  .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
-	border-top-color: #003300
-	
-  }
-  
-  .navbar-inverse .navbar-nav>.dropdown>a .caret {
-	border-bottom-color: #003300
-  }
-  
-  .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
-	border-bottom-color: #003300
-  }
   .content {
 	  max-width: 1520px;
 	  margin: auto;
@@ -554,39 +515,29 @@ h4 {
 
   
  
-  
-  .navbar-inverse .navbar-nav>.active>a:hover,
-  .navbar-inverse .navbar-nav>li>a:hover,
-  .navbar-inverse .navbar-nav>li>a:focus {
-	background-color: #FF6F61
-  }
-  
-  .navbar-inverse .navbar-nav>.active>a,
-  .navbar-inverse .navbar-nav>.open>a,
-  .navbar-inverse .navbar-nav>.open>a,
-  .navbar-inverse .navbar-nav>.open>a:hover,
-  .navbar-inverse .navbar-nav>.open>a,
-  .navbar-inverse .navbar-nav>.open>a:hover,
-  .navbar-inverse .navbar-nav>.open>a:focus {
-	background-color: #FF6F61
-  }
-  
+
  
   
-  .navbar-inverse .navbar-nav>li>a:hover,
-  .navbar-inverse .navbar-nav>li>a:focus {
-	color: yellow
+  
+
+
+  .navbar-nav li a {
+	  background-color: #FF6F61!important;
+  }
+
+
+
+  .new-hamberg img{
+	width: 100%;
+	height: 100%;
+  }
+
+
+
+  .new-hamberg {
+  	width: 40px;
+    height: 40px;
+    margin-top: -10px;
+	 
   }
   
-  .navbar-inverse .navbar-nav>.active>a,
-  .navbar-inverse .navbar-nav>.open>a,
-  .navbar-inverse .navbar-nav>.open>a:hover,
-  .navbar-inverse .navbar-nav>.open>a:focus {
-	color: yellow
-  }
-  
-  .navbar-inverse .navbar-nav>.active>a:hover,
-  .navbar-inverse .navbar-nav>.active>a:focus {
-	color: yellow
-	
-  }

@@ -16,7 +16,7 @@
         <h3>| สถานที่ฝึกประสบการณ์</h3>
     <hr>
       <div class="row">
-      <div class="leftcolumn"> 
+      <div class="leftcolumn0"> 
       @foreach($locations as $location)
       <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
        <div class="location-responsive">

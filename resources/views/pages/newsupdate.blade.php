@@ -16,7 +16,7 @@
         <h3>ประชาสัมพันธ์</h3>
     <hr>
       <div class="row">
-      <div class="leftcolumn"> 
+      <div class="leftcolumn00"> 
       @foreach($newsupdates as $newsupdate)
       <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
       <div class="wrapper1">

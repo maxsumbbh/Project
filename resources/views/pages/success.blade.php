@@ -16,7 +16,7 @@
         <h3>| ความสำเร็จ</h3>
     <hr>
       <div class="row">
-      <div class="leftcolumn"> 
+      <div class="leftcolumn0"> 
       @foreach($success as $success)
       <div class="col-sm-4 col-md-6 col-lg-4 col-xs-4">
         <div class="success-responsive">
