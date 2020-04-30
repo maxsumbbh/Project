@@ -171,7 +171,7 @@
                 <li class="{{ Request::path() == 'category' ? 'active' : '' }}">
 								<a class="nav-link" href="{{ route('category') }}"><i class="fa fa-minus"></i>&nbsp;ข้อมูลหลักสูตร</a></li>
 							  <li class="{{ Request::path() == 'bitcourse' ? 'active' : '' }}">
-								<a class="nav-link" href="{{ route('bitcourse') }}"><i class="fa fa-minus"></i>&nbsp;พัฒนาซอฟต์แวร์</a></li>
+								<a class="nav-link" href="{{ route('bitcourse') }}"><i class="fa fa-minus"></i>&nbsp;การพัฒนาซอฟต์แวร์</a></li>
 							  <li class="{{ Request::path() == 'mitcourse' ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('mitcourse') }}"><i class="fa fa-minus"></i>&nbsp;การจัดการสารสนเทศ</a></li>
 							</ul>
@@ -212,7 +212,7 @@
 				<div class="top-social">
 					<ul id="top-social-menu">
             @guest
-            <li><span class="	fa fa-sign-in fa-2x"></span>&nbsp;<a href="{{ route('login') }}">จัดการข้อมูล</a></li>
+            
             <li><span class="	fa fa-user-circle fa-2x"></span>&nbsp;<a href="{{ route('login') }}">ระบบสารสนเทศ</a></li>
             @else
     

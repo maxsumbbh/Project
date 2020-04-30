@@ -1,3 +1,11 @@
+<head> 
+<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    h3{
+        font-family: 'Kanit' !important;
+    }
+</style>
 @extends('layouts.admin')
 @section('content')
 <div class="content">

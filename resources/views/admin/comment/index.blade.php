@@ -1,4 +1,11 @@
-
+<head> 
+<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    h3{
+        font-family: 'Kanit' !important;
+    }
+</style>
 @extends('layouts.admin')
 @section('content')
 <div class="content">
@@ -29,8 +36,8 @@
                                             <input <?php if($comment->approve == 1){echo "checked";}?> type="checkbox" name='approve'>
                     
                                         <input type="hidden" name="commentId" value="{{$comment->id}}">
-                                            <input class="btn btn-success" type="submit" value="ตกลง">
-                                
+                                            <button class="btn btn-success" type="submit" value="ตกลง"></button>
+                                            onclick="return confirm('คุณต้องการที่จะลบใช่หรือไม่?');"
                                         </form></td>
 
                                     </tr>

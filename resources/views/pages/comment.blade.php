@@ -26,7 +26,7 @@
                           <textarea class="ccformfield" name="comment" rows="8" placeholder="แสดงความคิดเห็น" required></textarea>
                       </div>
                       <div class="ccfield-prepend">
-                          <button type="submit" class="form-submit">ตกลง</button>
+                          <button onclick="return confirm('คุณต้องการที่จะเพิ่มข้อเสนอแนะใช่หรือไม่?');" type="submit" class="btn btn-primary">ตกลง</button>
                       </div>
                     </form> 
         </section>

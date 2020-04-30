@@ -1,3 +1,11 @@
+<head> 
+<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<style>
+    h4{
+        font-family: 'Kanit' !important;
+    }
+</style>
 <aside class="main-sidebar">
     <section class="sidebar" style="height: auto;">
         <ul class="sidebar-menu tree" data-widget="tree">
@@ -177,7 +185,7 @@
                             <h4><i class="glyphicon glyphicon-book ">
 
                                 </i>
-                                <span>{{ trans('พัฒนาซอฟต์แวร์') }}</span></h4>
+                                <span>{{ trans('การพัฒนาซอฟต์แวร์') }}</span></h4>
                             </a>
                         </li>
                         @endcan
