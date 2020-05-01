@@ -24,7 +24,7 @@ class SubgroupController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $subgroups = Subgroup::with('category')->orderBy('category_id','desc')->paginate(5);
+        $subgroups = Subgroup::with('category')->orderBy('category_id','desc')->paginate(10);
         return view('admin.subgroup.index',[
             'subgroups'=> $subgroups
         ]);

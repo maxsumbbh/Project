@@ -24,7 +24,6 @@
       <div style="color:#000000;"><h2>| แบบฟอร์มงานทะเบียน</h2></div>
         <hr>
       <div class="row">
-      <div class="leftcolumn"> 
         <table class="table table-striped">
           <tr>
               <th>&nbsp;</th>
@@ -37,13 +36,12 @@
               <td>{{ $form->name }}</td>
               <td>
               <a href="files/{{ $form->file }}" download="{{ $form->file }}">
-                <p class="fa fa-file-pdf-o fa-2x"></p>
+                <div style="font-size:20px; color:red; padding-left:40px; padding-top:20px;"><p class="fa fa-file-pdf-o fa-2x"></p></div>
               </a>
               </td>
           </tr>
           @endforeach
       </table>
-</div>
     </div>
     </div>
 <script>

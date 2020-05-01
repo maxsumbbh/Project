@@ -5,6 +5,9 @@
     h2{
         font-family: 'Kanit', sans-serif !important;
     }
+    a{
+      font-size: 16px;
+    }
 </style>
 @extends('layouts.master')
 @extends('layouts.inc_navbar')
@@ -126,7 +129,7 @@
         <div class="grid">
           <div class="card-wrapperr">
             <div class="thumbnail-container">
-              <a href="{{ url('/activitie/show/'.$activitie->id)  }}"><img src="{{ asset('images/'.$activitie->image) }}" class="card-img-top"style="width:220px; height:220px;"></a>
+              <a href="{{ url('/activities/show/'.$activitie->id)  }}"><img src="{{ asset('images/'.$activitie->image) }}" class="card-img-top"style="width:220px; height:220px;"></a>
               <div class="card-desc-wrapper">
                 <div class="card-desc-container">
                   <div class="card-desc-cont">

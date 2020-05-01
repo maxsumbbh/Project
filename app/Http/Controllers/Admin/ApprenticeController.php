@@ -83,7 +83,7 @@ class ApprenticeController extends Controller
 
         Apprentice::create($form_data);
 
-        return redirect('admin/bapprentice')->with('success', 'เพิ่มข้อมูลฝึกงานสำเร็จ');
+        return redirect('admin/bapprentice')->with('success', 'เพิ่มข้อมูลโครงงานสำเร็จ');
     }
 
     /**
@@ -171,7 +171,7 @@ class ApprenticeController extends Controller
         );
 
         Apprentice::whereId($id)->update($form_data);
-        return redirect('admin/bapprentice')->with('success', 'แก้ไขข้อมูลฝึกงานสำเร็จ');
+        return redirect('admin/bapprentice')->with('success', 'แก้ไขข้อมูลโครงงานสำเร็จ');
     }
 
     /**
@@ -189,6 +189,6 @@ class ApprenticeController extends Controller
         }
         File::delete(public_path() . '\\files\\' . $apprentices->file);
         $apprentices->delete();
-        return redirect('admin/bapprentice')->with('success', 'ลบข้อมูลฝึกงานสำเร็จ');
+        return redirect('admin/bapprentice')->with('success', 'ลบข้อมูลโครงงานสำเร็จ');
     }
 }

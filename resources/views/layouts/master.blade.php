@@ -160,9 +160,6 @@
 				</div>
         <div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-          <li class="{{ Request::path() == 'homee' ? 'active' : '' }}">
-							<a class="nav-link" href="{{ route('homee') }}">หน้าหลัก</a>
-						</li>
 						  <li class="dropdown ">
 							<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown">หลักสูตร <b class="fa fa-caret-down"></b></a>
 							<ul class="dropdown-content ">
@@ -203,7 +200,12 @@
               
 							</ul>
             </li>
-   
+            <li class="{{ Request::path() == 'tact' ? 'active' : '' }}">
+							<a class="nav-link" href="{{ route('form') }}">แบบฟอร์ม</a>
+            </li>
+            <li class="{{ Request::path() == 'tact' ? 'active' : '' }}">
+							<a class="nav-link" href="{{ route('comment') }}">ข้อเสนอแนะ</a>
+            </li>
             <li class="{{ Request::path() == 'tact' ? 'active' : '' }}">
 							<a class="nav-link" href="{{ route('tact') }}">ติดต่อเรา</a>
             </li>

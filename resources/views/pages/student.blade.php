@@ -5,6 +5,8 @@
     h2{
         font-family: 'Kanit', sans-serif !important;
     }
+
+
 </style>
 @extends('layouts.master')
 @extends('layouts.inc_navbar')
@@ -23,90 +25,50 @@
       <div class="content0">  
       <div style="color:#000000;"><h2>| รายชื่อนักศึกษา</h2></div>
         <hr>
-      <div class="row">
-      <div class="leftcolumn"> 
+      <div class="row" style="width: 100%!important;">
         <b>* สามารถค้นหาปีการศึกษาใน Search</b>
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="panel panel-default">
-       
+        <div class="row" style="width: 100%!important;">
+              <div class="panel panel-default">      
                   <div class="panel-body">
-  
                       <div class="table-responsive">
-                          <table class=" table table-bordered table-striped table-hover datatable datatable-User">
+                          <table class=" table table-bordered table-stripedtable table-bordered table-striped table-hover datatable datatable-User" style=" width: 100%!important;">
                               <thead>
                                   <tr>
-                                      <th width="10">
-  
-                                      </th>
-                                      <th>
-                                        
-                                      </th>
-                                      <th>
-                                        {{ trans('รหัสนักศึกษา') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('ชื่อ-นามสกุล') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('ปีการศึกษา') }}
-                                      </th>
-                                      <th>
-                                        {{ trans('รูปภาพ') }}
-                                      </th>
-                                      <th>
+                                  <th></th>
+                                      <th>{{ trans('รหัสนักศึกษา') }}</th>
+                                      <th>{{ trans('ชื่อ-นามสกุล') }}</th>
+                                      <th>{{ trans('ปีการศึกษา') }}</th>
+                                      <th>{{ trans('รูปภาพ') }}</th>
+                                      <th></th>
                                       
-                                      </th>
-                                      <th>
-                                          &nbsp;
-                                      </th>
                                   </tr>
                               </thead>
                               <tbody>
                                   @foreach($students as $key => $student)
-                                      <tr data-entry-id="{{ $student->id }}">
-                                          <td>
-  
+                                      <tr data-entry-id="{{ $student->id }}">   
+                                      <td></td>
+                                          <td>{{ $student->studentcode }}</td>
+                                          <td>{{ $student->name }}</td>
+                                          <td>{{ $student->studentyear->name }}</td>
+                                          <td> <img src="{{ URL::to('/') }}/images/{{ $student->image }}"
+                                              onclick="onClick(this)" class="w3-hover-opacity"style="width:100px; cursor:pointer;">
                                           </td>
-                                          <td>
-                                             
-                                          </td>
-                                          <td>
-                                            {{ $student->studentcode }}
-                                          </td>
-                                          <td>
-                                            {{ $student->name }}
-                                          </td>
-                                          <td>
-                                            {{ $student->studentyear->name }}
-                                          </td>
-                                          <td>
-                                            <a href="{{ asset('images/'.$student->image)}}">
-                                              <img src="{{ URL::to('/') }}/images/{{ $student->image }}"
-                                              class="img-thumbnail" width="75" />
-                                          </td>
-                                          <td>
-                                         
-                                          </td>
-                                          <td>
-                                        
-  
-                                          </td>
-  
+                                          <td></td>
+                                          
                                       </tr>
                                   @endforeach
                               </tbody>
                           </table>
                       </div>
-  
-  
                   </div>
               </div>
-  
-          </div>
+          </div>  
       </div>
-</div>
-
+             <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                                  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                                  <div class="w3-modal-content w3-animate-zoom" style="margin-top:70px">
+                                  <img id="img01" style="width:100%; height:auto';">
+                            </div>
     </div>
     </div>
 <script>

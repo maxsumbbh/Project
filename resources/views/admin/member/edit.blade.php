@@ -8,7 +8,7 @@
             <div aligh="right">
                 <a href="{{ route('admin.bmembers') }}" class="btn btn-default">กลับ</a>
             </div>
-
+            <br>
             <div class="card">
                 <div class="card-header">แก้ไขข้อมูลคณาจารย์</div>
                 <div class="card-body">

@@ -57,7 +57,7 @@ class NewsupdateController extends Controller
             'title' => 'required',
             'content' => 'required',
             'image' => 'required|image|max:2048',
-            'date' => 'required'
+            // 'date' => 'required'
         ]);
 
         $image = $request->file('image');
@@ -68,7 +68,7 @@ class NewsupdateController extends Controller
             'title' => $request->title,
             'content' => $request->content,
             'image' => $new_name,
-            'date' => $request->date
+            // 'date' => $request->date
         );
 
         Newsupdate::create($form_data);
@@ -118,7 +118,7 @@ class NewsupdateController extends Controller
                 'title' => 'required',
                 'content' => 'required',
                 'image' => 'required|image|max:2048',
-                'date' => 'required'
+                // 'date' => 'required'
             ]);
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images'), $image_name);
@@ -135,7 +135,7 @@ class NewsupdateController extends Controller
             'title' => $request->title,
             'content' => $request->content,
             'image' => $image_name,
-            'date' => $request->date
+            // 'date' => $request->date
         );
 
         Newsupdate::whereId($id)->update($form_data);

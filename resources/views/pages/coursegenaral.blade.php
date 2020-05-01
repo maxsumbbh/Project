@@ -24,11 +24,11 @@
       <div style="color:#000000;"><h2>| หลักสูตรทั่วไป</h2></div>
         <hr>
       <div class="row">
-      <div class="leftcolumn"> 
+
         @foreach ($coursegenarals as $coursegenaral)
         <p>{!! $coursegenaral->text !!}</p>  
         @endforeach
-</div>
+
 
     </div>
     </div>

@@ -195,8 +195,8 @@
 }
 
 .sitename img {
-	width: 150px;
-    height: 50px;
+	width: 200px;
+    height: 60px;
     position: fixed;
     top: 19px;
     z-index: 3000;

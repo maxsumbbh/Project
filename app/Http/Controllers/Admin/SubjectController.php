@@ -24,7 +24,7 @@ class SubjectController extends Controller
     public function index()
     {
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $subjects = Subject::with('subgroup')->orderBy('subgroup_id','desc')->paginate(5);
+        $subjects = Subject::with('subgroup')->orderBy('subgroup_id','desc')->paginate(10);
         return view('admin.subject.index',[
             'subjects'=> $subjects
         ]);

@@ -28,9 +28,7 @@
                         <table class=" table table-bordered table-striped table-hover datatable datatable-User">
                             <thead>
                                 <tr>
-                                    <th width="10">
-
-                                    </th>
+                    
                                     <th>
                                         {{ trans('รหัสนักศึกษา') }}
                                     </th>
@@ -49,17 +47,13 @@
                                     <th>
                                         {{ trans('ลบ') }}
                                     </th>
-                                    <th>
-                                        &nbsp;
-                                    </th>
+                               
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($students as $key => $student)
                                     <tr data-entry-id="{{ $student->id }}">
-                                        <td>
-
-                                        </td>
+                                 
                                         <td>
                                             {{ $student->studentcode }}
                                         </td>
@@ -85,10 +79,7 @@
                                                 <button type="submit" class="btn btn-danger">ลบ</button></a></div>
                                             </form>
                                         </td>
-                                        <td>
-                                      
-
-                                        </td>
+                                   
                                     </tr>
                                 @endforeach
                             </tbody>

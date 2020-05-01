@@ -31,13 +31,13 @@
                                 <br>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label class="col-md-12 text-left">ปฏิทิน</label>
                             <div class="col-md-8">
                                 <input type="date" name="date" data-format="dd-mm-yy">   
                                 <br> <br>
                             </div>
-                        </div>
+                        </div> -->
                         <br>
                         <div class="form-group">
                             <label class="col-md-12 text-left">เลือกรูปภาพ</label>

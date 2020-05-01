@@ -30,7 +30,7 @@
                     <form action="{{url('/comment')}}" method="POST">
                         {{csrf_field()}}
                         <div class="ccfield-prepend">
-                          <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
+                          <div style="text-align:left; font-size:40px;"><span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span></div><br>
                           <textarea class="ccformfield" name="comment" rows="8" placeholder="แสดงความคิดเห็น" required></textarea>
                       </div>
                       <div class="ccfield-prepend">

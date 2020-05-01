@@ -26,7 +26,7 @@
                         <tr>
                             <th>หัวข้อ</th>
                             <th>เนื้อหา</th>
-                            <th>วันที่</th>
+                            <!-- <th>วันที่</th> -->
                             <th>รูปภาพ</th>
                             <th>แก้ไข</th>
                             <th>ลบ</th>
@@ -35,7 +35,7 @@
                         <tr>
                             <td>{{ $newsupdate->title }}</td>
                             <td>{!! $newsupdate->content !!}</td>
-                            <td>{{ $newsupdate->date }}</td>
+                            <!-- <td>{{ $newsupdate->date }}</td> -->
                             <td>
                             <img src="{{ URL::to('/') }}/images/{{ $newsupdate->image }}"
                             class="img-thumbnail" width="75" />

@@ -34,7 +34,7 @@
                       <img class="" src="{{ asset('images/'.$member->image) }}" style="max-width: 100%; height: auto;"/>
                     </div>
                     <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8"><br><p>{{ $member->name }}</p>
-                      <p><b>{{ $member->position->name }}</b></p>
+                      <div style="color:#000;"><p>{{ $member->position->name }}</p></div>
                       <p>Tel : {{ $member->tel }}</p>
                       <p>Email : {{ $member->email }}</p><hr width="100%" color="#000000">
                     </div>        

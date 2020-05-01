@@ -26,12 +26,11 @@
       <div style="color:#000000;"><h2>| รูปผลงานโครงงาน</h2></div>
     <hr>
       <div class="row">
-      <div class="leftcolumn"> 
 
           @foreach($apprentices as $apprentice)
 
           <img src="{{ URL::to('/') }}/images/{{ $apprentice->image }}" style="width:220px; height:180px; 
-          cursor:pointer; margin-left: 30px; margin-bottom: 20px;" onclick="onClick(this)" class="w3-hover-opacity">  
+          cursor:pointer; margin-left: 100px; margin-bottom: 20px;" onclick="onClick(this)" class="w3-hover-opacity">  
 
         @endforeach
 </div>
@@ -40,11 +39,12 @@
                 <div class="w3-modal-content w3-animate-zoom" style="margin-top:70px">
                 <img id="img01" style="width:100%; height:auto;">
             </div>
-          </div>
+
 
 {!! $apprentices->render() !!}
     </div>
     </div>
+    <br><br><br>
 <script>
   (function() {
   var $grid = $('.grid').imagesLoaded(function() {

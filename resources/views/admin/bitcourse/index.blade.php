@@ -13,7 +13,7 @@
     <div class="row justify-content-center">
         <div class="col-md-10 col-md-offset-1">
             <br><br>
-            <h3>| เพิ่ม ลบ แก้ไข ส่วนหลักสูตรเทคโนโลยีสารสนเทศ</h3>
+            <h3>| เพิ่ม ลบ แก้ไข ส่วนหลักสูตรการพัฒนาซอฟต์แวร์</h3>
             <br>
             <div aligh="right">
                 <a href="{{ route('admin.bbitcourse.create') }}" class="btn btn-success btn-sm">เพิ่มข้อมูลหลักสูตร</a>
