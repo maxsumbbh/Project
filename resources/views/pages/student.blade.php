@@ -25,9 +25,9 @@
       <div class="content0">  
       <div style="color:#000000;"><h2>| รายชื่อนักศึกษา</h2></div>
         <hr>
-      <div class="row" style="width: 100%!important;">
+      <div class="row">
         <b>* สามารถค้นหาปีการศึกษาใน Search</b>
-        <div class="row" style="width: 100%!important;">
+        <div class="row">
               <div class="panel panel-default">      
                   <div class="panel-body">
                       <div class="table-responsive">
