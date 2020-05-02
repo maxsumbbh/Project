@@ -28,7 +28,7 @@ class CommentsController extends Controller
         $comment->comment=$request->comment;
         $comment->save();
         $comment = Comment::orderBy('updated_at','desc')->limit(4)->get();
-        return redirect('/comment')->with('success', 'เพิ่มข้อมูลเกี่ยวกับเราสำเร็จ');    
+        return redirect('/comment')->with('success', 'เพิ่มข้อมูลสำเร็จ');    
     }
 
     public function approval(Request $request)

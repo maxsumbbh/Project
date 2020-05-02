@@ -31,7 +31,7 @@ class MemberController extends Controller
         //     'members'=> $members
         // ]);
         abort_if(Gate::denies('user_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $members = Member::with('position')->orderBy('position_id','desc')->paginate(5);
+        $members = Member::with('position')->orderBy('position_id','desc')->paginate(10);
         return view('admin.member.index',[
             'members'=> $members
         ]);
