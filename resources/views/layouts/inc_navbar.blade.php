@@ -261,7 +261,7 @@
 
 		@foreach($headers as $header)
 		<div class="logo-container" style="z-index: 2500;">
-            <a id="LOGO" class="sitename" href="{{ route('homee') }}">
+            <a id="LOGO" class="sitename" href="{{ route('homepage') }}">
 			<img  src="{{ asset('images/'.$header->image) }}">
 
 			 </a>
@@ -293,14 +293,14 @@
                 @can('user_access')        
                 <a class="dropdown-item" href="admin"><span class="fa fa-database "></span>&nbsp;{{ __('สำหรับผู้ดูแลระบบ') }}</a>
                 @endcan
-                  <a class="dropdown-item" href="{{ route('homee') }}"
+                  <a class="dropdown-item" href="{{ route('homepage') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
                       <span class="fa fa-sign-out "></span>&nbsp;{{ __('ออกจากระบบ') }}
                   </a>
 
 
-                  <form id="logout-form" action="{{ route('homee') }}" method="POST" style="display: none;">
+                  <form id="logout-form" action="{{ route('homepage') }}" method="POST" style="display: none;">
                       @csrf
                   </form>
               </div>
@@ -317,7 +317,7 @@
 
 	<div id="MB" class="menu-box" style="z-index: 1500;">
 		<div class="nav-menu">
-		<a href="{{ route('homee') }}" class="w3-bar-item w3-button">หน้าหลัก</a><br>
+		<a href="{{ route('homepage') }}" class="w3-bar-item w3-button">หน้าหลัก</a><br>
 			<div class="w3-dropdown-hover">
 				<button class="w3-button">หลักสูตร<div class="traing"></div></button>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">

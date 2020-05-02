@@ -155,7 +155,7 @@
             </button>
 				<div class="navbar-header">
           @foreach($headers as $header)
-            <a class="navbar-brand" href="{{ route('homee') }}"> <img src="{{ asset('images/'.$header->image) }}" width="250px"></a>
+            <a class="navbar-brand" href="{{ route('homepage') }}"> <img src="{{ asset('images/'.$header->image) }}" width="250px"></a>
           @endforeach
 				</div>
         <div id="navbar" class="navbar-collapse collapse">

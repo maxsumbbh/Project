@@ -48,7 +48,7 @@ return [
     'year'                                 => 'Year',
     'yes'                                  => 'Yes',
     'youAreLoggedIn'                       => 'You are logged in!',
-    'yourAccountNeedsAdminApproval'        => 'Your accounts needs an administrator approval in order to log in',
+    'yourAccountNeedsAdminApproval'        => 'ส่งคำขอการลงทะเบียนให้ผู้ดูแลระบบอนุมัติ เพื่อเข้าสู่ระบบ',
     'submit'                               => 'Submit',
     'datatables'                           => [
         'copy'          => 'Copy',

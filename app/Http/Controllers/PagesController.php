@@ -10,7 +10,7 @@ class PagesController extends Controller
 {
     public function home(){
        
-        return view('pages.homee');
+        return view('pages.homepage');
     }
     public function member(){
        

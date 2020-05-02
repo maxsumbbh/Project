@@ -17,7 +17,7 @@ Route::post('/comment', 'CommentsController@store');
 // Route::get('books/export', 'BookController@export');
 
 
-Route::get('/homee','ShowhomeController@index')->name('homee');
+Route::get('/homepage','ShowhomeController@index')->name('homepage');
 Route::get('/form','ShowformController@index')->name('form');
 Route::get('/success','ShowsuccessController@index')->name('success');
 Route::get('/success/show/{id}','ShowsuccessController@show');
@@ -45,7 +45,7 @@ Route::get('/award/show/{id}','ShowawardController@show');
 Route::get('/coursegenaral','ShowcoursegenaralController@index')->name('coursegenaral');
 Route::get('/comment','ShowcommentController@index')->name('comment');
 
-Route::redirect('/home', '/homee');
+Route::redirect('/home', '/homepage');
 Route::redirect('/', '/login');
 Auth::routes();
 
