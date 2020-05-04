@@ -195,14 +195,15 @@
 }
 
 .sitename img {
-	width: 200px;
+	width: 220px;
     height: 60px;
     position: fixed;
     top: 19px;
     z-index: 3000;
     left: 50%;
-    margin-left: -90px;
+    margin-left: -130px;
     transition: all 0.5s;
+	
 }
 .scroll-height{
 	width: 100%;

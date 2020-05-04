@@ -34,27 +34,25 @@
                           <table class=" table table-bordered table-stripedtable table-bordered table-striped table-hover datatable datatable-User" style=" width: 100%!important;">
                               <thead>
                                   <tr>
-                                  <th></th>
+                                      <th></th>
                                       <th>{{ trans('รหัสนักศึกษา') }}</th>
                                       <th>{{ trans('ชื่อ-นามสกุล') }}</th>
                                       <th>{{ trans('ปีการศึกษา') }}</th>
                                       <th>{{ trans('รูปภาพ') }}</th>
                                       <th></th>
-                                      
                                   </tr>
                               </thead>
                               <tbody>
                                   @foreach($students as $key => $student)
                                       <tr data-entry-id="{{ $student->id }}">   
-                                      <td></td>
+                                          <td></td>
                                           <td>{{ $student->studentcode }}</td>
                                           <td>{{ $student->name }}</td>
                                           <td>{{ $student->studentyear->name }}</td>
                                           <td> <img src="{{ URL::to('/') }}/images/{{ $student->image }}"
                                               onclick="onClick(this)" class="w3-hover-opacity"style="width:100px; cursor:pointer;">
                                           </td>
-                                          <td></td>
-                                          
+                                          <td></td>         
                                       </tr>
                                   @endforeach
                               </tbody>
