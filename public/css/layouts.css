@@ -39,7 +39,7 @@
 	
 	margin-bottom: 0;
 	background-color: #ffffff;
-	background:#f15b2a;
+	background:#0C4A60;
 	transition: all 0.2s ease-out;
   }
 
@@ -56,6 +56,13 @@
 	font-family: 'Kanit', sans-serif;
   }
   
+  .navbar .navbar-nav li a:hover{
+	font-size: 17px;
+	text-transform: uppercase;
+	color: #F6C026;
+	transition: all 0.2s ease-out;
+	font-family: 'Kanit', sans-serif;
+  }
   .navbar-brand {
 	font-size: 25px;
 	transition: all 0.2s ease-out;
@@ -78,7 +85,7 @@
 	.navbar-nav>li>a {
 	  padding: 0;
 	  margin-top: 35px;
-	  margin-left: 15px;
+	  margin-left: 10px;
 	  line-height: 70px;
 	}
   
@@ -158,6 +165,7 @@
 	
   }
   
+  
   #top-social-menu li {
 	float: left;
 	padding: 10px 15px;
@@ -170,12 +178,12 @@
   
   #top-social-menu li a {
 	text-decoration: none;
-	color: #000;
+	color: #E1DDDB;
   }
   
   #top-social-menu li a:hover {
 	text-decoration: none;
-	color: #543A1A;
+	color: #F6C026;
   }
   
   #top-social-menu i {
@@ -264,7 +272,7 @@
   }
   
   .dropdown-menu {
-	background-color: #FF6F61;
+	background-color: #0C4A60 !important;
   }
 
   .dropdown {
@@ -275,7 +283,7 @@
   .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #f15b2a;
+	background-color: #0C4A60;
 	min-width: 160px;
 	margin-left: 14px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -293,7 +301,7 @@
   
   .dropdown-content a:hover {
 	background-color: #fff !important;	
-	color: #000 !important;
+	color: #F6C026 !important;
   }
   
   .dropdown:hover .dropdown-content {
@@ -523,7 +531,7 @@ h4 {
 
 
   .navbar-nav li a {
-	  background-color: #f15b2a!important;
+	  background-color: #0C4A60	!important;
   }
 
 

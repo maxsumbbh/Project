@@ -36,11 +36,11 @@
     <div class="content0">  
     <div class="row">
     <div class="leftcolumn">
-      <div style="color:#000000;"><h2>เกี่ยวกับสาขา</h2></div>
+    <div style="color:#000000;"><h2><i class="glyphicon glyphicon-credit-card"></i>&nbsp;เกี่ยวกับสาขา</h2></div>
       <hr> 
       @foreach ($abouts as $about)
       <div class="indent2">
-        <p>{!! $about->text !!}</p>  
+        <div class="card-about"><p>{!! $about->text !!}</p></div>
        </div>
     @endforeach
 </div>
@@ -68,7 +68,7 @@
 </div>
 </div>
 <div class="leftcolumn"> 
-<div style="color:#000000;"><h2>ประชาสัมพันธ์</h2></div>
+<div style="color:#000000;"><h2><i class="glyphicon glyphicon-bullhorn"></i>&nbsp;ประชาสัมพันธ์</h2></div>
   <hr>
   <u><p style="margin-left:690px;"><a href="newsupdate">ดูทั้งหมด</a></p></u>
   @foreach($newsupdatess as $newsupdate)
@@ -120,7 +120,7 @@
   </div>
     <div class="row">
       <div class="leftcolumn">
-      <div style="color:#000000;"><h2>กิจกรรม</h2></div>
+      <div style="color:#000000;"><h2><i class="glyphicon glyphicon-list-alt"></i>&nbsp;กิจกรรม</h2></div>
         <hr> 
         <u><p style="margin-left:690px;"><a href="activities">ดูทั้งหมด</a></p></u>
       @foreach($activities as $activitie)

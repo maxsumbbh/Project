@@ -155,7 +155,7 @@
             </button>
 				<div class="navbar-header">
           @foreach($headers as $header)
-            <a class="navbar-brand" href="{{ route('homepage') }}"> <img src="{{ asset('images/'.$header->image) }}" width="250px"></a>
+            <a class="navbar-brand" href="{{ route('homepage') }}"> <img src="{{ asset('images/'.$header->image) }}" width="290px"></a>
           @endforeach
 				</div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -220,7 +220,7 @@
     
             <li class="nav-item dropdown">
               @can('user_access')        
-              <span class="fa fa-database"></span>&nbsp;<a href="admin"></span>&nbsp;{{ __('การจัดการข้อมูล') }}</a>
+              <span class="fa fa-database" style="color: #fff;"></span>&nbsp;<a href="admin"></span>&nbsp;{{ __('การจัดการข้อมูล') }}</a>
                @endcan
     
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

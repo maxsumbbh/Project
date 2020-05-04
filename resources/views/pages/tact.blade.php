@@ -37,10 +37,10 @@
           โทรสาร : 0-2222-2814 ต่อ 5331
         </p>
         <div style="color:#000000;"><h5>การเดินทาง</h5></div>
-        <p>
-          MRT : สถานีสามยอด<br>
-          รถเมล์ : สาย4 สาย7 สาย9 สาย40 สาย43 สาย49 สาย56 สาย73 สาย85
-        </p>
+        
+          <div class="fa fa-subway" style="font-size: 20px;"> MRT : สถานีสามยอด</div><br><br>
+          <div class="fa fa-bus" style="font-size: 20px;">รถเมล์ : 4 , 7 , 9 , 40 , 43 , 49 , 56 , 73 , 85</div>
+        
 </div>
 
     </div>
