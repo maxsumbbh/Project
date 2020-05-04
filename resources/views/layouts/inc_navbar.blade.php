@@ -195,13 +195,13 @@
 }
 
 .sitename img {
-	width: 220px;
+	width: 180px;
     height: 60px;
     position: fixed;
     top: 19px;
     z-index: 3000;
     left: 50%;
-    margin-left: -130px;
+    margin-left: -110px;
     transition: all 0.5s;
 	
 }

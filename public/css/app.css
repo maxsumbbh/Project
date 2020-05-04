@@ -853,12 +853,12 @@
     position: relative ;
   }
   .card-wrapperr:hover{
-    box-shadow: 0px 5px 3px #696969	;
+    box-shadow: 5px 5px 5px 5px #696969	;
   }
   .card-about {
     background: #fff;
     border-radius: 2px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+    box-shadow: 5px 5px 5px 5px #E1DDDB;
   }
 .r1{
   margin-left: 50px;
@@ -978,7 +978,7 @@
     position: absolute;
     top: -40px;
     left: -16px;
-    background: #872642;
+    background: #EF6C33;
     color: #fff;
     font-weight: bold;
     padding: 5px 8px;
@@ -987,7 +987,7 @@
     position: absolute;
     top: -42px;
     left: -16px;
-    background: #872642;
+    background: #EF6C33;
     color: #fff;
     font-weight: bold;
     padding: 5px 8px;

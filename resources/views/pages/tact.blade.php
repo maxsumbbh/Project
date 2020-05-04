@@ -38,8 +38,8 @@
         </p>
         <div style="color:#000000;"><h5>การเดินทาง</h5></div>
         
-          <div class="fa fa-subway" style="font-size: 20px;"> MRT : สถานีสามยอด</div><br><br>
-          <div class="fa fa-bus" style="font-size: 20px;">รถเมล์ : 4 , 7 , 9 , 40 , 43 , 49 , 56 , 73 , 85</div>
+          <div class="fa fa-subway" style="font-size: 20px;">&nbsp; MRT : สถานีสามยอด</div><br><br>
+          <div class="fa fa-bus" style="font-size: 20px;">&nbsp; รถเมล์ : 4 , 7 , 9 , 40 , 43 , 49 , 56 , 73 , 85</div>
         
 </div>
 
